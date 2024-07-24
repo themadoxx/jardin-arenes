@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans Tifinagh:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
 </head>
 
 <body>
@@ -18,7 +21,7 @@
                 <div class="background1">
                     <div class="container">
                         <div class="container1">
-                            <img class="link-icon" alt="" src="./public/link@2x.png" id="linkImage" />
+                            <img class="link-icon" alt="" src="./assets/img/logo-arrondissement.png" id="linkImage" />
 
                             <div class="container2">
                                 <div class="container3">
@@ -56,171 +59,132 @@
                         </div>
                     </div>
                     <div class="container-wrapper">
-                        <div class="container14">
-                            <div class="blur">
-                                <div class="horizontal-divider"></div>
-                                <div class="image-background">
-                                    <div class="container15">
-                                        <div class="svg"></div>
-                                        <div class="container-container">
-                                            <div class="container16">
-                                                <div class="background2"></div>
-                                                <div class="background3"></div>
-                                            </div>
-                                        </div>
-                                        <div class="div">مصارعة الثيران - ساحة الدار البيضاء</div>
-                                        <div class="border"></div>
-                                    </div>
-                                    <div class="container17">
-                                        <div class="container-frame">
-                                            <div class="container18">
-                                                <div class="background4"></div>
-                                                <div class="background5"></div>
-                                            </div>
-                                        </div>
-                                        <div class="tauromachie-arnes">
-                                            Tauromachie - Arènes de Casablanca
-                                        </div>
-                                        <div class="border1"></div>
-                                    </div>
-                                    <div class="container-parent">
-                                        <div class="container19">
-                                            <div class="svg1"></div>
-                                            <div class="frame-div">
-                                                <div class="container20">
-                                                    <div class="background6"></div>
-                                                    <div class="background7"></div>
-                                                </div>
-                                            </div>
-                                            <div class="div1">ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ</div>
-                                            <div class="border2"></div>
-                                        </div>
-                                        <div class="div2">ساحة الدار البيضاء.</div>
-                                        <div class="casablanca-ville-de">
-                                            Casablanca, ville de loisirs
-                                        </div>
-                                        <div class="div3">ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ ⵡⴰⵎⵎⴰⵙ ⵏ ⵜⵖⵓⵔ</div>
-                                        <div class="link2">
-                                            <div class="gradientblur">
-                                                <div class="gradient">
-                                                    <div class="background8">
-                                                        <div class="dcouvrir-maintenant">
-                                                            Découvrir maintenant
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="container21">
-                                            <div class="container22">
-                                                <div class="container23">
-                                                    <div class="div4">
-                                                        من المهم الاعتناء بالمريض، وأن يتبعه المريض، لكن
-                                                        ذلك سيحدث في وقت يكون فيه الكثير من العمل والألم.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="background-parent">
-                                            <img class="background-icon" alt="" src="./public/background@2x.png" />
-
-                                            <div class="container24">
-                                                <div class="container25">
-                                                    <div class="container26">
-                                                        <div class="casablanca-ville-effervescent">
-                                                            Casablanca, ville effervescente et cosmopolite,
-                                                            a toujours été un carrefour de cultures,
-                                                            d'innovations et de divertissements. Depuis le
-                                                            début du XXe siècle, cette métropole marocaine a
-                                                            su se distinguer par son dynamisme et sa
-                                                            capacité à offrir des loisirs variés à ses
-                                                            habitants et visiteurs.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="container27">
-                                                <div class="map-container-outer">
-                                                    <div class="map-container-inner">
-                                                        <div class="asa-sarl-0000000-1-parent">
-                                                            <img class="asa-sarl-0000000-1" alt=""
-                                                                src="./public/asa-sarl-0000000-1@2x.png" />
-
-                                                            <img class="icons-pin" alt=""
-                                                                src="./public/icons--pin@2x.png" />
-                                                        </div>
-                                                        <div class="interactive-map-parent">
-                                                            <div class="interactive-map">
-                                                                <div class="container28"></div>
-                                                                <div class="wrapper-map-scroll">
-                                                                    <img class="map-scroll-icon" alt=""
-                                                                        src="./public/map-scroll.svg" />
-                                                                </div>
-                                                                <div class="asa-sarl-0000000-1-group">
-                                                                    <img class="asa-sarl-0000000-11" alt=""
-                                                                        src="./public/asa-sarl-0000000-11@2x.png" />
-
-                                                                    <img class="icons-pin1" alt=""
-                                                                        src="./public/icons--pin1@2x.png" />
-                                                                </div>
-                                                                <div class="asa-sarl-0000000-1-container">
-                                                                    <img class="asa-sarl-0000000-12" alt=""
-                                                                        src="./public/asa-sarl-0000000-11@2x.png" />
-
-                                                                    <img class="icons-pin2" alt=""
-                                                                        src="./public/icons--pin1@2x.png" />
-                                                                </div>
-                                                            </div>
-                                                            <img class="frame-child" alt=""
-                                                                src="./public/group-4.svg" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="overlay-container">
-                                                    <div class="overlayoverlayblur">
-                                                        <div class="container29">
-                                                            <div class="container30">
-                                                                <img class="separator-icon" alt=""
-                                                                    src="./public/separator.svg" />
-                                                            </div>
-                                                            <div class="container31">
-                                                                <div class="div5">
-                                                                    <span>
-                                                                        <p class="p">أنت هنا</p>
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="overlayoverlayblur1">
-                                                        <div class="container32">
-                                                            <div class="container33">
-                                                                <img class="vector-icon" alt=""
-                                                                    src="./public/vector.svg" />
-                                                            </div>
-                                                            <div class="container34">
-                                                                <div class="o">ⵍoⵔⴻⵎ ⵉⵒⵙⵓ</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="container35">
-                                    <div class="container36">
-                                        <div class="container37">
-                                            <div class="div6">
-                                                ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ ⵡⴰⵎⵎⴰⵙ ⵏ ⵜⵖⵓⵔⵉⵡⵉⵏ ⵏ ⵜⵙⵎⵍⴰⵢⵜ ⴷ ⵉⵎⴰⴳⵔⴰⵡⵏ ⵏ
-                                                ⵓⵏⵖⵎⵉⵙ ⴷ ⵓⵎⵢⴰⵡⴰⴹ ⵏ ⵓⵙⵉⵏⴰⴳ ⴰⴳⵍⴷⴰⵏ ⵏ ⵜⵓⵙⵙⵏⴰ ⵜⴰⵎⴰⵣⵉⵖⵜ
-                                                ⵓⵙⴼⵓⴳⵍⵓ ⵏ ⵓⵙⵖⵣⵏ ⵏ ⵜⵡⵏⵖⴰ ⵏ ⵜⴼⵉⵏⴰⵖ
-                                            </div>
-                                        </div>
+                    <div class="hero-page-container">
+                        <div class="hero-page-container1">
+                            <div class="hero-page-container2">
+                                <div class="hero-page-container3">
+                                    <div class="hero-page-casablanca-ville-effervescent">
+                                        Casablanca, ville effervescente et cosmopolite, a toujours été un
+                                        carrefour de cultures, d'innovations et de divertissements. Depuis
+                                        le début du XXe siècle, cette métropole marocaine a su se
+                                        distinguer par son dynamisme et sa capacité à offrir des loisirs
+                                        variés à ses habitants et visiteurs.
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <footer class="hero-page-container4">
+                            <div class="hero-page-container5">
+                                <div class="hero-page-container6">
+                                    <div class="hero-page-div">
+                                        ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ ⵡⴰⵎⵎⴰⵙ ⵏ ⵜⵖⵓⵔⵉⵡⵉⵏ ⵏ ⵜⵙⵎⵍⴰⵢⵜ ⴷ ⵉⵎⴰⴳⵔⴰⵡⵏ ⵏ ⵓⵏⵖⵎⵉⵙ ⴷ
+                                        ⵓⵎⵢⴰⵡⴰⴹ ⵏ ⵓⵙⵉⵏⴰⴳ ⴰⴳⵍⴷⴰⵏ ⵏ ⵜⵓⵙⵙⵏⴰ ⵜⴰⵎⴰⵣⵉⵖⵜ ⵓⵙⴼⵓⴳⵍⵓ ⵏ ⵓⵙⵖⵣⵏ ⵏ ⵜⵡⵏⵖⴰ
+                                        ⵏ ⵜⴼⵉⵏⴰⵖ
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+                        <main class="hero-page-container-parent">
+                            <div class="hero-page-container7">
+                                <div class="hero-page-svg"></div>
+                                <div class="hero-page-hero-title">
+                                    <div class="hero-page-container8">
+                                        <div class="hero-page-background"></div>
+                                        <div class="hero-page-background1"></div>
+                                    </div>
+                                </div>
+                                <div class="hero-page-div1">مصارعة الثيران - ساحة الدار البيضاء</div>
+                                <div class="hero-page-border"></div>
+                            </div>
+                            <div class="hero-page-container9">
+                                <div class="hero-page-container-wrapper">
+                                    <div class="hero-page-container10">
+                                        <div class="hero-page-background2"></div>
+                                        <div class="hero-page-background3"></div>
+                                    </div>
+                                </div>
+                                <div class="hero-page-tauromachie-arnes">
+                                    Tauromachie - Arènes de Casablanca
+                                </div>
+                                <div class="hero-page-border1"></div>
+                            </div>
+                            <section class="hero-page-page-title">
+                                <div class="hero-page-container11">
+                                    <div class="hero-page-svg1"></div>
+                                    <div class="hero-page-title-content">
+                                        <div class="hero-page-container12">
+                                            <div class="hero-page-background4"></div>
+                                            <div class="hero-page-background5"></div>
+                                        </div>
+                                    </div>
+                                    <div class="hero-page-div2">ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ</div>
+                                    <div class="hero-page-border2"></div>
+                                </div>
+                                <div class="hero-page-div3">ساحة الدار البيضاء.</div>
+                                <div class="hero-page-casablanca-ville-de">Casablanca, ville de loisirs</div>
+                                <div class="hero-page-div4">ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ ⵡⴰⵎⵎⴰⵙ ⵏ ⵜⵖⵓⵔ</div>
+                                <button class="hero-page-link">
+                                    <div class="hero-page-gradientblur">
+                                        <div class="hero-page-gradient">
+                                            <div class="hero-page-background6">
+                                                <div class="hero-page-dcouvrir-maintenant">Découvrir maintenant</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                                <div class="hero-page-horizontal-divider"></div>
+                                <div class="hero-page-container13">
+                                    <div class="hero-page-container14">
+                                        <div class="hero-page-container15">
+                                            <div class="hero-page-div5">
+                                                من المهم الاعتناء بالمريض، وأن يتبعه المريض، لكن ذلك سيحدث في
+                                                وقت يكون فيه الكثير من العمل والألم.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hero-page-container16">
+                                    <div class="hero-page-container17"></div>
+                                    <div class="hero-page-map-wrapper">
+                                        <div class="hero-page-map-content">
+                                          
+                                        <div class="hero-page-interactive-map-parent">
+                                            <div id="map" class="hero-page-interactive-map"></div>
+                                        </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="hero-page-footer">
+                                        <div class="hero-page-overlayoverlayblur">
+                                            <div class="hero-page-container18">
+                                                <div class="hero-page-container19">
+                                                    <img class="hero-page-frame-icon" loading="lazy" alt="" src="./public/frame.svg" />
+                                                </div>
+                                                <div class="hero-page-container20">
+                                                    <div class="hero-page-div6">
+                                                        <span>
+                                                            <p class="hero-page-p">أنت هنا</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hero-page-overlayoverlayblur1">
+                                            <div class="hero-page-container21">
+                                                <div class="hero-page-container22">
+                                                    <img class="hero-page-vector-icon" loading="lazy" alt="" src="./public/vector.svg" />
+                                                </div>
+                                                <div class="hero-page-container23">
+                                                    <div class="hero-page-o">ⵍoⵔⴻⵎ ⵉⵒⵙⵓ</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </main>
+                    </div>
+
                     </div>
                 </div>
             </div>
@@ -708,7 +672,7 @@
                                 </div>
                                 <div class="image-block">
                                     <img class="ctguwpe2fekerk4zurylmoqtl34pn-icon" alt=""
-                                        src="./public/ctguwpe2fekerk4zurylmoqtl34png@2x.png" />
+                                        src="assets/img/ctgUWPe2FeKeRk4ZuRYlMoqtL34.png.png" />
                                 </div>
                             </div>
                             <div class="success-icons-row">
@@ -1519,14 +1483,32 @@
         </div>
     </div>
 
-    <script>
-        var linkImage = document.getElementById("linkImage");
-        if (linkImage) {
-            linkImage.addEventListener("click", function (e) {
-                // Please sync "diplomatic-darling-319615.framer.app by html.to.design ❤️ FREE version - 17/07/2024, 4:17:55 CEST" to the project
-            });
-        }
-    </script>
+   <script>
+    // Initialisation de la carte
+    var map = L.map('map').setView([33.588892, -7.639583], 25); // Centrer la carte sur le jardin public
+
+    // Ajouter une couche de carte (OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Coordonnées des panneaux avec QR codes
+    var qrPins = [
+        [33.589, -7.640], // Coordonnée 1
+        [33.5891, -7.6395], // Coordonnée 2
+        [33.5888, -7.6397], // Coordonnée 3
+        [33.5885, -7.6396], // Coordonnée 4
+        [33.5887, -7.6393], // Coordonnée 5
+        [33.5889, -7.6394]  // Coordonnée 6
+    ];
+
+    // Ajout des pins sur la carte
+    qrPins.forEach(function (coords, index) {
+        L.marker(coords).addTo(map)
+            .bindPopup('<b>Panneau QR Code ' + (index + 1) + '</b><br />Scannez le code QR pour plus d\'informations.');
+    });
+</script>
+
 </body>
 
 </html>
