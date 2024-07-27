@@ -7766,15 +7766,174 @@
 }
 
 /** Cards Stacking */
-.cards {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-rows: repeat(var(--cards-count), var(--card-height));
-  gap: 40px 0;
+
+
+/*****/
+/* Container */
+.container-main-section-1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
+.background-main-section-1 {
+    width: 1280px;
+    border-radius: 30px;
+    padding: 40px;
+}
+
+/* Main Content */
+.content-main-section-1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-content-main-section-1 {
+    width: 60%;
+}
+
+.right-content-main-section-1 {
+    width: 35%;
+}
+
+/* Location List */
+.location-list-main-section-1 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.location-item-main-section-1 {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #111;
+    display: inline-block; /* Permet à l'élément de s'ajuster à la longueur du texte */
+    white-space: nowrap; /* Évite le retour à la ligne si le texte est trop long */
+    max-width: fit-content; /* S'assure que l'élément prend la taille du contenu */
+}
+
+
+
+/* Titles and Buttons */
+
+/* Réduire l'espace entre les titres */
+.title-main-section-1,
+.heading-main-section-1,
+.subheading-main-section-1 {
+    line-height: 1.2; /* Ajuster la hauteur de ligne pour réduire l'espace vertical */
+}
+
+/* Si vous voulez également ajuster la marge supérieure du premier titre */
+.heading-main-section-1 {
+    margin-top: 10px; /* Ajuster cette valeur selon vos besoins */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.title-main-section-1 {
+   
+    margin-bottom: 40px;
+}
+
+.heading-main-section-1 {
+    font-size: 61px;
+    margin-bottom: 10px;
+}
+
+.subheading-main-section-1 {
+    font-size: 54px;
+    
+}
+
+.button-main-section-1 {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.button-main-section-1:hover {
+    background-color: #333;
+}
+
+/* Paragraphs */
+.paragraph-main-section-1 {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Map */
+.map-main-section-1 {
+    height: 100%;
+    border-radius: 30px;
+    background: url('./public/asa-sarl-0000000-1@2x.png') no-repeat center;
+    background-size: cover;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1275px) {
+    .content-main-section-1 {
+        flex-direction: column;
+    }
+
+    .left-content-main-section-1, .right-content-main-section-1 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .location-item-main-section-1 {
+        font-size: 16px;
+    }
+
+    .heading-main-section-1 {
+        font-size: 28px;
+    }
+
+    .subheading-main-section-1 {
+        font-size: 20px;
+    }
+
+    .button-main-section-1 {
+        padding: 8px 16px;
+    }
+
+    .paragraph-main-section-1 {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .location-item-main-section-1 {
+        font-size: 14px;
+    }
+
+    .heading-main-section-1 {
+        font-size: 24px;
+    }
+
+    .subheading-main-section-1 {
+        font-size: 18px;
+    }
+
+    .button-main-section-1 {
+        padding: 6px 12px;
+    }
+
+    .paragraph-main-section-1 {
+        font-size: 12px;
+    }
+}
+
+
+/*****/
 .card {
   position: sticky;
   top: 0;
@@ -7788,6 +7947,15 @@
   overflow: hidden;
   box-shadow: 0 25px 50px -12px hsla(265.3, 20%, 10%, 35%);
   transform-origin: center top;
+}
+
+.cards {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: repeat(var(--cards-count), var(--card-height));
+  gap: 40px 0;
 }
 
 .card__image-container {

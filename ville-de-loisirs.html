@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans Tifinagh:wght@400&display=swap" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="./js/script.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
 </head>
@@ -58,134 +59,38 @@
                             </div>
                         </div>
                     </div>
-                    <div class="container-wrapper">
-                    <div class="hero-page-container">
-                        <div class="hero-page-container1">
-                            <div class="hero-page-container2">
-                                <div class="hero-page-container3">
-                                    <div class="hero-page-casablanca-ville-effervescent">
-                                        Casablanca, ville effervescente et cosmopolite, a toujours été un
-                                        carrefour de cultures, d'innovations et de divertissements. Depuis
-                                        le début du XXe siècle, cette métropole marocaine a su se
-                                        distinguer par son dynamisme et sa capacité à offrir des loisirs
-                                        variés à ses habitants et visiteurs.
+                <div class="container-main-section-1">
+                    <section class="background-main-section-1">
+                        <div class="content-main-section-1">
+                            <div class="left-content-main-section-1">
+                                <div class="homepage-main-section-1">
+                                    <div class="location-list-main-section-1">
+                                        <div class="location-item-main-section-1">ساحة الدار البيضاء</div>
+                                        <div class="location-item-main-section-1">Jardin des Arènes de Casablanca</div>
+                                        <div class="location-item-main-section-1">ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ</div>
                                     </div>
+                                    <div class="title-main-section-1">
+                                        <h1 class="heading-main-section-1">ساحة الدار البيضاء</h1>
+                                        <h1 class="heading-main-section-1">Casablanca, ville de loisirs</h1>
+                                        <h1 class="heading-main-section-1">ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ ⵡⴰⵎⵎⴰⵙ ⵏ ⵜⵖⵓⵔ</h1>
+                                    </div>
+                                    <button class="button-main-section-1">Découvrir maintenant</button>
+                                    <p class="paragraph-main-section-1">من المهم الاعتناء بالمريض، وأن يتبعه المريض، لكن ذلك سيحدث في
+                                        وقت يكون فيه الكثير من العمل والألم.</p>
+                                    <p class="paragraph-main-section-1">Casablanca, ville effervescente et cosmopolite, a toujours été
+                                        un carrefour de cultures, d'innovations et de divertissements. Depuis le début du XXe siècle,
+                                        cette métropole marocaine a su se distinguer par son dynamisme et sa capacité à offrir des
+                                        loisirs variés à ses habitants et visiteurs.</p>
+                                    <p class="paragraph-main-section-1">ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ ⵡⴰⵎⵎⴰⵙ ⵏ ⵜⵖⵓⵔⵉⵡⵉⵏ ⵏ ⵜⵙⵎⵍⴰⵢⵜ ⴷ ⵉⵎⴰⴳⵔⴰⵡⵏ ⵏ ⵓⵏⵖⵎⵉⵙ ⴷ
+                                        ⵓⵎⵢⴰⵡⴰⴹ ⵏ ⵓⵙⵉⵏⴰⴳ ⴰⴳⵍⴷⴰⵏ ⵏ ⵜⵓⵙⵙⵏⴰ ⵜⴰⵎⴰⵣⵉⵖⵜ ⵓⵙⴼⵓⴳⵍⵓ ⵏ ⵓⵙⵖⵣⵏ ⵏ ⵜⵡⵏⵖⴰ ⵏ ⵜⴼⵉⵏⴰⵖ</p>
                                 </div>
+                            </div>
+                            <div class="right-content-main-section-1">
+                                <div id="map-main-section-1" class="map-main-section-1"></div>
                             </div>
                         </div>
-                        <footer class="hero-page-container4">
-                            <div class="hero-page-container5">
-                                <div class="hero-page-container6">
-                                    <div class="hero-page-div">
-                                        ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ ⵡⴰⵎⵎⴰⵙ ⵏ ⵜⵖⵓⵔⵉⵡⵉⵏ ⵏ ⵜⵙⵎⵍⴰⵢⵜ ⴷ ⵉⵎⴰⴳⵔⴰⵡⵏ ⵏ ⵓⵏⵖⵎⵉⵙ ⴷ
-                                        ⵓⵎⵢⴰⵡⴰⴹ ⵏ ⵓⵙⵉⵏⴰⴳ ⴰⴳⵍⴷⴰⵏ ⵏ ⵜⵓⵙⵙⵏⴰ ⵜⴰⵎⴰⵣⵉⵖⵜ ⵓⵙⴼⵓⴳⵍⵓ ⵏ ⵓⵙⵖⵣⵏ ⵏ ⵜⵡⵏⵖⴰ
-                                        ⵏ ⵜⴼⵉⵏⴰⵖ
-                                    </div>
-                                </div>
-                            </div>
-                        </footer>
-                        <main class="hero-page-container-parent">
-                            <div class="hero-page-container7">
-                                <div class="hero-page-svg"></div>
-                                <div class="hero-page-hero-title">
-                                    <div class="hero-page-container8">
-                                        <div class="hero-page-background"></div>
-                                        <div class="hero-page-background1"></div>
-                                    </div>
-                                </div>
-                                <div class="hero-page-div1">مصارعة الثيران - ساحة الدار البيضاء</div>
-                                <div class="hero-page-border"></div>
-                            </div>
-                            <div class="hero-page-container9">
-                                <div class="hero-page-container-wrapper">
-                                    <div class="hero-page-container10">
-                                        <div class="hero-page-background2"></div>
-                                        <div class="hero-page-background3"></div>
-                                    </div>
-                                </div>
-                                <div class="hero-page-tauromachie-arnes">
-                                    Tauromachie - Arènes de Casablanca
-                                </div>
-                                <div class="hero-page-border1"></div>
-                            </div>
-                            <section class="hero-page-page-title">
-                                <div class="hero-page-container11">
-                                    <div class="hero-page-svg1"></div>
-                                    <div class="hero-page-title-content">
-                                        <div class="hero-page-container12">
-                                            <div class="hero-page-background4"></div>
-                                            <div class="hero-page-background5"></div>
-                                        </div>
-                                    </div>
-                                    <div class="hero-page-div2">ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ</div>
-                                    <div class="hero-page-border2"></div>
-                                </div>
-                                <div class="hero-page-div3">ساحة الدار البيضاء.</div>
-                                <div class="hero-page-casablanca-ville-de">Casablanca, ville de loisirs</div>
-                                <div class="hero-page-div4">ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ ⵡⴰⵎⵎⴰⵙ ⵏ ⵜⵖⵓⵔ</div>
-                                <button class="hero-page-link">
-                                    <div class="hero-page-gradientblur">
-                                        <div class="hero-page-gradient">
-                                            <div class="hero-page-background6">
-                                                <div class="hero-page-dcouvrir-maintenant">Découvrir maintenant</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </button>
-                                <div class="hero-page-horizontal-divider"></div>
-                                <div class="hero-page-container13">
-                                    <div class="hero-page-container14">
-                                        <div class="hero-page-container15">
-                                            <div class="hero-page-div5">
-                                                من المهم الاعتناء بالمريض، وأن يتبعه المريض، لكن ذلك سيحدث في
-                                                وقت يكون فيه الكثير من العمل والألم.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="hero-page-container16">
-                                    <div class="hero-page-container17"></div>
-                                    <div class="hero-page-map-wrapper">
-                                        <div class="hero-page-map-content">
-                                          
-                                        <div class="hero-page-interactive-map-parent">
-                                            <div id="map" class="hero-page-interactive-map"></div>
-                                        </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="hero-page-footer">
-                                        <div class="hero-page-overlayoverlayblur">
-                                            <div class="hero-page-container18">
-                                                <div class="hero-page-container19">
-                                                    <img class="hero-page-frame-icon" loading="lazy" alt="" src="./public/frame.svg" />
-                                                </div>
-                                                <div class="hero-page-container20">
-                                                    <div class="hero-page-div6">
-                                                        <span>
-                                                            <p class="hero-page-p">أنت هنا</p>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="hero-page-overlayoverlayblur1">
-                                            <div class="hero-page-container21">
-                                                <div class="hero-page-container22">
-                                                    <img class="hero-page-vector-icon" loading="lazy" alt="" src="./public/vector.svg" />
-                                                </div>
-                                                <div class="hero-page-container23">
-                                                    <div class="hero-page-o">ⵍoⵔⴻⵎ ⵉⵒⵙⵓ</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                        </main>
-                    </div>
-
-                    </div>
+                    </section>
+                </div>
                 </div>
             </div>
             <div class="background-container">
@@ -228,6 +133,72 @@
                             </div>
                         </div>
                     </div>
+
+
+
+
+<div class="space space--small"></div>
+<div class="cards">
+    <div class="card" data-index="0">
+        <div class="card__inner">
+            <div class="card__image-container">
+                <img class="card__image"
+                    src="https://images.unsplash.com/photo-1620207418302-439b387441b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=100"
+                    alt="" />
+            </div>
+            <div class="card__content">
+                <h1 class="card__title">Card Title</h1>
+                <p class="card__description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta
+                    error nam eaque. Eum fuga laborum quos expedita iste saepe
+                    similique, unde possimus quia at magnam sed cupiditate?
+                    Reprehenderit, harum!
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="card" data-index="0">
+        <div class="card__inner">
+            <div class="card__image-container">
+                <img class="card__image"
+                    src="https://images.unsplash.com/photo-1620207418302-439b387441b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=100"
+                    alt="" />
+            </div>
+            <div class="card__content">
+                <h1 class="card__title">Card Title</h1>
+                <p class="card__description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta
+                    error nam eaque. Eum fuga laborum quos expedita iste saepe
+                    similique, unde possimus quia at magnam sed cupiditate?
+                    Reprehenderit, harum!
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="card" data-index="0">
+        <div class="card__inner">
+            <div class="card__image-container">
+                <img class="card__image"
+                    src="https://images.unsplash.com/photo-1620207418302-439b387441b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=100"
+                    alt="" />
+            </div>
+            <div class="card__content">
+                <h1 class="card__title">Card Title</h1>
+                <p class="card__description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta
+                    error nam eaque. Eum fuga laborum quos expedita iste saepe
+                    similique, unde possimus quia at magnam sed cupiditate?
+                    Reprehenderit, harum!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="space"></div>
+
+
+
+
                     <div class="container39">
                         <div class="history-content-wrapper">
                             <div class="history-content">
@@ -542,6 +513,12 @@
                             </div>
                         </div>
                     </div>
+
+
+
+
+
+
                     <div class="link-wrapper">
                         <div class="link4">
                             <div class="gradientblur1">
@@ -1485,7 +1462,7 @@
 
    <script>
     // Initialisation de la carte
-    var map = L.map('map').setView([33.588892, -7.639583], 25); // Centrer la carte sur le jardin public
+    var map = L.map('map-main-section-1').setView([33.588892, -7.639583], 25); // Centrer la carte sur le jardin public
 
     // Ajouter une couche de carte (OpenStreetMap)
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -1508,6 +1485,7 @@
             .bindPopup('<b>Panneau QR Code ' + (index + 1) + '</b><br />Scannez le code QR pour plus d\'informations.');
     });
 </script>
+
 
 </body>
 

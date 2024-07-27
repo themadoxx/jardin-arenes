@@ -1,0 +1,164 @@
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f7f6;
+  color: #111011;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.background {
+  width: 1280px;
+  background: linear-gradient(180deg, #f9f7f6, rgba(247, 244, 242, 0) 83.55%);
+  border-radius: 30px;
+  padding: 40px;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+}
+
+header .container2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .link-icon {
+  width: 160px;
+  height: 155px;
+  cursor: pointer;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #111011;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+header .link1 a {
+  color: #fff;
+  background-color: #000;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+/* Main Content */
+.container15 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container15 .blur {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container16, .container18, .container20 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  border: 1px solid #aaa;
+  border-radius: 30px;
+}
+
+.container16 .div,
+.container18 .jardin-des-arnes,
+.container20 .div1 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+/* Map Section */
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 645px;
+  background: url('./public/asa-sarl-0000000-1@2x.png') no-repeat center;
+  background-size: cover;
+}
+
+.map-pin-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.map-pin-info .wrapper-map-scroll img {
+  width: 100%;
+  height: auto;
+}
+
+/* Overlay Section */
+.overlayoverlayblur,
+.overlayoverlayblur1 {
+  backdrop-filter: blur(5px);
+  background-color: rgba(245, 245, 245, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.overlayoverlayblur p,
+.overlayoverlayblur1 p {
+  margin: 0;
+  font-size: 16px;
+  color: #111011;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1275px) {
+  .container15 .blur {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .container-group {
+    min-height: auto;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  header nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .container15 .blur {
+    gap: 20px;
+  }
+
+  .background {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header .container2 {
+    flex-wrap: wrap;
+  }
+}
