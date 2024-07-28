@@ -1,220 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Stacking Animation</title>
+  <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/aatjs/dist/aat.min.js"></script>
 
-  <link rel="stylesheet" href="./styles/global.css" />
-  <link rel="stylesheet" href="./styles/test.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans Tifinagh:wght@400&display=swap" />
 </head>
 
 <body>
-  <div class="container">
-    <section class="background">
-      <header class="container1">
-        <div class="container2">
-          <img class="link-icon" loading="lazy" alt="" src="./public/link@2x.png" id="linkImage" />
-
-          <nav class="container3">
-            <div class="container4">
-              <div class="container5">
-                <a class="histoire">Histoire</a>
-              </div>
-            </div>
-            <div class="container6">
-              <div class="container7">
-                <a class="dcouvrir">Découvrir</a>
-              </div>
-            </div>
-            <div class="container8">
-              <div class="container9">
-                <a class="patrimoine">Patrimoine</a>
-              </div>
-            </div>
-            <div class="container10">
-              <div class="container11">
-                <div class="link">
-                  <a class="faq">FAQ</a>
-                </div>
-              </div>
-            </div>
-          </nav>
-          <div class="container12">
-            <div class="link1">
-              <div class="container13">
-                <div class="container14">
-                  <a class="mot-du-prsident">Mot du Président</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-      <div class="container15">
-        <div class="blur">
-          <div class="horizontal-divider"></div>
-          <div class="container-parent">
-            <div class="container16">
-              <div class="svg"></div>
-              <div class="image-titles">
-                <div class="container17">
-                  <div class="background1"></div>
-                  <div class="background2"></div>
-                </div>
-              </div>
-              <div class="div">ساحة الدار البيضاء</div>
-              <div class="border"></div>
-            </div>
-            <div class="container18">
-              <div class="container-wrapper">
-                <div class="container19">
-                  <div class="background3"></div>
-                  <div class="background4"></div>
-                </div>
-              </div>
-              <div class="jardin-des-arnes">
-                Jardin des Arènes de Casablanca
-              </div>
-              <div class="border1"></div>
-            </div>
-            <div class="container-group">
-              <div class="container20">
-                <div class="svg1"></div>
-                <div class="city-title-container">
-                  <div class="container21">
-                    <div class="background5"></div>
-                    <div class="background6"></div>
-                  </div>
-                </div>
-                <div class="div1">ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ</div>
-                <div class="border2"></div>
-              </div>
-              <div class="div2">ساحة الدار البيضاء.</div>
-              <div class="casablanca-ville-de">
-                Casablanca, ville de loisirs
-              </div>
-              <div class="div3">ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ ⵡⴰⵎⵎⴰⵙ ⵏ ⵜⵖⵓⵔ</div>
-              <div class="link2">
-                <div class="gradientblur">
-                  <div class="gradient">
-                    <div class="background7">
-                      <div class="dcouvrir-maintenant">
-                        Découvrir maintenant
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="container22">
-                <div class="container23">
-                  <div class="container24">
-                    <div class="div4">
-                      من المهم الاعتناء بالمريض، وأن يتبعه المريض، لكن ذلك
-                      سيحدث في وقت يكون فيه الكثير من العمل والألم.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="background-parent">
-                <img class="background-icon" alt="" src="./public/background@2x.png" />
-
-                <div class="container25">
-                  <div class="container26">
-                    <div class="container27">
-                      <div class="casablanca-ville-effervescent">
-                        Casablanca, ville effervescente et cosmopolite, a
-                        toujours été un carrefour de cultures, d'innovations
-                        et de divertissements. Depuis le début du XXe siècle,
-                        cette métropole marocaine a su se distinguer par son
-                        dynamisme et sa capacité à offrir des loisirs variés à
-                        ses habitants et visiteurs.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="container28">
-                  <div class="container29"></div>
-                  <div class="nested-map">
-                    <div class="map-container">
-                      <div class="asa-sarl-0000000-1-parent">
-                        <img class="asa-sarl-0000000-1" alt="" src="./public/asa-sarl-0000000-1@2x.png" />
-
-                        <img class="icons-pin" loading="lazy" alt="" src="./public/icons--pin@2x.png" />
-                      </div>
-                      <div class="map-pin-info">
-                        <div class="wrapper-map-scroll">
-                          <img class="map-scroll-icon" alt="" src="./public/map-scroll.svg" />
-                        </div>
-                        <div class="asa-sarl-0000000-1-group">
-                          <img class="asa-sarl-0000000-11" alt="" src="./public/asa-sarl-0000000-1-1@2x.png" />
-
-                          <img class="icons-pin1" alt="" src="./public/icons--pin-1@2x.png" />
-                        </div>
-                        <div class="asa-sarl-0000000-1-container">
-                          <img class="asa-sarl-0000000-12" alt="" src="./public/asa-sarl-0000000-1-1@2x.png" />
-
-                          <img class="icons-pin2" alt="" src="./public/icons--pin-2@2x.png" />
-                        </div>
-                        <img class="map-pin-info-child" alt="" src="./public/group-4.svg" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="overlayoverlayblur-parent">
-                    <div class="overlayoverlayblur">
-                      <div class="container30">
-                        <div class="container31">
-                          <img class="frame-icon" loading="lazy" alt="" src="./public/frame.svg" />
-                        </div>
-                        <div class="container32">
-                          <div class="div5">
-                            <span>
-                              <p class="p">أنت هنا</p>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="overlayoverlayblur1">
-                      <div class="container33">
-                        <div class="container34">
-                          <img class="vector-icon" loading="lazy" alt="" src="./public/vector.svg" />
-                        </div>
-                        <div class="container35">
-                          <div class="o">ⵍoⵔⴻⵎ ⵉⵒⵙⵓ</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="container36">
-            <div class="container37">
-              <div class="container38">
-                <div class="div6">
-                  ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ ⵡⴰⵎⵎⴰⵙ ⵏ ⵜⵖⵓⵔⵉⵡⵉⵏ ⵏ ⵜⵙⵎⵍⴰⵢⵜ ⴷ ⵉⵎⴰⴳⵔⴰⵡⵏ ⵏ ⵓⵏⵖⵎⵉⵙ ⴷ
-                  ⵓⵎⵢⴰⵡⴰⴹ ⵏ ⵓⵙⵉⵏⴰⴳ ⴰⴳⵍⴷⴰⵏ ⵏ ⵜⵓⵙⵙⵏⴰ ⵜⴰⵎⴰⵣⵉⵖⵜ ⵓⵙⴼⵓⴳⵍⵓ ⵏ ⵓⵙⵖⵣⵏ ⵏ
-                  ⵜⵡⵏⵖⴰ ⵏ ⵜⴼⵉⵏⴰⵖ
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <div class="card-section">
+<div class="space space--small"></div>
+<div class="cards">
+  <div class="card" data-index="0">
+    <div class="card__inner">
+      <div class="card__image-container">
+        <img class="card__image"
+          src="https://images.unsplash.com/photo-1620207418302-439b387441b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=100"
+          alt="" />
       </div>
-    </section>
+      <div class="card__content">
+        <h1 class="card__title">Card Title</h1>
+        <p class="card__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta
+          error nam eaque. Eum fuga laborum quos expedita iste saepe
+          similique, unde possimus quia at magnam sed cupiditate?
+          Reprehenderit, harum!
+        </p>
+      </div>
+    </div>
   </div>
+  <div class="card" data-index="0">
+    <div class="card__inner">
+      <div class="card__image-container">
+        <img class="card__image"
+          src="https://images.unsplash.com/photo-1620207418302-439b387441b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=100"
+          alt="" />
+      </div>
+      <div class="card__content">
+        <h1 class="card__title">Card Title</h1>
+        <p class="card__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta
+          error nam eaque. Eum fuga laborum quos expedita iste saepe
+          similique, unde possimus quia at magnam sed cupiditate?
+          Reprehenderit, harum!
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card" data-index="0">
+    <div class="card__inner">
+      <div class="card__image-container">
+        <img class="card__image"
+          src="https://images.unsplash.com/photo-1620207418302-439b387441b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=100"
+          alt="" />
+      </div>
+      <div class="card__content">
+        <h1 class="card__title">Card Title</h1>
+        <p class="card__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta
+          error nam eaque. Eum fuga laborum quos expedita iste saepe
+          similique, unde possimus quia at magnam sed cupiditate?
+          Reprehenderit, harum!
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="space"></div>
+</div>
 
   <script>
-    var linkImage = document.getElementById("linkImage");
-    if (linkImage) {
-      linkImage.addEventListener("click", function (e) {
-        // Please sync "diplomatic-darling-319615.framer.app by html.to.design ❤️ FREE version - 17/07/2024, 4:17:55 CEST" to the project
-      });
+  // This was built using aat.js: https://github.com/TahaSh/aat
+
+  const { ScrollObserver, valueAtPercentage } = aat
+
+  const cardsContainer = document.querySelector('.cards')
+  const cards = document.querySelectorAll('.card')
+  cardsContainer.style.setProperty('--cards-count', cards.length)
+  cardsContainer.style.setProperty(
+    '--card-height',
+    `${cards[0].clientHeight}px`
+  )
+  Array.from(cards).forEach((card, index) => {
+    const offsetTop = 20 + index * 20
+    card.style.paddingTop = `${offsetTop}px`
+    if (index === cards.length - 1) {
+      return
     }
+    const toScale = 1 - (cards.length - 1 - index) * 0.1
+    const nextCard = cards[index + 1]
+    const cardInner = card.querySelector('.card__inner')
+    ScrollObserver.Element(nextCard, {
+      offsetTop,
+      offsetBottom: window.innerHeight - card.clientHeight
+    }).onScroll(({ percentageY }) => {
+      cardInner.style.scale = valueAtPercentage({
+        from: 1,
+        to: toScale,
+        percentage: percentageY
+      })
+      cardInner.style.filter = `brightness(${valueAtPercentage({
+        from: 1,
+        to: 0.6,
+        percentage: percentageY
+      })})`
+    })
+  })
   </script>
 </body>
 

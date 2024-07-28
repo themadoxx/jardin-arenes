@@ -7934,104 +7934,215 @@
 
 
 /*****/
-.custom-card-section * {
-  box-sizing: border-box;
+:root {
+	--unique-card-height: 40vw;
+	--unique-card-margin: 4vw;
+	--unique-card-top-offset: 1em;
+	--unique-numcards: 4;
+	--unique-outline-width: 0px;
 }
 
-.custom-card-section body {
-  background: hsl(265.3, 10%, 75%);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
-    sans-serif;
+#unique-cards {
+	padding-bottom: calc(var(--unique-numcards) * var(--unique-card-top-offset)); /* Make place at bottom, as items will slide to that position*/
+	margin-bottom: var(--unique-card-margin); /* Don't include the --unique-card-margin in padding, as that will affect the scroll-timeline*/
 }
 
-.custom-card-section .card {
-  position: sticky;
-  top: 0;
+#unique-card_1 {
+	--unique-index: 1;
 }
 
-.custom-card-section .card__inner {
-  will-change: transform;
-  background: white;
-  border-radius: 14px;
-  display: flex;
-  overflow: hidden;
-  box-shadow: 0 25px 50px -12px hsla(265.3, 20%, 10%, 35%);
-  transform-origin: center top;
+#unique-card_2 {
+	--unique-index: 2;
 }
 
-.custom-card-section .cards {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-rows: repeat(var(--cards-count), var(--card-height));
-  gap: 40px 0;
+#unique-card_3 {
+	--unique-index: 3;
 }
 
-.custom-card-section .card__image-container {
-  display: flex;
-  width: 40%;
-  flex-shrink: 0;
+#unique-card_4 {
+	--unique-index: 4;
 }
 
-.custom-card-section .card__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  aspect-ratio: 1;
+.unique-card {
+	position: sticky;
+	top: 0;
+	padding-top: calc(var(--unique-index) * var(--unique-card-top-offset));
 }
 
-.custom-card-section .card__content {
-  padding: 40px 30px;
-  display: flex;
-  flex-direction: column;
+@supports (animation-timeline: works) {
+
+	@scroll-timeline unique-cards-element-scrolls-in-body {
+		source: selector(body);
+		scroll-offsets:
+			/* Start when the start edge touches the top of the scrollport */
+			selector(#unique-cards) start 1,
+			/* End when the start edge touches the start of the scrollport */
+			selector(#unique-cards) start 0
+		;
+		start: selector(#unique-cards) start 1; /* Start when the start edge touches the top of the scrollport */
+		end: selector(#unique-cards) start 0; /* End when the start edge touches the start of the scrollport */
+		time-range: 4s;
+	}
+
+	.unique-card {
+		--unique-index0: calc(var(--unique-index) - 1); /* 0-based index */
+		--unique-reverse-index: calc(var(--unique-numcards) - var(--unique-index0)); /* reverse index */
+		--unique-reverse-index0: calc(var(--unique-reverse-index) - 1); /* 0-based reverse index */
+	}
+	
+	.unique-card__content {
+		transform-origin: 50% 0%;
+		will-change: transform;
+
+		--unique-duration: calc(var(--unique-reverse-index0) * 1s);
+		--unique-delay: calc(var(--unique-index0) * 1s);
+
+		animation: var(--unique-duration) linear unique-scale var(--unique-delay) forwards;
+		animation-timeline: unique-cards-element-scrolls-in-body;
+	}
+
+	@keyframes unique-scale {
+		to {
+			transform:
+				scale(calc(
+					1.1
+					-
+					calc(0.1 * var(--unique-reverse-index))
+				));
+		}
+	}
 }
 
-.custom-card-section .card__title {
-  padding: 0;
-  margin: 0;
-  font-size: 60px;
-  font-weight: 600;
-  color: #16263a;
+/** DEBUG **/
+
+#unique-debug {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+}
+#unique-debug::after {
+  content: " Show Debug";
+  margin-left: 1.5em;
+  color: white;
+  white-space: nowrap;
 }
 
-.custom-card-section .card__description {
-  line-height: 1.4;
-  font-size: 24px;
-  color: #16263a;
+#unique-debug:checked ~ main {
+  --unique-outline-width: 1px;
 }
 
-.custom-card-section .space {
-  height: 90vh;
+
+/** PAGE STYLING **/
+
+* { /* Poor Man's Reset */
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-.custom-card-section .space--small {
-  height: 40vh;
+body {
+	background: rgb(58 29 43);
+	color: rgb(255, 255, 255);
+	text-align: center;
+
+	font-size: calc(1em + 0.5vw);
 }
 
-@media (max-width: 600px) {
-  .custom-card-section .card__inner {
-    flex-direction: column;
-  }
+header,
+main {
+	width: 80vw;
+	margin: 0 auto;
+}
 
-  .custom-card-section .card__image-container {
-    width: 100%;
-  }
+header {
+	height: 100vh;
+	display: grid;
+	place-items: center;
+}
 
-  .custom-card-section .card__image {
-    aspect-ratio: 16 / 9;
-  }
+#unique-cards {
+	list-style: none;
+	outline: calc(var(--unique-outline-width) * 10) solid blue;
+	
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(var(--unique-numcards), var(--unique-card-height));
+	gap: var(--unique-card-margin);
+}
 
-  .custom-card-section .card__title {
-    font-size: 32px;
-  }
+.unique-card {
+	outline: var(--unique-outline-width) solid hotpink;
+}
 
-  .custom-card-section .card__description {
-    font-size: 16px;
-  }
+.unique-card__content {
+	box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+	background: rgb(255, 255, 255);
+	color: rgb(10, 5, 7);
+	border-radius: 1em;
+	overflow: hidden;
 
-  .custom-card-section .card__content {
-    padding: 30px 20px;
-  }
+	display: grid;
+	grid-template-areas: "text img";
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+
+	align-items: stretch;
+	outline: var(--unique-outline-width) solid lime;
+}
+
+.unique-card__content > div {
+	grid-area: text;
+	width: 80%;
+	place-self: center;
+	text-align: left;
+
+	display: grid;
+	gap: 1em;
+	place-items: start;
+}
+
+.unique-card__content > figure {
+	grid-area: img;
+	overflow: hidden;
+}
+
+.unique-card__content > figure > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+h1 {
+	font-weight: 300;
+	font-size: 3.5em;
+}
+
+h2 {
+	font-weight: 300;
+	font-size: 2.5em;
+}
+
+p {
+	font-family: sans-serif;
+	font-weight: 300;
+	line-height: 1.42;
+}
+
+.unique-btn {
+	background: rgb(188 87 36);
+	color: rgb(255 255 255);
+	text-decoration: none;
+	display: inline-block;
+	padding: 0.5em;
+	border-radius: 0.25em;
+}
+
+aside {
+	width: 50vw;
+	margin: 0 auto;
+	text-align: left;
+}
+
+aside p {
+	margin-bottom: 1em;
 }
