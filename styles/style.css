@@ -7934,12 +7934,23 @@
 
 
 /*****/
-.card {
+.custom-card-section * {
+  box-sizing: border-box;
+}
+
+.custom-card-section body {
+  background: hsl(265.3, 10%, 75%);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.custom-card-section .card {
   position: sticky;
   top: 0;
 }
 
-.card__inner {
+.custom-card-section .card__inner {
   will-change: transform;
   background: white;
   border-radius: 14px;
@@ -7949,7 +7960,7 @@
   transform-origin: center top;
 }
 
-.cards {
+.custom-card-section .cards {
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
@@ -7958,26 +7969,26 @@
   gap: 40px 0;
 }
 
-.card__image-container {
+.custom-card-section .card__image-container {
   display: flex;
   width: 40%;
   flex-shrink: 0;
 }
 
-.card__image {
+.custom-card-section .card__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   aspect-ratio: 1;
 }
 
-.card__content {
+.custom-card-section .card__content {
   padding: 40px 30px;
   display: flex;
   flex-direction: column;
 }
 
-.card__title {
+.custom-card-section .card__title {
   padding: 0;
   margin: 0;
   font-size: 60px;
@@ -7985,42 +7996,42 @@
   color: #16263a;
 }
 
-.card__description {
+.custom-card-section .card__description {
   line-height: 1.4;
   font-size: 24px;
   color: #16263a;
 }
 
-.space {
+.custom-card-section .space {
   height: 90vh;
 }
 
-.space--small {
+.custom-card-section .space--small {
   height: 40vh;
 }
 
 @media (max-width: 600px) {
-  .card__inner {
+  .custom-card-section .card__inner {
     flex-direction: column;
   }
 
-  .card__image-container {
+  .custom-card-section .card__image-container {
     width: 100%;
   }
 
-  .card__image {
+  .custom-card-section .card__image {
     aspect-ratio: 16 / 9;
   }
 
-  .card__title {
+  .custom-card-section .card__title {
     font-size: 32px;
   }
 
-  .card__description {
+  .custom-card-section .card__description {
     font-size: 16px;
   }
 
-  .card__content {
+  .custom-card-section .card__content {
     padding: 30px 20px;
   }
 }
