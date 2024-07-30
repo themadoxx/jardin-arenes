@@ -459,14 +459,14 @@
 
 .container-scroll-image {
     display: flex;
-   /* height: 200vh; /* Assurez-vous que la page soit assez longue pour scroller */
+   min-height: 200vh; /* Assurez-vous que la page soit assez longue pour scroller */
 }
 
 .text-section {
     width: 50%;
     padding: 100px;
     overflow-y: auto;
-    height: 100vh;
+  /*  height: 100vh;*/
     font-size: 2.5em;
 }
 
@@ -490,3 +490,5 @@
     margin-right: auto;
     display: block;
 }
+
+/***************UN LIEU EMBLématique******************/
