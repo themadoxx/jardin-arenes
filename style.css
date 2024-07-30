@@ -1,4 +1,290 @@
-/* style.css */
+
+/****HERO ET NAVBAR********/
+.background-wrapper {
+  background-color: #f8f9fa; /* Changez la couleur de fond si nécessaire */
+  padding: 20px;
+}
+
+.background1 {
+  background: linear-gradient(180deg, #f9f7f6, rgba(247, 244, 242, 0) 83.55%);
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid white; /* Montre une bordure blanche */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link-icon {
+  width: 10vh; /* Ajustez la taille du logo si nécessaire */
+  height: auto;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.buttons-container > div {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.mot-du-prsident {
+  white-space: nowrap;
+}
+/* Container */
+.container-main-section-1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.background-main-section-1 {
+    width: 1280px;
+    border-radius: 30px;
+    padding: 40px;
+}
+
+/* Main Content */
+.content-main-section-1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-content-main-section-1 {
+    width: 60%;
+}
+
+.right-content-main-section-1 {
+    width: 35%;
+}
+
+/* Location List */
+.location-list-main-section-1 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.location-item-main-section-1 {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #111;
+    display: inline-block; /* Permet à l'élément de s'ajuster à la longueur du texte */
+    white-space: nowrap; /* Évite le retour à la ligne si le texte est trop long */
+    max-width: fit-content; /* S'assure que l'élément prend la taille du contenu */
+}
+
+
+
+/* Titles and Buttons */
+
+/* Réduire l'espace entre les titres */
+.title-main-section-1,
+.heading-main-section-1,
+.subheading-main-section-1 {
+    line-height: 1.2; /* Ajuster la hauteur de ligne pour réduire l'espace vertical */
+}
+
+/* Si vous voulez également ajuster la marge supérieure du premier titre */
+.heading-main-section-1 {
+    margin-top: 10px; /* Ajuster cette valeur selon vos besoins */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.title-main-section-1 {
+   
+    margin-bottom: 40px;
+}
+
+.heading-main-section-1 {
+    font-size: 61px;
+    margin-bottom: 10px;
+}
+
+.subheading-main-section-1 {
+    font-size: 54px;
+    
+}
+
+.button-main-section-1 {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.button-main-section-1:hover {
+    background-color: #333;
+}
+
+/* Paragraphs */
+.paragraph-main-section-1 {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Map */
+.map-main-section-1 {
+    height: 100%;
+    border-radius: 30px;
+    background: url('./public/asa-sarl-0000000-1@2x.png') no-repeat center;
+    background-size: cover;
+}
+
+
+.container3,
+.container4 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.histoire {
+  position: relative;
+  line-height: 32px;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 55px;
+}
+
+.container2,
+.container9 {
+  display: flex;
+  justify-content: flex-start;
+} 
+
+.container2 {
+  width: 331px;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--gap-13xl);
+  opacity: 0.3;
+  max-width: 100%;
+}
+
+.hero-page-container4,
+.hero-page-container5 {
+  max-width: 100%;
+}
+
+.container5 {
+  flex: 1;
+  min-width: 46px;
+}
+
+.container5,
+.container6 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.dcouvrir {
+  position: relative;
+  line-height: 32px;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 71px;
+}
+
+.dcouvrir {
+  position: relative;
+  line-height: 32px;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 71px;
+}
+
+.container7 {
+  flex: 1;
+  min-width: 51px;
+}
+
+
+
+
+/* Responsive Styles */
+@media screen and (max-width: 1275px) {
+    .content-main-section-1 {
+        flex-direction: column;
+    }
+
+    .left-content-main-section-1, .right-content-main-section-1 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .location-item-main-section-1 {
+        font-size: 16px;
+    }
+
+    .heading-main-section-1 {
+        font-size: 28px;
+    }
+
+    .subheading-main-section-1 {
+        font-size: 20px;
+    }
+
+    .button-main-section-1 {
+        padding: 8px 16px;
+    }
+
+    .paragraph-main-section-1 {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .location-item-main-section-1 {
+        font-size: 14px;
+    }
+
+    .heading-main-section-1 {
+        font-size: 24px;
+    }
+
+    .subheading-main-section-1 {
+        font-size: 18px;
+    }
+
+    .button-main-section-1 {
+        padding: 6px 12px;
+    }
+
+    .paragraph-main-section-1 {
+        font-size: 12px;
+    }
+     .container2 {
+    flex-wrap: wrap;
+    gap: var(--gap-base);
+  }
+}
+
+@media (max-width: 768px) {
+  .buttons-container {
+    display: none;
+  }
+}
+/* Cartes qui scrollent */
 .card-section * {
   box-sizing: border-box;
 }
@@ -99,4 +385,116 @@
   .card-section .card__content {
     padding: 30px 20px;
   }
+}
+
+
+
+
+/************/
+.custom-div-container {
+  padding: 20px; /* Ajoute 20px de blanc autour de la div */
+  background-color: white; /* Fond blanc autour de la div */
+  border-radius: 10px; /* Arrondit les bords extérieurs */
+}
+
+.custom-div {
+  background: linear-gradient(180deg, #f9f7f6, rgba(247, 244, 242, 0) 83.55%);
+  border-radius: 10px; /* Arrondit les bords de la div interne */
+  padding: 20px;
+  border: 1px solid white; /* Montre une bordure blanche */
+}
+
+
+/******************/
+
+.container-loisirs-1 {
+
+  padding: 2rem;
+ 
+  border-radius: 8px;
+}
+
+
+
+.title-ar {
+  font-size: 1.8rem;
+    text-align: center;
+  margin-bottom: 1rem;
+}
+
+.title-fr {
+  font-size: 1.5rem;
+    text-align: center;
+  margin-bottom: 1rem;
+}
+
+.content-loisirs-1, .footer-loisirs-1 {
+  margin-top: 2rem;
+}
+
+
+
+.text-ar, .text-ber, .text-fr {
+  direction: rtl;
+    text-align: center;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    padding: 1rem;
+  }
+  
+  .title-ar {
+    font-size: 1.5rem;
+  }
+  
+  .title-fr {
+    font-size: 1.2rem;
+  }
+}
+
+/********************/
+.container-parralax {
+    display: block;
+}
+
+.text-column-parralax, .image-column-parralax {
+    width: 100%;
+}
+
+.image-column-parralax img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 1024px) {
+    .container-parralax {
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .text-column-parralax {
+        flex: 1;
+        overflow-y: auto;
+        padding: 20px;
+    }
+
+    .image-column-parralax {
+        flex: 1;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image-column-parralax img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
 }

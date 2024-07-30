@@ -178,3 +178,11 @@ body {
   --br-base: 16px;
   --br-5xs: 8px;
 }
+
+.titres-des-cartes h4 {
+  margin-bottom: -51px; /* Ajustez cette valeur pour réduire l'espace */
+}
+
+.paragraphe-cartes p {
+  margin-bottom: -51px; /* Ajustez cette valeur pour réduire l'espace */
+}

@@ -2,17 +2,89 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Card Stacking Animation</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jardin des Arènes de Maarif</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans Tifinagh:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!--  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />-->
     <script src="https://unpkg.com/aatjs/dist/aat.min.js"></script>
-
 </head>
 
 <body>
-  <div class="card-section">
-<div class="space space--small"></div>
+  <div class="custom-div-container">
+<div class="custom-div">
+      <div class="background-wrapper">
+        <div class="background1">
+          <div class="container">
+            <img class="link-icon" alt="" src="./assets/img/logo-arrondissement.png" id="linkImage" />
+            <div class="buttons-container">
+              <div class="histoire">Histoire</div>
+              <div class="dcouvrir">Découvrir</div>
+              <div class="patrimoine">Patrimoine</div>
+              <div class="faq">FAQ</div>
+            </div>
+            <div class="mot-du-prsident">Mot du Président</div>
+          </div>
+        </div>
+      </div>
+          <div class="container-main-section-1">
+            <section class="background-main-section-1">
+              <div class="content-main-section-1">
+                <div class="left-content-main-section-1">
+                  <div class="homepage-main-section-1">
+                    <div class="location-list-main-section-1">
+                      <div class="location-item-main-section-1">ساحة الدار البيضاء</div>
+                      <div class="location-item-main-section-1">Jardin des Arènes de Casablanca</div>
+                      <div class="location-item-main-section-1">ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ</div>
+                    </div>
+                    <div class="title-main-section-1">
+                      <h1 class="heading-main-section-1">ساحة الدار البيضاء</h1>
+                      <h1 class="heading-main-section-1">Casablanca, ville de loisirs</h1>
+                      <h1 class="heading-main-section-1">ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ ⵡⴰⵎⵎⴰⵙ ⵏ ⵜⵖⵓⵔ</h1>
+                    </div>
+                    <button class="button-main-section-1">Découvrir maintenant</button>
+                    <p class="paragraph-main-section-1">من المهم الاعتناء بالمريض، وأن يتبعه المريض، لكن ذلك سيحدث في
+                      وقت يكون فيه الكثير من العمل والألم.</p>
+                    <p class="paragraph-main-section-1">Casablanca, ville effervescente et cosmopolite, a toujours été
+                      un carrefour de cultures, d'innovations et de divertissements. Depuis le début du XXe siècle,
+                      cette métropole marocaine a su se distinguer par son dynamisme et sa capacité à offrir des
+                      loisirs variés à ses habitants et visiteurs.</p>
+                    <p class="paragraph-main-section-1">ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ ⵡⴰⵎⵎⴰⵙ ⵏ ⵜⵖⵓⵔⵉⵡⵉⵏ ⵏ ⵜⵙⵎⵍⴰⵢⵜ ⴷ ⵉⵎⴰⴳⵔⴰⵡⵏ ⵏ ⵓⵏⵖⵎⵉⵙ ⴷ
+                      ⵓⵎⵢⴰⵡⴰⴹ ⵏ ⵓⵙⵉⵏⴰⴳ ⴰⴳⵍⴷⴰⵏ ⵏ ⵜⵓⵙⵙⵏⴰ ⵜⴰⵎⴰⵣⵉⵖⵜ ⵓⵙⴼⵓⴳⵍⵓ ⵏ ⵓⵙⵖⵣⵏ ⵏ ⵜⵡⵏⵖⴰ ⵏ ⵜⴼⵉⵏⴰⵖ</p>
+                  </div>
+                </div>
+                <div class="right-content-main-section-1">
+                  <div id="map-main-section-1" class="map-main-section-1"></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      </div>
+</div>
+
+
+<div class="container-loisirs-1">
+  <h1 class="title-ar">اكتشف مصارعة الثيران في حلبة مصارعة الثيران</h1>
+  <h2 class="title-fr">Les arènes de Maarif : un symbole de divertissement</h2>
+  <h2 class="title-fr">ⵍoⵔⴻⵎ ⵉⵒⵙⵓⵎ ⴷoⵍoⵔ ⵙⵉⵜ ⴰⵎⴻⵜ, ⵛoⵏⵙⴻⵛⵜⴻⵜⵓⵔ ⴰⴷⵉⵒⵉⵙⵛⵉⵏⴳ ⴻⵍⵉⵜ</h2>
+
+  <div class="content-loisirs-1">
+    <p class="text-ber">ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ ⵡⴰⵎⵎⴰⵙⵙ ⵏ ⵜⵖⵓⵔⵉⵡⵉⵏ ⵜⵉⵏⴰⵥⵓⵕⵉⵏ</p>
+    <p class="text-ar">من المهم الاهتمام بالمريض، وأن يتبعه العميل من المهم الاهتمام بالمريض، وأن يتبعه العميل</p>
+    <p class="text-fr">L'histoire des arènes de Maarif est un exemple emblématique de cette tradition de divertissement qui a marqué les esprits et contribué à forger l'identité culturelle de Casablanca.</p>
+  </div>
+</div>
+
+
+<div class="card-section">
+<!--<div class="space space--small"></div>-->
 <div class="cards">
   <div class="card" data-index="0">
     <div class="card__inner">
@@ -72,6 +144,84 @@
 <div class="space"></div>
 </div>
 
+
+  <div class="custom-div-container">
+    <div class="custom-div">
+
+          <div class="container-loisirs-1">
+            <h1 class="title-ar">اكتشف مصارعة الثيران في حلبة مصارعة الثيران</h1>
+            <h2 class="title-fr">L’Histoire des Arènes</h2>
+            <h2 class="title-fr">ⵍoⵔⴻⵎ ⵉⵒⵙⵓⵎ ⴷoⵍoⵔ ⵙⵉⵜ ⴰⵎⴻⵜ, ⵛoⵏⵙⴻⵛⵜⴻⵜⵓⵔ ⴰⴷⵉⵒⵉⵙⵛⵉⵏⴳ ⴻⵍⵉⵜ</h2>
+
+            <div class="content-loisirs-1">
+              <p class="text-ber">ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ ⵡⴰⵎⵎⴰⵙⵙ ⵏ ⵜⵖⵓⵔⵉⵡⵉⵏ ⵜⵉⵏⴰⵥⵓⵕⵉⵏ</p>
+              <p class="text-ar">من المهم الاهتمام بالمريض، وأن يتبعه العميل من المهم الاهتمام بالمريض، وأن يتبعه العميل</p>
+              <p class="text-fr">L'histoire des arènes de Maarif est un exemple emblématique de cette tradition de divertissement
+                qui a marqué les esprits et contribué à forger l'identité culturelle de Casablanca.</p>
+            </div>
+          </div>
+
+
+<div class="container-parralax">
+  <div class="text-column-parralax">
+  Mais Casablanca ne s’est pas arrêtée à l’ère des arènes. Même après leur démolition en 1971, la ville a continué à
+  évoluer, à s’adapter et à diversifier ses offres de loisirs.
+    
+    <!-- Ajoutez plus de contenu ici pour permettre le défilement -->
+  </div>
+  <div class="image-column-parralax">
+    <img src="assets/img/picasso-casa.jpg" alt="Description" />
+  </div>
+</div>
+
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    // Initialisation de la carte
+    var map = L.map('map-main-section-1').setView([33.588892, -7.639583], 25); // Centrer la carte sur le jardin public
+
+    // Ajouter une couche de carte (OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Coordonnées des panneaux avec QR codes
+    var qrPins = [
+      [33.589, -7.640], // Coordonnée 1
+      [33.5891, -7.6395], // Coordonnée 2
+      [33.5888, -7.6397], // Coordonnée 3
+      [33.5885, -7.6396], // Coordonnée 4
+      [33.5887, -7.6393], // Coordonnée 5
+      [33.5889, -7.6394]  // Coordonnée 6
+    ];
+
+    // Ajout des pins sur la carte
+    qrPins.forEach(function (coords, index) {
+      L.marker(coords).addTo(map)
+        .bindPopup('<b>Panneau QR Code ' + (index + 1) + '</b><br />Scannez le code QR pour plus d\'informations.');
+    });
+  </script>
   <script>
   // This was built using aat.js: https://github.com/TahaSh/aat
 
