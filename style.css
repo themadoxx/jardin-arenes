@@ -5,6 +5,15 @@ body {
   line-height: normal;
 }
 
+body {
+  font-family: var(--font-inter) !important;
+} 
+
+h1, h2, h3, h4, h5 {
+   font-family: var(--font-inter) !important;
+   font-weight: normal !important;
+}
+
 :root {
   /* fonts */
   --font-inter: Inter;
@@ -66,7 +75,7 @@ body {
   background: linear-gradient(180deg, #f9f7f6, rgba(247, 244, 242, 0) 83.55%);
   border-radius: 10px;
   padding: 20px;
-  border: 1px solid white; /* Montre une bordure blanche */
+ /* border: 1px solid white;  */
 }
 
 .container {
@@ -106,7 +115,7 @@ body {
 .background-main-section-1 {
     width: 1280px;
     border-radius: 30px;
-    padding: 40px;
+    padding: 55px;
 }
 
 /* Main Content */
@@ -116,7 +125,7 @@ body {
 }
 
 .left-content-main-section-1 {
-    width: 60%;
+    width: 55%;
 }
 
 .right-content-main-section-1 {
@@ -156,7 +165,7 @@ body {
 /* Si vous voulez également ajuster la marge supérieure du premier titre */
 .heading-main-section-1 {
     margin-top: 10px; /* Ajuster cette valeur selon vos besoins */
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .title-main-section-1 {
@@ -348,8 +357,7 @@ body {
 
 .card-section body {
   background: hsl(265.3, 10%, 75%);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+  font-family: 'Inter',
     sans-serif;
 }
 
@@ -1276,6 +1284,12 @@ body {
     padding-left: 30px;
     box-sizing: border-box;
   }
+  .lieu-emblematique-container12 {
+  
+  height: 280px;
+ 
+
+}
 }
 @media screen and (max-width: 450px) {
   .lieu-emblematique-div,
