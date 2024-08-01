@@ -1169,13 +1169,74 @@ margin-bottom: 12vh;
   justify-content: flex-start;
   gap: 12.8px;
 }
-.lieu-emblematique-frame-wrapper {
+/* .lieu-emblematique-frame-wrapper {
   width: 647.8px;
   flex-direction: row;
   justify-content: flex-end;
- /* padding: 0 59px;*/
+ /* padding: 0 59px;
+  box-sizing: border-box;
+} */
+
+/* Style de base pour les liens */
+.lieu-emblematique-frame-nav a {
+  position: relative;
+  text-decoration: none;
+  color: gray; /* Couleur par défaut des liens */
+  padding: 10px 0; /* Ajustez selon vos besoins */
+  margin: 0 10px; /* Espace entre les liens */
+  font-size: 18px; /* Ajustez selon vos besoins */
+  font-family: var(--font-inter);
+}
+
+.lieu-emblematique-frame-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: gray; /* Couleur par défaut du trait */
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.lieu-emblematique-frame-nav a:hover::after {
+  transform: scaleX(1);
+}
+.lieu-emblematique-frame-nav a.active {
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+
+.lieu-emblematique-frame-nav a.active,
+.lieu-emblematique-frame-nav a.active::after {
+  color: black; /* Couleur du texte et du trait pour le bouton actif */
+}
+
+.lieu-emblematique-frame-nav a.active::after {
+  background-color: black; /* Couleur du trait pour le bouton actif */
+  transform: scaleX(1);
+}
+
+/* Container pour les liens */
+.lieu-emblematique-frame-wrapper {
+  display: flex;
+  justify-content: center; /* Centrer les liens horizontalement */
+  align-items: center; /* Centrer les liens verticalement */
+  width: 100%;
   box-sizing: border-box;
 }
+
+/* Alignement des éléments internes */
+.lieu-emblematique-frame-container {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 100%;
+}
+
 .lieu-emblematique-nt3eoptbxs2yub8fnfdeso5pt6ipn-icon {
   height: 781px;
   flex: 1;
@@ -1348,7 +1409,7 @@ margin-bottom: 12vh;
   }
   .lieu-emblematique-container12 {
   
-  height: 280px;
+  height: 360px;
  
 
 }
@@ -3348,3 +3409,157 @@ margin-bottom: 12vh;
     box-sizing: border-box;
   }
 }
+
+
+/***Reponsive 1ere section ********/
+@media screen and (max-width: 600px) {
+  .content-main-section-1 {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .left-content-main-section-1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .homepage-main-section-1 {
+    width: 100%;
+  }
+
+  .lieu-emblematique-pilules-avec-success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lieu-emblematique-container1,
+  .lieu-emblematique-container4,
+  .lieu-emblematique-container8 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .lieu-emblematique-border,
+  .lieu-emblematique-border1,
+  .lieu-emblematique-border2 {
+    margin: 0 auto;
+  }
+
+  .title-main-section-1 {
+    margin-bottom: 20px;
+  }
+
+  .heading-main-section-1 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  .button-main-section-1 {
+    padding: 8px 16px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .horizontal-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    margin: 10px 0;
+  }
+
+  .paragraph-main-section-1 {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .right-content-main-section-1 {
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+  }
+
+  .map-main-section-1 {
+    width: 100%;
+    height: 100%;
+    background-color: #eaeaea;
+  }
+}
+
+/***** Responsive section image bloquée ****/
+@media screen and (max-width: 700px) {
+  .custom-div-container {
+    padding: 10px;
+  }
+
+  .custom-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-loisirs-2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .title-ar,
+  .title-fr {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+  .content-loisirs-2 {
+    padding: 10px;
+  }
+
+  .text-ber,
+  .text-ar,
+  .text-fr {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .container-scroll-image {
+    width: 100%;
+  }
+
+  .text-section {
+    padding: 10px;
+  }
+
+  .paragraphe-sec-1,
+  .paragraphe-sec-2,
+  .paragraphe-sec-3,
+  .paragraphe-sec-4,
+  .paragraphe-sec-5 {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .image-section {
+    display: none;
+  }
+}
+
+/****** Responsive section commune avec boutons *****/
+
+@media screen and (max-width: 700px) {
+.lieu-emblematique-pilules-avec-success-parent {
+  gap: 33px;
+}
+}
+
+/***** Responsive avant dernière section *****/
+
+@media screen and (max-width: 700px){
+  .section-en-evolution-cette-fusion-du {
+  height: 391px;
+}
+  .section-footer-et-copyright-div, .section-footer-et-copyright-div1, .section-footer-et-copyright-la-mtamorphose-de {
+font-size: 22px;
+  }
+}
+  
+
