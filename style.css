@@ -131,7 +131,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .background-main-section-1 {
-    width: 75vh;
+    width: 100vh;
     border-radius: 30px;
   /*  padding: 55px; */
 }
@@ -145,12 +145,12 @@ h1, h2, h3, h4, h5 {
 }
 
 .left-content-main-section-1 {
-    width: 55%;
+    width: 43%;
 }
 
 .right-content-main-section-1 {
        width: 51%;
-    height: 47vh;
+    height: 56vh;
 }
 
 /* Location List */
@@ -184,7 +184,7 @@ h1, h2, h3, h4, h5 {
     line-height: 1.2; /* Ajuster la hauteur de ligne pour réduire l'espace vertical */
 }
 
-/* Si vous voulez également ajuster la marge supérieure du premier titre */
+
 .heading-main-section-1 {
     margin-top: 10px; /* Ajuster cette valeur selon vos besoins */
     font-family: var(--font-inter) !important;
@@ -196,7 +196,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .heading-main-section-1 {
-    font-size: 50px;
+    font-size: 42px;
     margin-bottom: 1px;
 }
 
@@ -593,11 +593,11 @@ margin-bottom: 12vh;
 }
 
 .text-section {
-    width: 580px;
+    width: 390px;
    /*  padding: 10px; */
     overflow-y: auto;
   /*  height: 100vh;*/
-    font-size: 1.8em;
+    font-size: 24px;
 }
 
 
@@ -615,7 +615,7 @@ margin-bottom: 12vh;
     position: sticky;
     top: 60%; /* Ajuste cette valeur pour que l'image commence plus bas */
     transform: translateY(-50%);
-    width: 514px; 
+    width: 430px; 
     margin-left: 0vh;
     margin-right: auto;
     display: block;
@@ -963,7 +963,7 @@ margin-bottom: 12vh;
 }
 .lieu-emblematique-les-arnes-de {
   width: 455px;
-  line-height: 62.4px;
+ /* line-height: 62.4px; */
   display: flex;
   align-items: center;
   max-width: 116%;
@@ -1025,7 +1025,7 @@ margin-bottom: 12vh;
   height: 194px;
   padding: 0;
   box-sizing: border-box;
-  font-size: var(--font-size-base-5);
+  font-size: 14px;
 }
 .lieu-emblematique-frame-parent,
 .lieu-emblematique-pilules-avec-success-parent {
@@ -1034,7 +1034,7 @@ margin-bottom: 12vh;
 .lieu-emblematique-frame-parent {
   align-self: stretch;
   gap: 45px;
-  font-size: var(--font-size-28xl-5);
+  font-size: 35px;
   color: var(--color-gray-100);
 }
 .lieu-emblematique-pilules-avec-success-parent {
@@ -1200,8 +1200,8 @@ margin-bottom: 12vh;
   max-width: 100%;
 }
 .lieu-emblematique-background6 {
-  margin-left: -2.5px;
-  height: 782px;
+ /* margin-left: -2.5px; */
+  height: 620px;
   flex: 1;
   border-radius: var(--br-45xl);
   background: linear-gradient(
@@ -1254,7 +1254,7 @@ margin-bottom: 12vh;
     position: relative;
     display: flex;
     flex-direction: row;
-    padding: 0 12% 10% 12%;
+    padding: 0 12% 0 12%;
     gap: 8%;
     line-height: normal;
     letter-spacing: normal;
