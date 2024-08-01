@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5 {
 /****HERO ET NAVBAR********/
 .background-wrapper {
   background-color: #f8f9fa; /* Changez la couleur de fond si nécessaire */
-  padding: 20px;
+  padding: 0 20px 0 20px;
 }
 
 .background1 {
@@ -87,6 +87,23 @@ h1, h2, h3, h4, h5 {
 .link-icon {
   width: 10vh; /* Ajustez la taille du logo si nécessaire */
   height: auto;
+}
+
+.horizontal-divider {
+  width: 466.3px;
+  height: 1px;
+  border-radius: var(--br-3xs);
+  background: linear-gradient(
+    270deg,
+    rgba(234, 232, 225, 0.2),
+    rgba(17, 16, 17, 0.2) 75.68%,
+    rgba(17, 16, 17, 0)
+  );
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  line-height: normal;
+  letter-spacing: normal;
 }
 
 .buttons-container {
@@ -116,7 +133,7 @@ h1, h2, h3, h4, h5 {
 .background-main-section-1 {
     width: 75vh;
     border-radius: 30px;
-    padding: 55px;
+  /*  padding: 55px; */
 }
 
 /* Main Content */
@@ -132,8 +149,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .right-content-main-section-1 {
-       width: 46%;
-    height: 46vh;
+       width: 51%;
+    height: 47vh;
 }
 
 /* Location List */
@@ -191,12 +208,12 @@ h1, h2, h3, h4, h5 {
 .button-main-section-1 {
     background-color: #000;
     color: #fff;
-    padding: 19px 33px;
+    padding: 16px 25px;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     margin-bottom: 20px;
-    font-size: 16px;
+    font-size: 14px;
     font-family: var(--font-inter);
 }
 
@@ -388,11 +405,12 @@ h1, h2, h3, h4, h5 {
 
 .card-section .cards {
     width: 100%;
-    max-width: 1122px;
+    max-width: 905px;
     margin: 0 auto;
     display: grid;
     grid-template-rows: repeat(var(--cards-count), var(--card-height));
     gap: 300px 0;
+    
 }
 
 .card-section .card__image-container {
@@ -401,7 +419,7 @@ h1, h2, h3, h4, h5 {
     flex-shrink: 0;
     flex-direction: column;
     padding: 20px;
-    gap: 10px;
+    gap: 40px;
     align-items: center;
     justify-content: center;
 }
@@ -416,22 +434,23 @@ h1, h2, h3, h4, h5 {
 }
 
 .card-section .card__content {
-  padding: 50px 80px;
+  padding: 40px 80px;
   display: flex;
+ justify-content: center;
   flex-direction: column;
 }
 
 .card-section .card__title {
   padding: 0;
   margin: 0;
-  font-size: 42px;
+  font-size: 28px;
   font-weight: 600;
   color: #16263a;
 }
 
 .card-section .card__description {
   line-height: 1.4;
-  font-size: 20px;
+  font-size: 14px;
   color: #16263a;
 }
 
@@ -498,7 +517,7 @@ h1, h2, h3, h4, h5 {
 }
 .container-loisirs-2 {
 
-  padding: 0 10%;
+  padding: 5% 10% 0 10%;
  
   border-radius: 8px;
 display: block;
@@ -570,11 +589,12 @@ margin-bottom: 12vh;
     display: flex;
    min-height: 200vh; 
    justify-content: center;
+   gap: 80px;
 }
 
 .text-section {
-    width: 30%;
-    padding: 0 10%;
+    width: 580px;
+   /*  padding: 10px; */
     overflow-y: auto;
   /*  height: 100vh;*/
     font-size: 1.8em;
@@ -595,8 +615,8 @@ margin-bottom: 12vh;
     position: sticky;
     top: 60%; /* Ajuste cette valeur pour que l'image commence plus bas */
     transform: translateY(-50%);
-    width: 95%; /* Rend l'image plus petite */
-    margin-left: -4vh;
+    width: 514px; 
+    margin-left: 0vh;
     margin-right: auto;
     display: block;
 }
@@ -1018,7 +1038,7 @@ margin-bottom: 12vh;
   color: var(--color-gray-100);
 }
 .lieu-emblematique-pilules-avec-success-parent {
-  width: 610px;
+  width: 472px;
   gap: 7px;
   min-width: 410px;
 }
@@ -1234,7 +1254,7 @@ margin-bottom: 12vh;
     position: relative;
     display: flex;
     flex-direction: row;
-    padding: 0 15% 10% 17%;
+    padding: 0 12% 10% 12%;
     gap: 8%;
     line-height: normal;
     letter-spacing: normal;
