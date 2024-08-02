@@ -2822,12 +2822,14 @@ margin-bottom: 12vh;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 9.6px;
+  align-items: center;
 }
 .section-footer-et-copyright-div2,
 .section-footer-et-copyright-frame-group,
 .section-footer-et-copyright-frame-wrapper {
   display: flex;
   max-width: 100%;
+  
 }
 .section-footer-et-copyright-frame-wrapper {
   flex-direction: row;
