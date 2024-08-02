@@ -938,13 +938,13 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const floatingCross = document.getElementById("floating-cross");
+    const floatingArrow = document.getElementById("floating-arrow");
 
     function checkScroll() {
       if (window.scrollY === 0) {
-        floatingCross.style.display = "flex";
+        floatingArrow.style.display = "flex";
       } else {
-        floatingCross.style.display = "none";
+        floatingArrow.style.display = "none";
       }
     }
 
@@ -955,6 +955,7 @@
     window.addEventListener("scroll", checkScroll);
   });
 </script>
+
 
 </body>
 

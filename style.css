@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5 {
 
 
 
-#floating-cross {
+#floating-arrow {
   position: fixed;
   bottom: 20px;
   left: 50%;
@@ -116,10 +116,11 @@ h1, h2, h3, h4, h5 {
 }
 
 @media (min-width: 768px) {
-  #floating-cross {
+  #floating-arrow {
     display: none; /* Cache l'élément sur les écrans plus larges */
   }
 }
+
 
 
 
