@@ -1498,10 +1498,13 @@ margin-bottom: 12vh;
   }
   .lieu-emblematique-container12 {
   width: 90%;
-  height: 420px;
+  height: 580px;
   margin-top: 20px;
  
 
+}
+.lieu-emblematique-div2 {
+  height: 200px;
 }
 }
 @media screen and (max-width: 450px) {
