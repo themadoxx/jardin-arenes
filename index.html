@@ -1032,6 +1032,17 @@
 
 </script>
 
+<script>
+  // Fonction pour interdire le défilement horizontal
+  function preventHorizontalScroll(event) {
+    if (window.scrollX !== 0) {
+      window.scrollTo(0, window.scrollY);
+    }
+  }
+
+  // Ajouter un écouteur d'événements de défilement sur la fenêtre
+  window.addEventListener('scroll', preventHorizontalScroll);
+</script>
 <!-- AOS JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
