@@ -8,6 +8,16 @@
     font-style: normal;
 }
 
+body, html {
+  max-width: 100%;
+
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
 .font-arabe {
   font-family: 'KacstTitle', sans-serif !important;
 }
