@@ -271,7 +271,7 @@
   <div class="container-scroll-image">
     <div class="text-section">
       <img src="assets/img/ctgUWPe2FeKeRk4ZuRYlMoqtL34.png.png" alt="Description de l'image" class="img-loisirs-mobile">
-      <p class="paragraphe-sec-1">
+      <p id="para1" class="paragraphe-sec-1">
         <span class="francais">Mais Casablanca ne s’est pas arrêtée à l’ère des arènes. Même après leur démolition en 1971,
           la ville a continué à évoluer, à s’adapter et à diversifier ses offres de loisirs.</span>
           <br><br>
@@ -283,31 +283,31 @@
           ⵉⵎⵉⵎⵉⵡⴰⵏ.</span>
       </p>
       <img src="assets/img/ctgUWPe2FeKeRk4ZuRYlMoqtL34.png.png" alt="Description de l'image" class="img-loisirs-mobile">
-      <p class="paragraphe-sec-2">
+      <p id="para2"  class="paragraphe-sec-2">
         <span class="francais">Paragraph 2 en français...</span>
         <span class="arabe font-arabe">فقرة 2 بالعربية...</span>
         <span class="tamazight">ⵉⵎⵎⵉⵡⴰⵏ 2 ⵉⵏ ⵜⴰⵎⴰⵣⵉⵖⵜ...</span>
       </p>
       <img src="assets/img/ctgUWPe2FeKeRk4ZuRYlMoqtL34.png.png" alt="Description de l'image" class="img-loisirs-mobile">
-      <p class="paragraphe-sec-3">
+      <p id="para3" class="paragraphe-sec-3">
         <span class="francais">Paragraph 3 en français...</span>
         <span class="arabe font-arabe">فقرة 3 بالعربية...</span>
         <span class="tamazight">ⵉⵎⵎⵉⵡⴰⵏ 3 ⵉⵏ ⵜⴰⵎⴰⵣⵉⵖⵜ...</span>
       </p>
       <img src="assets/img/ctgUWPe2FeKeRk4ZuRYlMoqtL34.png.png" alt="Description de l'image" class="img-loisirs-mobile">
-      <p class="paragraphe-sec-4">
+      <p id="para4" class="paragraphe-sec-4">
         <span class="francais">Paragraph 4 en français...</span>
         <span class="arabe font-arabe">فقرة 4 بالعربية...</span>
         <span class="tamazight">ⵉⵎⵎⵉⵡⴰⵏ 4 ⵉⵏ ⵜⴰⵎⴰⵣⵉⵖⵜ...</span>
       </p>
       <img src="assets/img/ctgUWPe2FeKeRk4ZuRYlMoqtL34.png.png" alt="Description de l'image" class="img-loisirs-mobile">
-      <p class="paragraphe-sec-5">
+      <p id="para5" class="paragraphe-sec-5">
         <span class="francais">Paragraph 5 en français...</span>
         <span class="arabe font-arabe">فقرة 5 بالعربية...</span>
         <span class="tamazight">ⵉⵎⵎⵉⵡⴰⵏ 5 ⵉⵏ ⵜⴰⵎⴰⵣⵉⵖⵜ...</span>
       </p>
     </div>
-    <div class="image-section">
+    <div id="dynamic-image" class="image-section">
       <img src="assets/img/picasso-casa.jpg" alt="Fixed Image">
     </div>
   </div>
@@ -956,7 +956,52 @@
   });
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Initialisation de l'observer
+    var options = {
+      root: null, // Utilise le viewport comme racine
+      rootMargin: '0px',
+      threshold: 0.5 // Déclenche lorsque 50% de l'élément est visible
+    };
 
+    var observer = new IntersectionObserver(callback, options);
+
+    // Sélection des paragraphes à observer
+    var targets = document.querySelectorAll('.text-section p');
+
+    targets.forEach(function (target) {
+      observer.observe(target);
+    });
+
+    function callback(entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          // Changer l'image en fonction de l'ID du paragraphe
+          var image = document.querySelector('#dynamic-image img');
+          switch (entry.target.id) {
+            case 'para1':
+              image.src = 'assets/img/picasso-casa.jpg';
+              break;
+            case 'para2':
+              image.src = 'assets/img/image2.jpg';
+              break;
+            case 'para3':
+              image.src = 'assets/img/image3.jpg';
+              break;
+            case 'para4':
+              image.src = 'assets/img/image4.jpg';
+              break;
+            case 'para5':
+              image.src = 'assets/img/image5.jpg';
+              break;
+          }
+        }
+      });
+    }
+  });
+
+</script>
 </body>
 
 </html>
