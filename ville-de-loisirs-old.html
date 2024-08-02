@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans Tifinagh:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/aatjs/dist/aat.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="desktop">
+        <div class="background">
+            <div class="background-wrapper">
+                <div class="background1">
+                    <div class="container">
+                        <div class="container1">
+                            <img class="link-icon" alt="" src="./assets/img/logo-arrondissement.png" id="linkImage" />
+
+                            <div class="container2">
+                                <div class="container3">
+                                    <div class="container4">
+                                        <div class="histoire">Histoire</div>
+                                    </div>
+                                </div>
+                                <div class="container5">
+                                    <div class="container6">
+                                        <div class="dcouvrir">Découvrir</div>
+                                    </div>
+                                </div>
+                                <div class="container7">
+                                    <div class="container8">
+                                        <div class="patrimoine">Patrimoine</div>
+                                    </div>
+                                </div>
+                                <div class="container9">
+                                    <div class="container10">
+                                        <div class="link">
+                                            <div class="faq">FAQ</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container11">
+                                <div class="link1">
+                                    <div class="container12">
+                                        <div class="container13">
+                                            <div class="mot-du-prsident">Mot du Président</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="container-main-section-1">
+                    <section class="background-main-section-1">
+                        <div class="content-main-section-1">
+                            <div class="left-content-main-section-1">
+                                <div class="homepage-main-section-1">
+                                    <div class="location-list-main-section-1">
+                                        <div class="location-item-main-section-1">ساحة الدار البيضاء</div>
+                                        <div class="location-item-main-section-1">Jardin des Arènes de Casablanca</div>
+                                        <div class="location-item-main-section-1">ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ</div>
+                                    </div>
+                                    <div class="title-main-section-1">
+                                        <h1 class="heading-main-section-1">ساحة الدار البيضاء</h1>
+                                        <h1 class="heading-main-section-1">Casablanca, ville de loisirs</h1>
+                                        <h1 class="heading-main-section-1">ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ ⵡⴰⵎⵎⴰⵙ ⵏ ⵜⵖⵓⵔ</h1>
+                                    </div>
+                                    <button class="button-main-section-1">Découvrir maintenant</button>
+                                    <p class="paragraph-main-section-1">من المهم الاعتناء بالمريض، وأن يتبعه المريض، لكن ذلك سيحدث في
+                                        وقت يكون فيه الكثير من العمل والألم.</p>
+                                    <p class="paragraph-main-section-1">Casablanca, ville effervescente et cosmopolite, a toujours été
+                                        un carrefour de cultures, d'innovations et de divertissements. Depuis le début du XXe siècle,
+                                        cette métropole marocaine a su se distinguer par son dynamisme et sa capacité à offrir des
+                                        loisirs variés à ses habitants et visiteurs.</p>
+                                    <p class="paragraph-main-section-1">ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ ⵡⴰⵎⵎⴰⵙ ⵏ ⵜⵖⵓⵔⵉⵡⵉⵏ ⵏ ⵜⵙⵎⵍⴰⵢⵜ ⴷ ⵉⵎⴰⴳⵔⴰⵡⵏ ⵏ ⵓⵏⵖⵎⵉⵙ ⴷ
+                                        ⵓⵎⵢⴰⵡⴰⴹ ⵏ ⵓⵙⵉⵏⴰⴳ ⴰⴳⵍⴷⴰⵏ ⵏ ⵜⵓⵙⵙⵏⴰ ⵜⴰⵎⴰⵣⵉⵖⵜ ⵓⵙⴼⵓⴳⵍⵓ ⵏ ⵓⵙⵖⵣⵏ ⵏ ⵜⵡⵏⵖⴰ ⵏ ⵜⴼⵉⵏⴰⵖ</p>
+                                </div>
+                            </div>
+                            <div class="right-content-main-section-1">
+                                <div id="map-main-section-1" class="map-main-section-1"></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                </div>
+            </div>
+            <div class="background-container">
+                <div class="background9">
+                    <div class="container38">
+                        <div class="container-inner">
+                            <div class="parent">
+                                <div class="div7">
+                                    اكتشف مصارعة الثيران في حلبة مصارعة الثيران
+                                </div>
+                                <div class="les-arnes-de">
+                                    Les arènes de Maarif : un symbole de divertissement
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame-parent">
+                            <div class="wrapper">
+                                <div class="div8">
+                                    ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ ⵡⴰⵎⵎⴰⵙⵙ ⵏ ⵜⵖⵓⵔⵉⵡⵉⵏ ⵜⵉⵏⴰⵥⵓⵕⵉⵏ
+                                </div>
+                            </div>
+                            <div class="div9">
+                                من المهم الاهتمام بالمريض، وأن يتبعه العميل من المهم الاهتمام
+                                بالمريض، وأن يتبعه العميل
+                            </div>
+                        </div>
+                        <div class="lhistoire-des-arnes">
+                            L’histoire des arènes de Maarif est un exemple emblématique de
+                            cette tradition de divertissement qui a marqué les esprits et
+                            contribué à forger l'identité culturelle de Casablanca.
+                        </div>
+                        <div class="container-child">
+                            <div class="o-oo-o-parent">
+                                <div class="o-oo">
+                                    ⵍoⵔⴻⵎ ⵉⵒⵙⵓⵎ ⴷoⵍoⵔ ⵙⵉⵜ ⴰⵎⴻⵜ, ⵛoⵏⵙⴻⵛⵜⴻⵜⵓⵔ ⴰⴷⵉⵒⵉⵙⵛⵉⵏⴳ ⴻⵍⵉⵜ
+                                </div>
+                                <div class="o-oo1">
+                                    ⵍoⵔⴻⵎ ⵉⵒⵙⵓⵎ ⴷoⵍoⵔ ⵙⵉⵜ ⴰⵎⴻⵜ, ⵛoⵏⵙⴻⵛⵜⴻⵜⵓⵔ ⴰⴷⵉⵒⵉⵙⵛⵉⵏⴳ ⴻⵍⵉⵜ
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+             
+<main>
+    <ul id="unique-cards">
+        <li class="unique-card" id="unique-card_1" style="--index: 1;">
+                <div class="unique-card__content">
+                    <div>
+                        <div class="titres-des-cartes">
+                            <h4>Lorem ipsum dolor sit amet</h4>
+                            <h4>Lorem ipsum dolor sit amet</h4>
+                            <h4>Lorem ipsum dolor sit amet</h4>
+                        </div>
+                        <div class="paragraphe-cartes">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                
+                        <p><a href="#top" class="unique-btn unique-btn--accent">Read more</a></p>
+                    </div>
+                    <figure>
+                        <img src="assets/img/arenes-old.avif" alt="Image description">
+                        <img src="assets/img/arenes-colorized.jpg" alt="Image description">
+                    </figure>
+                </div>
+        </li>
+        <li class="unique-card" id="unique-card_2" style="--index: 2;">
+                <div class="unique-card__content-2">
+                    <div>
+                        <div class="titres-des-cartes">
+                            <h4>Lorem ipsum dolor sit amet</h4>
+                            <h4>Lorem ipsum dolor sit amet</h4>
+                            <h4>Lorem ipsum dolor sit amet</h4>
+                        </div>
+                        <div class="paragraphe-cartes">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                
+                        <p><a href="#top" class="unique-btn unique-btn--accent">Read more</a></p>
+                    </div>
+                    <figure>
+                        <img src="assets/img/ctgUWPe2FeKeRk4ZuRYlMoqtL34.png.png" alt="Image description">
+                        <img src="assets/img/image00002.png" alt="Image description">
+                    </figure>
+                </div>
+        </li>
+        <li class="unique-card" id="unique-card_3" style="--index: 3;">
+                <div class="unique-card__content">
+                    <div>
+                        <div class="titres-des-cartes">
+                            <h4>Lorem ipsum dolor sit amet</h4>
+                            <h4>Lorem ipsum dolor sit amet</h4>
+                            <h4>Lorem ipsum dolor sit amet</h4>
+                        </div>
+                        <div class="paragraphe-cartes">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                
+                        <p><a href="#top" class="unique-btn unique-btn--accent">Read more</a></p>
+                    </div>
+                    <figure>
+                        <img src="assets/img/picasso-casa.jpg" alt="Image description">
+                        <img src="assets/img/Shoelifer_arenes-de-casablanca.jpg" alt="Image description">
+                    </figure>
+                </div>
+        </li>
+        <li class="unique-card" id="unique-card_4" style="--index: 4;">
+            <div class="unique-card__content-2">
+                <div>
+                    <div class="titres-des-cartes">
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                    </div>
+                    <div class="paragraphe-cartes">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+
+                    <p><a href="#top" class="unique-btn unique-btn--accent">Read more</a></p>
+                </div>
+                <figure>
+                    <img src="assets/img/TMDZRNJB2RBGRHQNEWNVYOPSMY.jpg"
+                        alt="Image description">
+                        <img src="assets/img/image00001.png" alt="Image description">
+                </figure>
+            </div>
+        </li>
+    </ul>
+</main>
+               
+
+                
+
+
+
+
+
+                    <div class="link-wrapper">
+                        <div class="link4">
+                            <div class="gradientblur1">
+                                <div class="gradient1">
+                                    <div class="background18">
+                                        <div class="casablanca-se-transforme">
+                                            Casablanca se transforme
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="background-wrapper1">
+                <div class="background19">
+                    <div class="container92">
+
+<div class="container-parralax">
+    <div class="text-column-parralax">
+    ⵍoⵔⴻⵎ ⵉⵒⵙⵓⵎ ⴷoⵍoⵔ ⵙⵉⵜ ⴰⵎⴻⵜ, ⵛoⵏⵙⴻⵛⵜⴻⵜⵓⵔ ⴰⴷⵉⵒⵉⵙⵛⵉⵏⴳ ⴻⵍⵉⵜ
+    </div>
+    <div class="image-column-parralax">
+        <div class="sticky-wrapper-parralax">
+            <img src="assets/img/picasso-casa.jpg" alt="Description" />
+        </div>
+    </div>
+</div>
+
+                        <div class="arena-history-intro">
+                            <div class="arena-history-title">
+                                <div class="arena-history-name">
+                                    <div class="arena-history-titles">
+                                        <div class="div18">حلبة مصارعة الثيران</div>
+                                    </div>
+                                    <div class="arena-history-titles1">
+                                        <div class="lhistoire-des-arnes1">
+                                            L’Histoire des Arènes
+                                        </div>
+                                    </div>
+                                    <div class="o-oo2">
+                                        ⵍoⵔⴻⵎ ⵉⵒⵙⵓⵎ ⴷoⵍoⵔ ⵙⵉⵜ ⴰⵎⴻⵜ, ⵛoⵏⵙⴻⵛⵜⴻⵜⵓⵔ ⴰⴷⵉⵒⵉⵙⵛⵉⵏⴳ ⴻⵍⵉⵜ
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="div19">
+                                من المهم الاهتمام بالمريض، وأن يتبعه العميل، ولكن في نفس الوقت
+                                سوف يتأثر ببعض الآلام والمعاناة الكبيرة.
+                            </div>
+                        </div>
+                        <div class="design-compass">
+                            <div class="your-compass-to-container">
+                                <p class="your-compass-to">
+                                    Your compass to innovation and design excellence. From
+                                    exploration to
+                                </p>
+                                <p class="execution-this-dynamic">
+                                    execution, this dynamic framework fuels creativity and
+                                    precision, ensuring
+                                </p>
+                            </div>
+                            <div class="o-oo3">
+                                ⵍoⵔⴻⵎ ⵉⵒⵙⵓⵎ ⴷoⵍoⵔ ⵙⵉⵜ ⴰⵎⴻⵜ, ⵛoⵏⵙⴻⵛⵜⴻⵜⵓⵔ ⴰⴷⵉⵒⵉⵙⵛⵉⵏⴳ ⴻⵍⵉⵜ ⵙⴻⴷ ⴷo
+                                ⴻⵉⵓⵙⵎoⴷ ⵜⴻⵎⵒoⵔ ⵉⵏⵛⵉⴷⵉⴷⵓⵏⵜ ⵓⵜ ⵍⴰⴱoⵔⴻ ⴻⵜ ⴷoⵍoⵔⴻ ⵎⴰⴳⵏⴰ ⴰⵍⵉⵇⵓⴰ. ⵓⵜ
+                                ⴻⵏⵉⵎ
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container93">
+                        <div class="container94">
+                            <div class="success-icon-image">
+                                <div class="pilules-avec-success-parent">
+                                    <div class="pilules-avec-success">
+                                        <div class="container95">
+                                            <div class="icon-image-wrapper">
+                                                <div class="container96">
+                                                    <div class="svg2">
+                                                        <div class="svg3">
+                                                            <div class="container97">
+                                                                <div class="background20"></div>
+                                                                <div class="background21"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="div20">من المهم الاهتمام</div>
+                                            <div class="border3"></div>
+                                        </div>
+                                        <div class="container98">
+                                            <div class="second-icon-wrapper">
+                                                <div class="container99">
+                                                    <div class="svg4">
+                                                        <div class="container100">
+                                                            <div class="container101">
+                                                                <div class="svg5"></div>
+                                                                <div class="background22"></div>
+                                                                <div class="background23"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="lorem-ipsum">Lorem ipsum</div>
+                                            <div class="border4"></div>
+                                        </div>
+                                        <div class="container102">
+                                            <div class="container-wrapper1">
+                                                <div class="container103">
+                                                    <div class="svg6">
+                                                        <div class="container104">
+                                                            <div class="container105">
+                                                                <div class="svg7"></div>
+                                                                <div class="background24"></div>
+                                                                <div class="background25"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="o1">ⵍoⵔⴻⵎ ⵉⵒⵙⵓⵎ</div>
+                                            <div class="border5"></div>
+                                        </div>
+                                    </div>
+                                    <div class="div21">
+                                        من المهم الاهتمام بالمريض، وأن يتبعه العميل، ولكن في نفس
+                                        الوقت سوف يتأثر ببعض الآلام والمعاناة الكبيرة.
+                                    </div>
+                                    <div class="mais-casablanca-ne">
+                                        Mais Casablanca ne s’est pas arrêtée à l’ère des arènes.
+                                        Même après leur démolition en 1971, la ville a continué à
+                                        évoluer, à s’adapter et à diversifier ses offres de
+                                        loisirs.
+                                    </div>
+                                    <div class="o-o-o">
+                                        ⵙⴻⴷ ⴷo ⴻⵉⵓⵙⵎoⴷ ⵜⴻⵎⵒoⵔ ⵉⵏⵛⵉⴷⵉⴷⵓⵏⵜ ⵓⵜ ⵍⴰⴱoⵔⴻ ⴻⵜ ⴷoⵍoⵔⴻ ⵎⴰⴳⵏⴰ
+                                        ⴰⵍⵉⵇⵓⴰ. ⵓⵜ ⴻⵏⵉⵎ ⴰⴷ ⵎⵉⵏⵉⵎ
+                                    </div>
+                                </div>
+                                <div class="image-block">
+                                    <img class="ctguwpe2fekerk4zurylmoqtl34pn-icon" alt=""
+                                        src="assets/img/ctgUWPe2FeKeRk4ZuRYlMoqtL34.png.png" />
+                                </div>
+                            </div>
+                            <div class="success-icons-row">
+                                <div class="success-icon-item">
+                                    <div class="pilules-avec-success1">
+                                        <div class="container106">
+                                            <div class="icon-wrapper">
+                                                <div class="container107">
+                                                    <div class="svg8">
+                                                        <div class="svg9">
+                                                            <div class="container108">
+                                                                <div class="background26"></div>
+                                                                <div class="background27"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="div22">من المهم الاهتمام</div>
+                                            <div class="border6"></div>
+                                        </div>
+                                        <div class="container109">
+                                            <div class="second-icon-wrapper1">
+                                                <div class="container110">
+                                                    <div class="svg10">
+                                                        <div class="container111">
+                                                            <div class="container112">
+                                                                <div class="svg11"></div>
+                                                                <div class="background28"></div>
+                                                                <div class="background29"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="lorem-ipsum1">Lorem ipsum</div>
+                                            <div class="border7"></div>
+                                        </div>
+                                        <div class="container113">
+                                            <div class="third-icon-wrapper">
+                                                <div class="container114">
+                                                    <div class="svg12">
+                                                        <div class="container115">
+                                                            <div class="container116">
+                                                                <div class="svg13"></div>
+                                                                <div class="background30"></div>
+                                                                <div class="background31"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="o2">ⵍoⵔⴻⵎ ⵉⵒⵙⵓⵎ</div>
+                                            <div class="border8"></div>
+                                        </div>
+                                    </div>
+                                    <div class="div23">
+                                        من المهم الاهتمام بالمريض، وأن يتبعه العميل، ولكن في نفس
+                                        الوقت سوف يتأثر ببعض الآلام والمعاناة الكبيرة.
+                                    </div>
+                                </div>
+                                <div class="les-dcennies-suivantes">
+                                    Les décennies suivantes ont vu l’émergence de nouveaux
+                                    espaces de divertissement : des complexes cinématographiques
+                                    modernes, des centres commerciaux animés, des parcs
+                                    d’attractions et des lieux culturels contemporains.
+                                </div>
+                                <div class="o-o-o1">
+                                    ⵙⴻⴷ ⴷo ⴻⵉⵓⵙⵎoⴷ ⵜⴻⵎⵒoⵔ ⵉⵏⵛⵉⴷⵉⴷⵓⵏⵜ ⵓⵜ ⵍⴰⴱoⵔⴻ ⴻⵜ ⴷoⵍoⵔⴻ ⵎⴰⴳⵏⴰ
+                                    ⴰⵍⵉⵇⵓⴰ. ⵓⵜ ⴻⵏⵉⵎ ⴰⴷ ⵎⵉⵏⵉⵎ
+                                </div>
+                            </div>
+                            <div class="success-icons-row1">
+                                <div class="pilules-avec-success-group">
+                                    <div class="pilules-avec-success2">
+                                        <div class="container117">
+                                            <div class="container-wrapper2">
+                                                <div class="container118">
+                                                    <div class="svg14">
+                                                        <div class="svg15">
+                                                            <div class="container119">
+                                                                <div class="background32"></div>
+                                                                <div class="background33"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="div24">من المهم الاهتمام</div>
+                                            <div class="border9"></div>
+                                        </div>
+                                        <div class="container120">
+                                            <div class="container-wrapper3">
+                                                <div class="container121">
+                                                    <div class="svg16">
+                                                        <div class="container122">
+                                                            <div class="container123">
+                                                                <div class="svg17"></div>
+                                                                <div class="background34"></div>
+                                                                <div class="background35"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="lorem-ipsum2">Lorem ipsum</div>
+                                            <div class="border10"></div>
+                                        </div>
+                                        <div class="container124">
+                                            <div class="container-wrapper4">
+                                                <div class="container125">
+                                                    <div class="svg18">
+                                                        <div class="container126">
+                                                            <div class="container127">
+                                                                <div class="svg19"></div>
+                                                                <div class="background36"></div>
+                                                                <div class="background37"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="o3">ⵍoⵔⴻⵎ ⵉⵒⵙⵓⵎ</div>
+                                            <div class="border11"></div>
+                                        </div>
+                                    </div>
+                                    <div class="div25">
+                                        من المهم الاهتمام بالمريض، وأن يتبعه العميل، ولكن في نفس
+                                        الوقت سوف يتأثر ببعض الآلام والمعاناة الكبيرة.
+                                    </div>
+                                </div>
+                                <div class="aujourdhui-casablanca-reste">
+                                    Aujourd'hui, Casablanca reste une ville où le loisir occupe
+                                    une place centrale. Les Casablancais continuent de se
+                                    rassembler pour des événements culturels, des festivals de
+                                    musique, des expositions d'art, et des activités sportives.
+                                </div>
+                                <div class="o-o-o2">
+                                    ⵙⴻⴷ ⴷo ⴻⵉⵓⵙⵎoⴷ ⵜⴻⵎⵒoⵔ ⵉⵏⵛⵉⴷⵉⴷⵓⵏⵜ ⵓⵜ ⵍⴰⴱoⵔⴻ ⴻⵜ ⴷoⵍoⵔⴻ ⵎⴰⴳⵏⴰ
+                                    ⴰⵍⵉⵇⵓⴰ. ⵓⵜ ⴻⵏⵉⵎ ⴰⴷ ⵎⵉⵏⵉⵎ
+                                </div>
+                            </div>
+                            <div class="third-success-icon-details">
+                                <div class="pilules-avec-success3">
+                                    <div class="container128">
+                                        <div class="third-image-svg-icon">
+                                            <div class="container129">
+                                                <div class="svg20">
+                                                    <div class="svg21">
+                                                        <div class="container130">
+                                                            <div class="background38"></div>
+                                                            <div class="background39"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="div26">من المهم الاهتمام</div>
+                                        <div class="border12"></div>
+                                    </div>
+                                    <div class="container131">
+                                        <div class="third-svg-icon">
+                                            <div class="container132">
+                                                <div class="svg22">
+                                                    <div class="container133">
+                                                        <div class="container134">
+                                                            <div class="svg23"></div>
+                                                            <div class="background40"></div>
+                                                            <div class="background41"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="lorem-ipsum3">Lorem ipsum</div>
+                                        <div class="border13"></div>
+                                    </div>
+                                    <div class="container135">
+                                        <div class="container-wrapper5">
+                                            <div class="container136">
+                                                <div class="svg24">
+                                                    <div class="container137">
+                                                        <div class="container138">
+                                                            <div class="svg25"></div>
+                                                            <div class="background42"></div>
+                                                            <div class="background43"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="o4">ⵍoⵔⴻⵎ ⵉⵒⵙⵓⵎ</div>
+                                        <div class="border14"></div>
+                                    </div>
+                                </div>
+                                <div class="div27">
+                                    من المهم الاهتمام بالمريض، وأن يتبعه العميل، ولكن في نفس
+                                    الوقت سوف يتأثر ببعض الآلام والمعاناة الكبيرة.
+                                </div>
+                                <div class="la-rhabilitation-des">
+                                    La réhabilitation des arènes en un jardin commémoratif est
+                                    une initiative qui illustre bien cette continuité. Ce jardin
+                                    sert non seulement de lieu de détente et de réflexion, mais
+                                    aussi de rappel vivant de l'héritage des arènes et de leur
+                                    rôle dans l’histoire des loisirs à Casablanca.
+                                </div>
+                                <div class="o-o-o3">
+                                    ⵙⴻⴷ ⴷo ⴻⵉⵓⵙⵎoⴷ ⵜⴻⵎⵒoⵔ ⵉⵏⵛⵉⴷⵉⴷⵓⵏⵜ ⵓⵜ ⵍⴰⴱoⵔⴻ ⴻⵜ ⴷoⵍoⵔⴻ ⵎⴰⴳⵏⴰ
+                                    ⴰⵍⵉⵇⵓⴰ. ⵓⵜ ⴻⵏⵉⵎ ⴰⴷ ⵎⵉⵏⵉⵎ
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-wrapper">
+                        <div class="arena-image-block">
+                            <div class="arena-image">
+                                <div class="arena-image-container">
+                                    <div class="container139">
+                                        <div class="background44">
+                                            <div class="container140">
+                                                <img class="nt3eoptbxs2yub8fnfdeso5pt6ipn-icon" alt=""
+                                                    src="./public/nt3eoptbxs2yub8fnfdeso5pt6ipng@2x.png" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="fourth-success-icon-details">
+                                        <div class="pill-success">
+                                            <div class="pilules-avec-success4">
+                                                <div class="container141">
+                                                    <div class="pill-button">
+                                                        <div class="container142">
+                                                            <div class="svg26">
+                                                                <div class="svg27">
+                                                                    <div class="container143">
+                                                                        <div class="background45"></div>
+                                                                        <div class="background46"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="div28">من المهم الاهتمام</div>
+                                                    <div class="border15"></div>
+                                                </div>
+                                                <div class="container144">
+                                                    <div class="pill-feature">
+                                                        <div class="container145">
+                                                            <div class="svg28">
+                                                                <div class="container146">
+                                                                    <div class="container147">
+                                                                        <div class="svg29"></div>
+                                                                        <div class="background47"></div>
+                                                                        <div class="background48"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="lorem-ipsum4">Lorem ipsum</div>
+                                                    <div class="border16"></div>
+                                                </div>
+                                                <div class="container148">
+                                                    <div class="container-wrapper6">
+                                                        <div class="container149">
+                                                            <div class="svg30">
+                                                                <div class="container150">
+                                                                    <div class="container151">
+                                                                        <div class="svg31"></div>
+                                                                        <div class="background49"></div>
+                                                                        <div class="background50"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="o5">ⵍoⵔⴻⵎ ⵉⵒⵙⵓⵎ</div>
+                                                    <div class="border17"></div>
+                                                </div>
+                                            </div>
+                                            <div class="arena-title-wrapper">
+                                                <div class="group">
+                                                    <div class="div29">حلبة مصارعة الثيران</div>
+                                                    <div class="lhistoire-des-arnes2">
+                                                        L’Histoire des Arènes
+                                                    </div>
+                                                    <div class="o-oo4">
+                                                        ⵍoⵔⴻⵎ ⵉⵒⵙⵓⵎ ⴷoⵍoⵔ ⵙⵉⵜ ⴰⵎⴻⵜ, ⵛoⵏⵙⴻⵛⵜⴻⵜⵓⵔ ⴰⴷⵉⵒⵉⵙⵛⵉⵏⴳ
+                                                        ⴻⵍⵉⵜ
+                                                    </div>
+                                                </div>
+                                                <div class="container152">
+                                                    <div class="client-quote">
+                                                        <div class="div30">
+                                                            ولكن في نفس الوقت سوف يتأثر ببعض الآلام
+                                                            والمعاناة الكبيرة.
+                                                        </div>
+                                                        <div class="o-oo5">
+                                                            En intégrant le passé et le présent, Casablanca
+                                                            démontre sa capacité à préserver son riche
+                                                            héritage culturel tout en s’adaptant aux
+                                                            nouvelles tendances et aux besoins de sa
+                                                            population.
+                                                        </div>
+                                                        <div class="o-oo6">
+                                                            ⵍoⵔⴻⵎ ⵉⵒⵙⵓⵎ ⴷoⵍoⵔ ⵙⵉⵜ ⴰⵎⴻⵜ, ⵛoⵏⵙⴻⵛⵜⴻⵜⵓⵔ ⴰⴷⵉⵒⵉⵙⵛ
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="link5">
+                                                    <div class="container153">
+                                                        <div class="container154">
+                                                            <div class="facebook1">Facebook</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fourth-success-icon-details-inner">
+                                            <div class="phases-parent">
+                                                <div class="phases">
+                                                    <div class="first-phase">
+                                                        <div class="construction">Construction</div>
+                                                    </div>
+                                                    <div class="second-phase">
+                                                        <div class="spectacles">Spectacles</div>
+                                                        <div class="tauromachie">Tauromachie</div>
+                                                    </div>
+                                                    <div class="dmolition">Démolition</div>
+                                                </div>
+                                                <div class="horizontal-divider-parent">
+                                                    <div class="horizontal-divider1"></div>
+                                                    <div class="horizontal-divider2"></div>
+                                                    <div class="horizontal-divider-wrapper">
+                                                        <div class="horizontal-divider3"></div>
+                                                    </div>
+                                                    <div class="horizontal-divider4"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container155">
+                                <div class="container156"></div>
+                                <div class="container157">
+                                    <div class="container158">
+                                        <div class="container159">
+                                            <div class="container160">
+                                                <div class="div31">نفس الوقت سوف يتأثر ببعض</div>
+                                            </div>
+                                        </div>
+                                        <div class="container161">
+                                            <div class="lorem-ipsum-dolor16">Lorem ipsum dolor</div>
+                                        </div>
+                                        <div class="container162">
+                                            <div class="container163">
+                                                <div class="o-o">ⵍoⵔⴻⵎ ⵉⵒⵎⵒoⵏⵛⵉⴷⵉⵏⵉ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detail-images">
+                                        <div class="images">1913</div>
+                                        <div class="horizontalborder"></div>
+                                    </div>
+                                </div>
+                                <div class="container164">
+                                    <div class="container165">
+                                        <div class="container166">
+                                            <div class="container167">
+                                                <div class="div32">نفس الوقت سوف يتأثر ببعض</div>
+                                            </div>
+                                            <div class="container168">
+                                                <div class="lorem-ipsum-dolor17">
+                                                    Lorem ipsum dolor
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container169">
+                                            <div class="container170">
+                                                <div class="container171">
+                                                    <div class="o-o1">ⵍoⵔⴻⵎ ⵉⵒⵎⵒoⵏⵛⵉⴷⵉⵏⵉ</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="parent1">
+                                        <div class="div33">1952</div>
+                                        <div class="horizontalborder1"></div>
+                                    </div>
+                                </div>
+                                <div class="container172">
+                                    <div class="container173">
+                                        <div class="container174">
+                                            <div class="container175">
+                                                <div class="div34">نفس الوقت سوف يتأثر ببعض</div>
+                                            </div>
+                                        </div>
+                                        <div class="container176">
+                                            <div class="lorem-ipsum-dolor18">Lorem ipsum dolor</div>
+                                            <div class="container177">
+                                                <div class="container178">
+                                                    <div class="o-o2">ⵍoⵔⴻⵎ ⵉⵒⵎⵒoⵏⵛⵉⴷⵉⵏⵉ</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="parent2">
+                                        <div class="div35">1970</div>
+                                        <div class="horizontalborder2"></div>
+                                    </div>
+                                </div>
+                                <div class="container179">
+                                    <div class="container180">
+                                        <div class="container181">
+                                            <div class="container182">
+                                                <div class="div36">نفس الوقت سوف يتأثر ببعض</div>
+                                            </div>
+                                            <div class="container183">
+                                                <div class="lorem-ipsum-dolor19">
+                                                    Lorem ipsum dolor
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container184">
+                                            <div class="container185">
+                                                <div class="container186">
+                                                    <div class="o-o3">ⵍoⵔⴻⵎ ⵉⵒⵎⵒoⵏⵛⵉⴷⵉⵏⵉ</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="parent3">
+                                        <div class="div37">1990</div>
+                                        <div class="horizontalborder3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="background-wrapper2">
+                <div class="background51">
+                    <div class="container187">
+                        <div class="div38">
+                            فبالنسبة لأدق التفاصيلالآلام والمعاناة الكبيرة.
+                        </div>
+                        <div class="quote">
+                            <div class="lorem-ipsum-dolor20">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                            </div>
+                            <div class="second-quote">
+                                <div class="o-oo7">ⵍoⵔⴻⵎ ⵉⵒⵙⵓⵎ ⴷoⵍoⵔ ⵙⵉⵜ ⵔ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container188">
+                        <div class="slides">
+                            <div class="container189">
+                                <img class="pzecta9irccrfab7civxskecqtepn-icon" alt=""
+                                    src="./public/pzecta9irccrfab7civxskecqtepng@2x.png" />
+
+                                <div class="overlay"></div>
+                            </div>
+                            <div class="background52">
+                                <div class="svg32"></div>
+                            </div>
+                        </div>
+                        <div class="slides1">
+                            <div class="background53">
+                                <div class="container-parent3">
+                                    <div class="container190">
+                                        <div class="container191">
+                                            <div class="div39">
+                                                من المهم الاهتمام بالمريض، وأن يتبعه العميل
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container192">
+                                        <div class="lorem-ipsum-dolor21">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                        </div>
+                                    </div>
+                                    <div class="container193">
+                                        <div class="o-oo8">
+                                            ⵍoⵔⴻⵎ ⵉⵒⵙⵓⵎ ⴷoⵍoⵔ ⵙⵉⵜ ⴰⵎⴻⵜ, ⵛoⵏⵙⴻⵛⵜⴻⵜⵓⵔ ⴰⴷⵉⵒⵉⵙⵛⵉⵏⴳ ⴻⵍⵉ
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container194">
+                                    <div class="container195">
+                                        <div class="container196">
+                                            <b class="pablo-picasso">Pablo Picasso</b>
+                                        </div>
+                                        <div class="container197">
+                                            <div class="casablanca-1980">Casablanca, 1980</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container198">
+                                <img class="wxtso75pkwvjknbmxtqsxgshdkopn-icon" alt=""
+                                    src="./public/wxtso75pkwvjknbmxtqsxgshdkopng@2x.png" />
+
+                                <div class="overlay1">
+                                    <div class="svg33"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slides2">
+                            <div class="container199">
+                                <img class="evqypqeudnq6qvlmpqrqylft6ospn-icon" alt=""
+                                    src="./public/evqypqeudnq6qvlmpqrqylft6ospng@2x.png" />
+
+                                <div class="overlay2"></div>
+                            </div>
+                            <div class="background54">
+                                <div class="container200">
+                                    <div class="container201">
+                                        <div class="container202">
+                                            <div class="div40">
+                                                من المهم الاهتمام بالمريض، وأن يتبعه العميل
+                                            </div>
+                                            <div class="lorem-ipsum-dolor22">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                elit, sed do
+                                            </div>
+                                            <div class="o-oo9">
+                                                ⵍoⵔⴻⵎ ⵉⵒⵙⵓⵎ ⴷoⵍoⵔ ⵙⵉⵜ ⴰⵎⴻⵜ, ⵛoⵏⵙⴻⵛⵜⴻⵜⵓⵔ
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container203">
+                                    <div class="container204">
+                                        <div class="container205">
+                                            <div class="container206">
+                                                <b class="marcel-serdan">Marcel Serdan</b>
+                                            </div>
+                                        </div>
+                                        <div class="container207">
+                                            <div class="casablanca-1999">Casablanca, 1999</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slides3">
+                            <img class="background-icon1" alt="" src="./public/background1@2x.png" />
+
+                            <div class="container208">
+                                <img class="gjwq6yf8c5o9i1s3wuspqbbspng-icon" alt=""
+                                    src="./public/gjwq6yf8c5o9i1s3wuspqbbspng@2x.png" />
+
+                                <div class="container209"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="background55">
+                    <div class="background56">
+                        <div class="container-parent4">
+                            <div class="container210">
+                                <div class="container211">
+                                    <div class="heading-2">
+                                        <div class="div41">عمل إلا إذا استفاد منه بعض الشيء.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container212">
+                                <div class="container213">
+                                    <div class="heading-21">
+                                        <div class="lorem-ipsum-dolor23">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container214">
+                                <div class="container215">
+                                    <div class="heading-22">
+                                        <div class="o-oo10">
+                                            ⵍoⵔⴻⵎ ⵉⵒⵙⵓⵎ ⴷoⵍoⵔ ⵙⵉⵜ ⴰⵎⴻⵜ, ⵛoⵏⵙⴻⵛⵜⴻⵜⵓⵔ ⴰⴷⵉⵒⵉⵙⵛⵉⵏⴳ ⴻⵍⵉⵜ 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container216">
+                            <div class="container217">
+                                <div class="container218">
+                                    <div class="container219">
+                                        <div class="container220">
+                                            <div class="container221">
+                                                <div class="container222">
+                                                    <div class="div42">
+                                                        من المهم الاهتمام بالمريض، وأن يتبعه العميل، ولكن
+                                                        في نفس الوقت سوف يتأثر ببعض الآلام والمعاناة
+                                                        الكبيرة. فبالنسبة لأها
+                                                    </div>
+                                                    <div class="lorem-ipsum-dolor24">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                        elit ?
+                                                    </div>
+                                                    <div class="o-o-o4">
+                                                         ⵏoⵙⵜⵔⵓⴷ ⴻⵅⴻⵔⵛⵉⵜⴰⵜⵉoⵏ ⵓⵍⵍⴰⵎⵛo ⵍⴰⴱoⵔⵉⵙ ⵏⵉⵙⵉ ⵓⵜ
+                                                        ⴰⵍⵉⵇⵓⵉⵒ ⴻⵅ ⴻⴰ ⵛoⵎⵎoⴷo ⵛoⵏⵙⴻⵇⵓⴰⵜ ?
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <img class="container-icon" alt="" src="./public/container@2x.png" />
+                                        </div>
+                                        <div class="container223">
+                                            <div class="container224">
+                                                <div class="div43">
+                                                    من المهم الاهتمام بالمريض، وأن يتبعه العميل، ولكن في
+                                                    نفس الوقت سوف يتأثر ببعض الآلام والمعاناة الكبيرة.
+                                                    فبالنسبة لأدق التفاصيل، لا يجوز لأحد أن يمارس أي عمل
+                                                    إلا إذا استفاد منه بعض الشيء. شكوك أو ألم مزعج في
+                                                    التوبيخ في المتعة التي يريدها
+                                                </div>
+                                                <div class="cette-fusion-du">
+                                                    Cette fusion du passé et du présent montre que la
+                                                    ville, en perpétuelle évolution, demeure un centre
+                                                    vibrant de loisirs et de divertissements, fidèle à
+                                                    sa tradition d’offrir des moments de joie et de
+                                                    rassemblement à tous ceux qui la vivent et la
+                                                    visitent.
+                                                </div>
+                                                <div class="o-oo11">
+                                                    ⵍoⵔⴻⵎ ⵉⵒⵙⵓⵎ ⴷoⵍoⵔ ⵙⵉⵜ ⴰⵎⴻⵜ, ⵛoⵏⵙⴻⵛⵜⴻⵜⵓⵔ ⴰⴷⵉⵒⵉⵙⵛⵉⵏⴳ
+                                                    ⴻⵍⵉⵜ, ⵙⴻⴷ ⴷo ⴻⵉⵓⵙⵎoⴷ ⵜⴻⵎⵒoⵔ ⵉⵏⵛⵉⴷⵉⴷⵓⵏⵜ ⵓⵜ ⵍⴰⴱoⵔⴻ ⴻⵜ
+                                                    ⴷoⵍoⵔⴻ ⵎⴰⴳⵏⴰ ⴰⵍⵉⵇⵓⴰ. ⵓⵜ ⴻⵏⵉⵎ ⴰⴷ ⵎⵉⵏⵉⵎ ⵠⴻⵏⵉⴰⵎ, ⵇⵓⵉⵙ
+                                                    ⵏoⵙⵜⵔⵓⴷ ⴻⵅⴻⵔⵛⵉⵜⴰⵜⵉoⵏ ⵓⵍⵍⴰⵎⵛo ⵍⴰⴱoⵔⵉⵙ ⵏⵉⵙⵉ ⵓⵜ ⴰⵍⵉⵇⵓⵉⵒ
+                                                    ⴻⵅ ⴻⴰ ⵛoⵎⵎoⴷo ⵛoⵏⵙⴻⵇⵓⴰⵜ.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container225">
+                                        <div class="container226">
+                                            <div class="container227">
+                                                <div class="div44">
+                                                    من المهم الاهتمام بالمريض، وأن يتبعه العميل، ولكن في
+                                                    نفس الوقت سوف يتأثر ببعض الآلام والمعاناة الكبيرة.
+                                                    فبالنسبة لأها
+                                                </div>
+                                                <div class="lorem-ipsum-dolor25">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                    elit ?
+                                                </div>
+                                                <div class="o-o-o5">
+                                                     ⵏoⵙⵜⵔⵓⴷ ⴻⵅⴻⵔⵛⵉⵜⴰⵜⵉoⵏ ⵓⵍⵍⴰⵎⵛo ⵍⴰⴱoⵔⵉⵙ ⵏⵉⵙⵉ ⵓⵜ
+                                                    ⴰⵍⵉⵇⵓⵉⵒ ⴻⵅ ⴻⴰ ⵛoⵎⵎoⴷo ⵛoⵏⵙⴻⵇⵓⴰⵜ ?
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img class="container-icon1" alt="" src="./public/container1@2x.png" />
+                                    </div>
+                                    <div class="container228">
+                                        <div class="container229">
+                                            <div class="container230">
+                                                <div class="div45">
+                                                    من المهم الاهتمام بالمريض، وأن يتبعه العميل، ولكن في
+                                                    نفس الوقت سوف يتأثر ببعض الآلام والمعاناة الكبيرة.
+                                                    فبالنسبة لأها
+                                                </div>
+                                                <div class="lorem-ipsum-dolor26">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                    elit ?
+                                                </div>
+                                                <div class="o-o-o6">
+                                                     ⵏoⵙⵜⵔⵓⴷ ⴻⵅⴻⵔⵛⵉⵜⴰⵜⵉoⵏ ⵓⵍⵍⴰⵎⵛo ⵍⴰⴱoⵔⵉⵙ ⵏⵉⵙⵉ ⵓⵜ
+                                                    ⴰⵍⵉⵇⵓⵉⵒ ⴻⵅ ⴻⴰ ⵛoⵎⵎoⴷo ⵛoⵏⵙⴻⵇⵓⴰⵜ ?
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img class="container-icon2" alt="" src="./public/container1@2x.png" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="background57">
+                    <div class="background58">
+                        <div class="container-parent5">
+                            <div class="container231">
+                                <div class="background59">
+                                    <div class="svg34"></div>
+                                    <img class="container-icon3" alt="" src="./public/container.svg" />
+
+                                    <div class="div46">في التوبيخ في المتعة التي يريدها</div>
+                                    <div class="lorem-ipsum-dolor27">
+                                        Lorem ipsum dolor sit amet,
+                                    </div>
+                                    <div class="o-oo12">ⵍoⵔⴻⵎ ⵉⵒⵙⵓⵎ ⴷoⵍoⵔ ⵙⵉⵜ ⴰⵎⴻⵜ,</div>
+                                    <div class="container-parent6">
+                                        <div class="container232">
+                                            <div class="container233">
+                                                <div class="div47">
+                                                    من المهم الاهتمام بالمريض، وأن يتبعه العميل، ولكن في
+                                                    نفس الوقت سوف يتأثر ببعض الآلام والمعاناة الكبيرة.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container234">
+                                            <div class="lorem-ipsum-dolor28">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                elit, sed
+                                            </div>
+                                        </div>
+                                        <div class="container235">
+                                            <div class="container236">
+                                                <div class="o-oo13">ⵍoⵔⴻⵎ ⵉⵒⵙⵓⵎ ⴷoⵍoⵔ ⵙⵉⵜ ⴰⵎⴻⵜ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="link6">
+                                        <div class="gradientblur2">
+                                            <div class="gradient2">
+                                                <div class="background60">
+                                                    <div class="commune-de-maarif">
+                                                        Commune de Maarif
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container237">
+                                <div class="link7">
+                                    <div class="container238">
+                                        <div class="container239">
+                                            <div class="svg35"></div>
+                                        </div>
+                                        <div class="container240">
+                                            <div class="container241">
+                                                <div class="facebook2">Facebook</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="svg36"></div>
+                                    <div class="horizontalborder4"></div>
+                                </div>
+                                <div class="link8">
+                                    <div class="container242">
+                                        <div class="container243">
+                                            <div class="svg37"></div>
+                                        </div>
+                                        <div class="container244">
+                                            <div class="container245">
+                                                <div class="commune-de-maarif1">
+                                                    Commune de Maarif
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="svg38"></div>
+                                    <div class="horizontalborder5"></div>
+                                </div>
+                                <div class="link9">
+                                    <div class="container246">
+                                        <div class="container247">
+                                            <div class="svg39"></div>
+                                        </div>
+                                        <div class="container248">
+                                            <div class="container249">
+                                                <div class="mot-du-prsident1">Mot du Président</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="svg40"></div>
+                                    <div class="horizontalborder6"></div>
+                                </div>
+                                <div class="link10">
+                                    <div class="container250">
+                                        <div class="container251">
+                                            <div class="svg41"></div>
+                                        </div>
+                                        <div class="container252">
+                                            <div class="container253">
+                                                <div class="jardin-des-arnes">Jardin des Arènes</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="svg42"></div>
+                                    <div class="horizontalborder7"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="link11">
+                            <div class="container254">
+                                <div class="container255">
+                                    <div class="jardin-des-arnes1">
+                                        Jardin des Arènes de Casablanca © 2024. Designed by
+                                        Digitex.ma
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <script>
+    // Initialisation de la carte
+    var map = L.map('map-main-section-1').setView([33.588892, -7.639583], 25); // Centrer la carte sur le jardin public
+
+    // Ajouter une couche de carte (OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Coordonnées des panneaux avec QR codes
+    var qrPins = [
+        [33.589, -7.640], // Coordonnée 1
+        [33.5891, -7.6395], // Coordonnée 2
+        [33.5888, -7.6397], // Coordonnée 3
+        [33.5885, -7.6396], // Coordonnée 4
+        [33.5887, -7.6393], // Coordonnée 5
+        [33.5889, -7.6394]  // Coordonnée 6
+    ];
+
+    // Ajout des pins sur la carte
+    qrPins.forEach(function (coords, index) {
+        L.marker(coords).addTo(map)
+            .bindPopup('<b>Panneau QR Code ' + (index + 1) + '</b><br />Scannez le code QR pour plus d\'informations.');
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+    AOS.init({
+        duration: 1200,
+        once: true,
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const cards = document.querySelectorAll('.unique-card');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                } else {
+                    entry.target.classList.remove('in-view');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        cards.forEach(card => {
+            observer.observe(card);
+        });
+    });
+</script>
+
+<script>
+    function handleStickyImage() {
+            const imageBlock = document.querySelector('.image-block');
+            const container = document.querySelector('.container94');
+
+            if (window.innerWidth >= 1024) { // Ajustez ce seuil selon vos besoins
+                const containerRect = container.getBoundingClientRect();
+                const imageRect = imageBlock.getBoundingClientRect();
+
+                if (containerRect.top <= 0 && containerRect.bottom >= window.innerHeight) {
+                    imageBlock.style.position = 'fixed';
+                    imageBlock.style.top = '50%';
+                    imageBlock.style.right = '0';
+                    imageBlock.style.transform = 'translateY(-50%)';
+                } else {
+                    imageBlock.style.position = 'relative';
+                    imageBlock.style.top = 'auto';
+                    imageBlock.style.transform = 'none';
+                }
+            } else {
+                imageBlock.style.position = 'relative';
+                imageBlock.style.top = 'auto';
+                imageBlock.style.transform = 'none';
+            }
+        }
+
+        window.addEventListener('scroll', handleStickyImage);
+        window.addEventListener('resize', handleStickyImage);
+</script>
+</body>
+
+</html>
