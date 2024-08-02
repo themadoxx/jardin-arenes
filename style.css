@@ -195,6 +195,26 @@ h1, h2, h3, h4, h5 {
   /*  padding: 55px; */
 }
 
+.background-main-section-1 {
+  position: relative; /* Nécessaire pour positionner correctement l'image de flou */
+  z-index: 1; /* Assurez-vous que cette section est au-dessus du fond de flou */
+}
+
+.background-main-section-1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('assets/img/blur.png') no-repeat center center;
+  background-size: cover;
+  filter: blur(10px); /* Ajustez le niveau de flou ici */
+  z-index: -1; /* Assurez-vous que le flou est derrière le contenu */
+  opacity: 0.5; /* Ajustez l'opacité si nécessaire */
+}
+
+
 /* Main Content */
 .content-main-section-1 {
     display: flex;
@@ -1266,7 +1286,7 @@ margin-bottom: 12vh;
 }
 .lieu-emblematique-frame-nav a.active {
     color: black;
-    border-bottom: 2px solid black;
+    border-bottom: 0.5px solid black;
 }
 
 
@@ -1474,8 +1494,9 @@ margin-bottom: 12vh;
     box-sizing: border-box;
   }
   .lieu-emblematique-container12 {
-  width: 70%;
-  height: 360px;
+  width: 90%;
+  height: 370px;
+  margin-top: 20px;
  
 
 }
@@ -3040,7 +3061,7 @@ margin-bottom: 12vh;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 2px;
+/*  padding: 2px; */
   z-index: 1;
 }
 .section-footer-et-copyright-gradientblur {
@@ -3346,12 +3367,13 @@ margin-bottom: 12vh;
 .section-footer-et-copyright-link5 {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-start; 
   justify-content: flex-start;
 }
 .section-footer-et-copyright-container25 {
   padding: 0 0 0.6px;
   margin-top: 100px;
+  text-align: center;
 }
 
 .section-footer-et-copyright-container24,
@@ -3533,6 +3555,7 @@ margin-bottom: 12vh;
     padding: 8px 16px;
     font-size: 16px;
     margin-bottom: 20px;
+    display: none;
   }
 
   .horizontal-divider {
@@ -3549,7 +3572,7 @@ margin-bottom: 12vh;
 
   .right-content-main-section-1 {
     width: 100%;
-    height: 285px;
+    height: 345px;
     margin-top: 20px;
   }
 
@@ -3569,6 +3592,7 @@ margin-bottom: 12vh;
 
 .title-ber {
   font-size: 18px;
+  margin: 4px 0;
 }
 
 }
@@ -3593,7 +3617,7 @@ margin-bottom: 12vh;
   .title-ar,
   .title-fr {
     font-size: 18px;
-    margin: 10px 0;
+    margin: 4px 0;
   }
 
   .content-loisirs-2 {
@@ -3603,7 +3627,7 @@ margin-bottom: 12vh;
   .text-ber,
   .text-ar,
   .text-fr {
-    font-size: 14px;
+    font-size: small;
     margin-bottom: 15px;
   }
 
@@ -3683,4 +3707,10 @@ gap: 8px;
 
 max-width: 300px;
 }
+
+.section-footer-et-copyright-container-parent {
+  font-size: small;
+  gap: 1px;
+}
+
 }
