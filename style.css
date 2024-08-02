@@ -1385,8 +1385,13 @@ margin-bottom: 12vh;
     min-width: 100%;
   }
   .lieu-emblematique-frame-nav {
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
     gap: 23px;
+  }
+  .lieu-emblematique-frame-nav, .lieu-emblematique-tauromachie-parent {
+    display: flex;
+    flex-direction: column;
   }
   .lieu-emblematique-horizontal-divider-parent {
     flex-wrap: wrap;
@@ -1396,6 +1401,7 @@ margin-bottom: 12vh;
     padding-left: var(--padding-10xl);
     padding-right: var(--padding-10xl);
     box-sizing: border-box;
+    margin-top: 40px;
   }
   .lieu-emblematique-frame-group {
     gap: 39px;
@@ -3592,4 +3598,19 @@ font-size: 22px;
   margin-bottom: 10px;
 }
 }
-  
+
+
+.img-loisirs-mobile {
+  display: none;
+  width: 100%; /* Ajustez la largeur selon vos besoins */
+  margin: 0 auto 20px auto; /* Centré horizontalement avec un espace en bas */
+}
+
+@media screen and (max-width: 600px) {
+.img-loisirs-mobile  {
+    display: block;
+    float: left;
+    width: 100%; /* Ajustez la largeur selon vos besoins */
+  }
+}
+
