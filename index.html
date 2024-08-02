@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans Tifinagh:wght@400&display=swap" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      <!-- AOS CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <!--  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />-->
     <script src="https://unpkg.com/aatjs/dist/aat.min.js"></script>
 </head>
@@ -24,9 +26,9 @@
 <div class="custom-div">
       <div class="background-wrapper">
         <div class="background1">
-          <div class="container">
+          <div data-aos="fade-up" data-aos-duration="1000" class="container">
             <img class="link-icon" alt="" src="./assets/img/logo-arrondissement.png" id="linkImage" />
-            <div class="buttons-container">
+            <div  class="buttons-container">
               <div class="histoire">Histoire</div>
               <div class="dcouvrir">Découvrir</div>
               <div class="patrimoine">Patrimoine</div>
@@ -36,7 +38,7 @@
           </div>
         </div>
       </div>
-          <div class="container-main-section-1">
+          <div  class="container-main-section-1">
             <section class="background-main-section-1">
               <div class="content-main-section-1">
                 <div class="left-content-main-section-1">
@@ -56,7 +58,7 @@
                               </div>
                             </div>
                           </div>
-                          <a class="lieu-emblematique-a font-arabe">من المهم الاهتمام</a>
+                          <a class="lieu-emblematique-a font-arabe">مقاطعة المعاريف</a>
                           <div class="lieu-emblematique-border"></div>
                         </div>
                         <div class="lieu-emblematique-container4">
@@ -90,29 +92,29 @@
                               </div>
                             </div>
                           </div>
-                          <a class="lieu-emblematique-o">ⵍoⵔⴻⵎ ⵉⵒⵙⵓⵎ</a>
+                          <a class="lieu-emblematique-o">ⵜⴰⵎⵎⴰⵙⵜ ⵏ ⵎⴰⴰⵔⵉⴼ</a>
                           <div class="lieu-emblematique-border2"></div>
                         </div>
                       </div>
                     </div>
-                    <div class="title-main-section-1">
-                      <h1 class="heading-main-section-1 font-arabe">ساحة الدار البيضاء</h1>
+                    <div  class="title-main-section-1" data-aos="fade-up" data-aos-duration="1000">
+                      <h1 class="heading-main-section-1 font-arabe">الدار البيضاء، مدينة الترفيه</h1>
                       <h1 class="heading-main-section-1">Casablanca, ville de loisirs</h1>
-                      <h1 class="heading-main-section-1">ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ ⵡⴰⵎⵎⴰⵙ ⵏ ⵜⵖⵓⵔ</h1>
+                      <h1 class="heading-main-section-1">ⴰⵏⴼⴰ ⴰⵏⵓ ⵏ ⵎⵓⵏⵜⵉⵔ</h1>
                     </div>
-                    <button class="button-main-section-1">Découvrir maintenant</button>
+                    <button data-aos="zoom-in" data-aos-duration="1000" class="button-main-section-1">Découvrir maintenant</button>
                     <div class="horizontal-divider"></div>
-                    <p class="paragraph-main-section-1 font-arabe">من المهم الاعتناء بالمريض، وأن يتبعه المريض، لكن ذلك سيحدث في
-                      وقت يكون فيه الكثير من العمل والألم.</p>
-                    <p class="paragraph-main-section-1">Casablanca, ville effervescente et cosmopolite, a toujours été
+                    <p data-aos="fade-up" data-aos-duration="1000" class="paragraph-main-section-1 font-arabe">الدار البيضاء، مدينة نابضة بالحياة ومتعددة الثقافات، لطالما كانت ملتقى للثقافات والابتكارات والترفيه. منذ بداية القرن
+                    العشرين، تميزت هذه المدينة المغربية الكبرى بديناميتها وقدرتها على تقديم أنواع متنوعة من الترفيه لسكانها وزوارها.</p>
+                    <p data-aos="fade-up" data-aos-duration="1000" class="paragraph-main-section-1">Casablanca, ville effervescente et cosmopolite, a toujours été
                       un carrefour de cultures, d'innovations et de divertissements. Depuis le début du XXe siècle,
                       cette métropole marocaine a su se distinguer par son dynamisme et sa capacité à offrir des
                       loisirs variés à ses habitants et visiteurs.</p>
-                    <p class="paragraph-main-section-1">ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ ⵡⴰⵎⵎⴰⵙ ⵏ ⵜⵖⵓⵔⵉⵡⵉⵏ ⵏ ⵜⵙⵎⵍⴰⵢⵜ ⴷ ⵉⵎⴰⴳⵔⴰⵡⵏ ⵏ ⵓⵏⵖⵎⵉⵙ ⴷ
-                      ⵓⵎⵢⴰⵡⴰⴹ ⵏ ⵓⵙⵉⵏⴰⴳ ⴰⴳⵍⴷⴰⵏ ⵏ ⵜⵓⵙⵙⵏⴰ ⵜⴰⵎⴰⵣⵉⵖⵜ ⵓⵙⴼⵓⴳⵍⵓ ⵏ ⵓⵙⵖⵣⵏ ⵏ ⵜⵡⵏⵖⴰ ⵏ ⵜⴼⵉⵏⴰⵖ</p>
+                    <p data-aos="fade-up" data-aos-duration="1000" class="paragraph-main-section-1">ⴰⵣⵖⴰⵡⵖⴰ (ⴰⴷⵔⴻⵔ ⵢⴰⵏⵉⵍⴰ)ⴰⵜⴰⵡⵏⵉⵜ ⵏ ⵜⴰⵙⵎⵎⵓⴷⵉⵜ ⴷ ⵜⵉⴼⵉⵏⴰⵖ، ⴰⵔⴻⵏⵉ ⵜⴰⴷⴻⵎⵎⴰⵔⵜ ⵉⵏ ⵓⵣⵣⵓⵍ ⴰⵎⵓⴷⵓⵛ ⴷⵜⵉⵖⴻⵜⵉⵏ. ⴳ ⵜⴰⵎⴰⵔⵓⵜ ⵜⵙⵉⵏⵉⵔ ⵏ ⵙ
+                    ⵓⵣⵣⵓⵍⵉⵏⵜⵉⵏ ⵓⴰⴷⴳⴷⵓⵔ ⵏⵏⵉⵙⵙⵉⵏ، ⵜⴰⵎⴻⴳⵉⵏⵜ ⴰⵣⵉⵎⵉⵙ ⴰⵎⵓⵍⵙⵉⵜ ⵏ ⵜⴰⵍⵓⴳⵉⵍⵉⵜ ⵜⵙⵎⵉ ⵎⵓⵙⵎⵓⵏ.</p>
                   </div>
                 </div>
-                <div class="right-content-main-section-1">
+                <div data-aos="fade-down" data-aos-duration="1000"class="right-content-main-section-1">
                   <div id="map-main-section-1" class="map-main-section-1"></div>
                 </div>
               </div>
@@ -125,7 +127,7 @@
 </div>
 
 
-<div class="container-loisirs-1">
+<div class="container-loisirs-1" >
   <div class="container-titres-2">
   <h1 class="title-ar">اكتشف مصارعة الثيران في حلبة مصارعة الثيران</h1>
   <h2 class="title-fr">Les arènes de Maarif : un symbole de divertissement</h2>
@@ -145,8 +147,8 @@
   <div class="card" data-index="0">
     <div class="card__inner">
     
-      <div class="card__content">
-        <div class="titres-cartes-interactives">
+      <div class="card__content" data-aos="fade-up" data-aos-duration="1000">
+        <div class="titres-cartes-interactives" >
         <h1 class="card__title">اكتحلبة مصارعة الثيران</h1>
         <h1 class="card__title">Les arènes de Maarif</h1>
         <h1 class="card__title">ⵍoⵔⴻⵎ ⵉⵒⵙⵓⵎ ⴷoⵍoⵔ ⵙⵉⵜ</h1>
@@ -180,7 +182,7 @@
   <div class="card" data-index="0">
     <div class="card__inner">
       
-        <div class="card__content">
+        <div class="card__content" data-aos="fade-up" data-aos-duration="1000">
           <div class="titres-cartes-interactives">
             <h1 class="card__title">اكتحلبة مصارعة الثيران</h1>
             <h1 class="card__title">Les arènes de Maarif</h1>
@@ -215,7 +217,7 @@
   <div class="card" data-index="0">
     <div class="card__inner">
      
-      <div class="card__content">
+      <div class="card__content" data-aos="fade-down" data-aos-duration="1000">
         <div class="titres-cartes-interactives">
           <h1 class="card__title">اكتحلبة مصارعة الثيران</h1>
           <h1 class="card__title">Les arènes de Maarif</h1>
@@ -255,7 +257,7 @@
   <div class="custom-div-container">
     <div class="custom-div">
 
-          <div class="container-loisirs-2">
+          <div class="container-loisirs-2" data-aos="fade-down" data-aos-duration="1200">
             <h1 class="title-ar">اكتشف مصارعة الثيران في حلبة مصارعة الثيران</h1>
             <h2 class="title-fr">Casablanca, Capitale des Loisirs</h2>
             <h2 class="title-fr">ⵍoⵔⴻⵎ ⵉⵒⵙⵓⵎ ⴷoⵍoⵔ ⵙⵉⵜ ⴰⵎⴻⵜ, ⵛoⵏⵙⴻⵛⵜⴻⵜⵓⵔ ⴰⴷⵉⵒⵉⵙⵛⵉⵏⴳ ⴻⵍⵉⵜ</h2>
@@ -268,7 +270,7 @@
             </div>
           </div>
 
-  <div class="container-scroll-image">
+  <div class="container-scroll-image" data-aos="fade-up" data-aos-duration="1000">
     <div class="text-section">
       <img src="assets/img/ctgUWPe2FeKeRk4ZuRYlMoqtL34.png.png" alt="Description de l'image" class="img-loisirs-mobile">
       <p id="para1" class="paragraphe-sec-1">
@@ -316,7 +318,7 @@
     </div>
   </div>
 
-<section class="lieu-emblematique-section-1">
+<section class="lieu-emblematique-section-1" data-aos="fade-left" data-aos-duration="1000">
   <div class="lieu-emblematique-container">
     <div class="lieu-emblematique-pilules-avec-success-parent">
       <div class="lieu-emblematique-pilules-avec-success">
@@ -433,7 +435,7 @@
 </section>
 
 
-<div class="titres-historiques-section-titres-historiques">
+<div class="titres-historiques-section-titres-historiques" data-aos="fade-right" data-aos-duration="800">
   <section class="titres-historiques-container">
     <div class="titres-historiques-titres-historiques">
       <a class="titres-historiques-a font-arabe">نفس الوقت سوف يتأثر ببعض</a>
@@ -473,7 +475,7 @@
 
 <div class="section-arenes-populaires-background">
   <main class="section-arenes-populaires-background1">
-    <section class="section-arenes-populaires-container">
+    <section class="section-arenes-populaires-container" data-aos="fade-up" data-aos-duration="1000">
       <div class="section-arenes-populaires-wrapper">
         <div class="section-arenes-populaires-div font-arabe">الحلبات: نجاح شعبي</div>
       </div>
@@ -482,7 +484,7 @@
         <div class="section-arenes-populaires-div1">ⵜⵉⴼⵉⵏⵉⵍ: ⴰⵎⵓⵔ ⵉⵎⵉⵏⵉⵏ</div>
       </div>
     </section>
-    <section class="section-arenes-populaires-container1">
+    <section class="section-arenes-populaires-container1" data-aos="fade-right" data-aos-duration="1000">
       <div class="section-arenes-populaires-container-parent">
         <div class="section-arenes-populaires-container2">
           <img class="section-arenes-populaires-pzecta9irccrfab7civxskecqtepn-icon" loading="lazy" alt=""
@@ -493,7 +495,7 @@
           <div class="section-arenes-populaires-svg"></div>
         </div>
       </div>
-      <div class="section-arenes-populaires-background-parent">
+      <div class="section-arenes-populaires-background-parent" >
         <div class="section-arenes-populaires-background3">
           <div class="section-arenes-populaires-container-group">
             <div class="section-arenes-populaires-container3">
@@ -580,7 +582,7 @@
 
 <div class="section-en-evolution-background">
   <main class="section-en-evolution-background1">
-    <section class="section-arenes-populaires-container">
+    <section class="section-arenes-populaires-container" data-aos="fade-in" data-aos-duration="1000">
       <div class="section-arenes-populaires-wrapper">
         <div class="section-arenes-populaires-div font-arabe">الحلبات: نجاح شعبي</div>
       </div>
@@ -589,7 +591,7 @@
         <div class="section-arenes-populaires-div1">ⵜⵉⴼⵉⵏⵉⵍ: ⴰⵎⵓⵔ ⵉⵎⵉⵏⵉⵏ</div>
       </div>
     </section>
-    <section class="section-en-evolution-container6">
+    <section class="section-en-evolution-container6" data-aos="fade-left" data-aos-duration="1000">
       <div class="section-en-evolution-container7">
         <div class="section-en-evolution-container8">
           <div class="section-en-evolution-container9">
@@ -649,7 +651,7 @@
 
 
 
-<div class="section-footer-et-copyright-container">
+<div class="section-footer-et-copyright-container" data-aos="fade-up" data-aos-duration="1000">
   <main class="section-footer-et-copyright-background">
     <section class="section-footer-et-copyright-background1">
       <div class="section-footer-et-copyright-container1">
@@ -1028,6 +1030,12 @@
     }
   });
 
+</script>
+
+<!-- AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
 </script>
 </body>
 
