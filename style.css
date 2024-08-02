@@ -2638,6 +2638,7 @@ margin-bottom: 12vh;
 }
 .section-en-evolution-container12 {
   align-self: stretch;
+  gap: 20px;
 }
 .section-en-evolution-container11 {
   width: 896px;
@@ -2669,7 +2670,7 @@ margin-bottom: 12vh;
   line-height: 27px;
 }
 .section-en-evolution-cette-fusion-du {
-  height: 205px;
+  height: 264px;
   font-size: 16.5px;
   color: var(--section-en-evolution-color-gray-100);
   display: flex;
@@ -3090,6 +3091,7 @@ margin-bottom: 12vh;
   width: 229px;
   border-radius: 118px;
   justify-content: flex-start;
+  margin-bottom: 20px;
 }
 .section-footer-et-copyright-link-wrapper {
   align-self: stretch;
@@ -3195,6 +3197,8 @@ margin-bottom: 12vh;
 .section-footer-et-copyright-commune-de-maarif1 {
   position: relative;
   line-height: 27px;
+  text-decoration: none;
+  color: inherit;
 }
 .section-footer-et-copyright-container14,
 .section-footer-et-copyright-container15 {
@@ -3306,6 +3310,8 @@ margin-bottom: 12vh;
 .section-footer-et-copyright-jardin-des-arnes {
   position: relative;
   line-height: 27px;
+  text-decoration: none;
+  color: inherit;
 }
 .section-footer-et-copyright-container22,
 .section-footer-et-copyright-container23 {
@@ -3669,7 +3675,7 @@ margin-bottom: 12vh;
 
 @media screen and (max-width: 700px){
   .section-en-evolution-cette-fusion-du {
-  height: 391px;
+  height: 905px;
 }
   .section-footer-et-copyright-div, .section-footer-et-copyright-div1, .section-footer-et-copyright-la-mtamorphose-de {
 font-size: 22px;
