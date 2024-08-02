@@ -4,12 +4,1327 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <title>Musique</title>
+    <title>Jardin des Arènes de Maarif</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans Tifinagh:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!--  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />-->
+    <script src="https://unpkg.com/aatjs/dist/aat.min.js"></script>
 </head>
 
 <body>
-    <h1>Musique</h1>
+    <div id="floating-arrow">
+        <i class="fas fa-arrow-down"></i>
+    </div>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-button" onclick="closePopup()">&times;</span>
+            <h2>Mot du Président</h2>
+            <div class="popup-text">
+                <p class="font-arabe">عزيزي الزائر،</p>
+                <p class="font-arabe">مرحبا بكم في موقعنا. نهدف إلى تقديم تجربة ممتازة وشاملة لجميع زوارنا. نأمل أن
+                    تجدوا كل ما
+                    تحتاجونه هنا. نتطلع إلى سماع آرائكم وملاحظاتكم.</p>
+
+                <p>Cher visiteur,</p>
+                <p>Bienvenue sur notre site. Nous visons à offrir une expérience excellente et complète à tous nos
+                    visiteurs. Nous
+                    espérons que vous trouverez tout ce dont vous avez besoin ici. Nous avons hâte de recevoir vos avis
+                    et
+                    commentaires.</p>
+
+                <p>ⵣⴰⵢⴻⵔ ⵢⴰⵏⴻ,</p>
+                <p>ⵉⵏⵓⵏⴰ ⵙ ⴰⵏⵡⵉⵢⵏ ⴰⵏⴰⵢⴰⵢ. ⵎⵓⵏⵜⵉⴽⵍ ⵡⴰⵏ ⵜⴰⵎⴻⵍⴷⵉⵢⵏ ⵙⵙⵓⵏ ⴷ ⵜⵉⵏⴰⵡⵉⵜ ⴰⵎⵙⵉⵏⵙ ⴰⴷⵉⵔ ⴰⵎⵓⴷⴰⵢⵏ ⵙⵓⵏⵜⵉⵔ ⴳ ⵡⴰⵙⴰⵏⵎⵓⵏ ⴳ
+                    ⵙⴽⵙⵓⵍⴷ
+                    ⵓⵎⴷⴻⵍ ⵙⵉⵏⴰ. ⵎⵓⴷ ⴰⵔⵎⵎⴰⴹ ⵓⵎⵓⵔⵉⴷ ⵢⴰⴷ ⵜⵉⵏⵜⴰⴳⵔⵎ ⵢⵉⵍⵉⵙⵍ ⵢⵉⵏⴻⵍⵍⵓⵙⵉⵏ.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="custom-div-container ">
+        <div class="custom-div">
+            <div class="background-wrapper">
+                <div class="background1">
+                    <div data-aos="fade-up" data-aos-duration="1000" class="container">
+                        <img class="link-icon" alt="" src="./assets/img/logo-arrondissement.png" id="linkImage" />
+                        <div class="buttons-container">
+                            <div class="histoire" onclick="scrollToSection()">Histoire</div>
+                            <div class="dcouvrir" onclick="scrollToSection()">Découvrir</div>
+                            <div class="patrimoine" onclick="scrollToSection()">Patrimoine</div>
+                            <div class="faq" onclick="scrollToSection()">FAQ</div>
+                        </div>
+                        <button class="button-main-section-1" onclick="showPopup()">Mot du Président</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="container-main-section-1">
+                <section class="background-main-section-1">
+                    <div class="content-main-section-1">
+                        <div class="left-content-main-section-1">
+                            <div class="homepage-main-section-1">
+                                <div class="location-list-main-section-1">
+                                    <div class="lieu-emblematique-pilules-avec-success">
+                                        <div class="lieu-emblematique-container1">
+                                            <div class="lieu-emblematique-container-wrapper">
+                                                <div class="lieu-emblematique-container2">
+                                                    <div class="lieu-emblematique-svg">
+                                                        <div class="lieu-emblematique-svg1">
+                                                            <div class="lieu-emblematique-container3">
+                                                                <div class="lieu-emblematique-background"></div>
+                                                                <div class="lieu-emblematique-background1"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="lieu-emblematique-a font-arabe">مقاطعة المعاريف</a>
+                                            <div class="lieu-emblematique-border"></div>
+                                        </div>
+                                        <div class="lieu-emblematique-container4">
+                                            <div class="lieu-emblematique-container-container">
+                                                <div class="lieu-emblematique-container5">
+                                                    <div class="lieu-emblematique-svg2">
+                                                        <div class="lieu-emblematique-container6">
+                                                            <div class="lieu-emblematique-container7">
+                                                                <div class="lieu-emblematique-svg3"></div>
+                                                                <div class="lieu-emblematique-background2"></div>
+                                                                <div class="lieu-emblematique-background3"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="lieu-emblematique-lorem-ipsum">Arrondissement de Maarif</a>
+                                            <div class="lieu-emblematique-border1"></div>
+                                        </div>
+                                        <div class="lieu-emblematique-container8">
+                                            <div class="lieu-emblematique-container-frame">
+                                                <div class="lieu-emblematique-container9">
+                                                    <div class="lieu-emblematique-svg4">
+                                                        <div class="lieu-emblematique-container10">
+                                                            <div class="lieu-emblematique-container11">
+                                                                <div class="lieu-emblematique-svg5"></div>
+                                                                <div class="lieu-emblematique-background4"></div>
+                                                                <div class="lieu-emblematique-background5"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="lieu-emblematique-o">ⵜⴰⵎⵎⴰⵙⵜ ⵏ ⵎⴰⴰⵔⵉⴼ</a>
+                                            <div class="lieu-emblematique-border2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="title-main-section-1" data-aos="fade-up" data-aos-duration="1000">
+                                    <h1 class="heading-main-section-1 font-arabe">مكان مرموق للموسيقى</h1>
+                                    <h1 class="heading-main-section-1">Un Haut Lieu de Musique</h1>
+                                    <h1 class="heading-main-section-1">ⵜⴰⵜⵜⴰⵔⵉⵜ ⵜⵉⵜⵜⵓⵙⵉⵇⵜ</h1>
+                                </div>
+                                <button data-aos="zoom-in" data-aos-duration="1000" class="button-main-section-1"
+                                    onclick="scrollToSection()">Découvrir maintenant</button>
+                                <div class="horizontal-divider"></div>
+                                <p data-aos="fade-up" data-aos-duration="1000"
+                                    class="paragraph-main-section-1 font-arabe">كانت حلبات الدار البيضاء مركزًا محوريًا للمشهد الموسيقي، حيث استضافت حفلات لا تُنسى لفنانين ذوي شهرة عالمية. أساطير مثل
+                                    جوني هاليداي، داليدا، وعبد الحليم حافظ أضاءوا هذه الساحة، جاذبين الآلاف من المتفرجين وخلقوا ذكريات لا تُمحى. لعب هذا
+                                    المكان الرمزي دورًا حاسمًا في نشر الموسيقى وساهم في النهضة الثقافية للدار البيضاء، من خلال توفير منصة لأكبر الأسماء في
+                                    عالم الموسيقى</p>
+                                <p data-aos="fade-up" data-aos-duration="1000" class="paragraph-main-section-1">
+                                    Les arènes de Casablanca ont été un centre névralgique pour la scène musicale, accueillant des concerts mémorables
+                                    d'artistes de renommée internationale. Des légendes comme Johnny Hallyday, Dalida, et Abdelhalim Hafid ont illuminé
+                                    cette scène, attirant des milliers de spectateurs et créant des souvenirs impérissables. Ce lieu emblématique a joué un
+                                    rôle crucial dans la diffusion de la musique et a contribué à l'essor culturel de Casablanca, en offrant une plateforme
+                                    aux plus grands noms de la musique mondiale.</p>
+                                <p data-aos="fade-up" data-aos-duration="1000" class="paragraph-main-section-1">ⴰⵣⵖⴰⵡⵖⴰ
+                                    (ⴰⴷⵔⴻⵔ ⵢⴰⵏⵉⵍⴰ)ⴰⵜⴰⵡⵏⵉⵜ ⵏ ⵜⴰⵙⵎⵎⵓⴷⵉⵜ ⴷ ⵜⵉⴼⵉⵏⴰⵖ، ⴰⵔⴻⵏⵉ ⵜⴰⴷⴻⵎⵎⴰⵔⵜ ⵉⵏ ⵓⵣⵣⵓⵍ ⴰⵎⵓⴷⵓⵛ
+                                    ⴷⵜⵉⵖⴻⵜⵉⵏ. ⴳ ⵜⴰⵎⴰⵔⵓⵜ ⵜⵙⵉⵏⵉⵔ ⵏ ⵙ
+                                    ⵓⵣⵣⵓⵍⵉⵏⵜⵉⵏ ⵓⴰⴷⴳⴷⵓⵔ ⵏⵏⵉⵙⵙⵉⵏ، ⵜⴰⵎⴻⴳⵉⵏⵜ ⴰⵣⵉⵎⵉⵙ ⴰⵎⵓⵍⵙⵉⵜ ⵏ ⵜⴰⵍⵓⴳⵉⵍⵉⵜ ⵜⵙⵎⵉ ⵎⵓⵙⵎⵓⵏ.</p>
+                            </div>
+                        </div>
+                        <div data-aos="fade-down" data-aos-duration="1000" class="right-content-main-section-1">
+                            <div id="map-main-section-1" class="map-main-section-1"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+
+    <div class="container-loisirs-1" id="target-section">
+        <div class="container-titres-2">
+            <h1 class="title-ar">حلبات المعاريف: رمز الترفيه</h1>
+            <h2 class="title-fr">Les arènes de Maarif : un symbole de divertissement</h2>
+            <h2 class="title-ber">ⵍⴰⵔⴻⵏⴻⵙ ⴷ ⵓⵛ ⵏ ⵎⴰⵄⵔⵉⴼ: ⵜⴰⵙⵓⴷⴷⵉⵢⵜ ⵏ ⵜⵔⴻⴼⵉⵀ</h2>
+        </div>
+        <div class="content-loisirs-1">
+            <p class="text-ber">ⴰⴷ ⵉⵙⵏⵎⴰⵍⴰ ⵡⴰⵎⵎⴰⵙⵙ ⵏ ⵜⵖⵓⵔⵉⵡⵉⵏ ⵜⵉⵏⴰⵥⵓⵕⵉⵏ</p>
+            <p class="text-ar font-arabe">من المهم الاهتمام بالمريض، وأن يتبعه العميل من المهم الاهتمام بالمريض، وأن
+                يتبعه العميل</p>
+            <p class="text-fr">Explorez comment les arènes de Casablanca ont été le centre des loisirs et des
+                divertissements, marquant l'histoire
+                culturelle de la ville avec des événements taurins, des concerts légendaires et bien plus encore</p>
+        </div>
+    </div>
+
+
+    <div class="card-section">
+        <div class="space space--small"></div>
+        <div class="cards">
+            <div class="card" data-index="0">
+                <div class="card__inner">
+
+                    <div class="card__content" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="titres-cartes-interactives">
+                            <h1 class="card__title">الحلبات، القلب النابض للمعاريف</h1>
+                            <h1 class="card__title">Les arènes, coeur battant de Maarif</h1>
+                            <h1 class="card__title">ⵍⴰⵔⴻⵏⴻⵙ، ⴰⴼⵓⵍⵜ ⴰⵜⵜⴰⵙⴳⵯⵔⵉ ⵏ ⵎⴰⵄⵔⵉⴼ</h1>
+                        </div>
+                        <p class="card__description font-arabe">
+                            اكتشف كيف أن حلبات الدار البيضاء قد نشطت حي المعاريف، وجذبت الحشود لعروض مصارعة الثيران
+                            والأحداث الثقافية المتنوعة، مما
+                            جعل هذه المنطقة قطب جذب حقيقي.
+                        </p>
+                        <p class="card__description">
+                            Découvrez comment les arènes de Casablanca ont dynamisé le quartier Ma'arif, attirant des
+                            foules pour des spectacles de
+                            tauromachie et des événements culturels divers, faisant de cette zone un véritable pôle
+                            d'attraction.
+                        </p>
+                        <p class="card__description">
+                            ⴰⴷⴷⴻⴽ ⴷ ⴷⵓⵣⴰ ⵜⵉⵏⴰⵔⵜ ⵍⴰⵔⴻⵏⴻⵙ ⵏ ⵇⵇⴰⴳⵣⵣⴰⴱⴰⵢ⵰ ⵉⵙⵎⵓⵙ ⵜⵉⵍⵎⵉⵣ ⵍⵊⵉ ⵎⴰⵄⵔⵉⴼ، ⵜⵉⵜⵜⴰⵜⵔⵓⵜ
+                        </p>
+                    </div>
+                    <div class="card__image-container">
+                        <img class="card__image" src="assets/img/arenes-colorized.jpg" alt="" />
+                        <img class="card__image" src="assets/img/ville-de-loisirs/arene-casablanca.jpg" alt="" />
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="card" data-index="0">
+                <div class="card__inner">
+
+                    <div class="card__content" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="titres-cartes-interactives">
+                            <h1 class="card__title">مشهد موسيقي لا يُنسى</h1>
+                            <h1 class="card__title">Scène musicale inoubliable</h1>
+                            <h1 class="card__title">ⵜⴰⵛⵉⵜ ⵜⵓⵙⵉⵇⵜ ⵜⴰⵜⵜⴰⵡⵜⵜ</h1>
+                        </div>
+                        <p class="card__description">
+                            اغمر نفسك في أجواء الحفلات الموسيقية التي لا تُنسى التي أقيمت في حلبات الدار البيضاء. من
+                            جوني هاليداي إلى فيروز، عِش من
+                            جديد أداءات أعظم الفنانين الذين تركوا بصماتهم على أجيال من سكان الدار البيضاء
+                        </p>
+                        <p class="card__description">
+                            Plongez dans l'ambiance des concerts mémorables qui ont eu lieu aux arènes de Casablanca. De
+                            Johnny Hallyday à Fayrouz,
+                            revivez les performances des plus grands artistes qui ont marqué des générations de
+                            Casablancais.
+                        </p>
+                        <p class="card__description">
+                            ⴰⵙⴳⵔ ⵓⵛ ⴰⴽⵍⵓ ⵉⵣⵉⵣⴰ ⵉⵏⵜⵜⴰⵍⵎⵉⵎ ⵏ ⵜⴰⵛⴻⵛⵛⵍⵉⵢⵉⵏ ⵜⴰⵜⵓⵔⵉⵇⵜ ⵜⴰⵏⵜⵜⴰⵥⵓⴳⵜ ⵜⵜⵙⵎⵓⵢⵉⵏ ⵜⴰⵎⵔⵉⵜⵜⵉⵢⵜ ⵙⵉ
+                            ⵇⵇⴰⴳⵣⵣⴰⴱⴰⴱⵢⴰⵢ
+                        </p>
+                    </div>
+                    <div class="card__image-container">
+                        <img class="card__image" src="assets/img/Shoelifer_arenes-de-casablanca.jpg" alt="" />
+                        <img class="card__image"
+                            src="assets/img/ville-de-loisirs/WhatsApp Image 2024-08-02 à 10.56.09_9ce63aae.jpg"
+                            alt="" />
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-index="0">
+                <div class="card__inner">
+
+                    <div class="card__content" data-aos="fade-down" data-aos-duration="1000">
+                        <div class="titres-cartes-interactives">
+                            <h1 class="card__title">الرياضة والعروض المتنوعة</h1>
+                            <h1 class="card__title">Sports et spectacles variés</h1>
+                            <h1 class="card__title">ⵜⵓⵔⵉⵜ ⴷ ⵜⵉⵏⵜⵜⵉⴷⴷⵓⵏⵜ ⵜⴰⵎⵓⵡⵉⵏⵜ</h1>
+                        </div>
+                        <p class="card__description">
+                            اكتشف تنوع الأحداث الرياضية والعروض التي استضافتها الحلبات. من سباقات السيارات القوية إلى
+                            مباريات الملاكمة، مرورًا بعروض
+                            السيرك، كان هذا المبنى مكانًا للترفيه المتنوع
+
+                        </p>
+                        <p class="card__description">
+                            Découvrez la diversité des événements sportifs et des spectacles accueillis par les arènes.
+                            Des courses de stock-car aux
+                            combats de boxe, en passant par les spectacles de cirque, cet édifice a été un lieu de
+                            divertissement éclectique.
+                        </p>
+                        <p class="card__description">
+                            ⴰⴷⴷⴻⴽ ⵜⵉⵏⵜⵜⴰⵡⵜ ⵏ ⵜⵉⵜⵜⵓⵔⵜⵜⵉⵏ ⵜⴰⵜⵜⵓⵔⵉⵜⵜ ⴷ ⵜⵉⵜⵜⴰⵜⵜⵔⵉⵓⵏ ⵜⴰⵏⵜⵜⴰ ⴰⴷⴷⴻⴽ ⵜⵉⵏⵜⵜⴰⵡⵜ ⵏ ⵜⵉⵜⵜⵓⵔⵜⵜⵉⵏ
+                            ⵜⴰⵜⵜⵓⵔⵉⵜⵜ ⴷ ⵜⵉⵜⵜⴰⵜⵜⵔⵉⵓⵏ ⵜⴰⵏⵜⵜⴰ
+                        </p>
+                    </div>
+                    <div class="card__image-container">
+                        <img class="card__image" src="assets/img/ville-de-loisirs/arenes10.jpg" alt="" />
+                        <img class="card__image" src="assets/img/plaza10.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="space"></div>
+    </div>
+
+
+    <div class="custom-div-container">
+        <div class="custom-div">
+
+            <div class="container-loisirs-2" data-aos="fade-down" data-aos-duration="1200">
+                <h1 class="title-ar">الدار البيضاء، عاصمة الترفيه</h1>
+                <h2 class="title-fr">Casablanca, Capitale des Loisirs</h2>
+                <h2 class="title-fr">ⵇⵇⴰⴳⵣⵣⴰⴱⴰⵢ⵰، ⵜⴰⵎⵔⵉⵜ ⵏ ⵜⵔⴻⴼⵉⵀ</h2>
+
+                <div class="content-loisirs-2">
+                    <p class="text-ar font-arabe">اغمر نفسك في أصول وبناء حلبات الدار البيضاء، من تشييدها السريع في عام
+                        1921 إلى هندستها المعمارية الفريدة بأسلوب
+                        النيو-موريسكي، رمز الدار البيضاء والمعاريف</p>
+                    <p class="text-fr">Plongez dans les origines et la construction des arènes de Casablanca, de leur
+                        édification rapide en
+                        1921 à leur
+                        architecture unique en style néo-mauresque, symbole de Casablanca & de Maarif</p>
+                    <p class="text-ber">ⴰⵙⴳⵔ ⵓⵛⴻⵏ ⵍⴻⵏⵙⴽ ⵢ ⴰⵙⵓⵍ ⴷ ⵎⴰⴱⵔⴰⵙ ⵏ ⵍⴰⵔⴻⵏⴻⵙ ⴷ ⵇⵇⴰⴳⵣⵣⴰⴱⴰⵢ⵰، ⴷ ⵜⵙⵉⵎⵉⵎⵉⵏ ⵙ ⵜⵛⵉⵉⵜⴻⵏ
+                        ⵜⵙⵉⵎⵎⵓⵙ ⵉⵎ ⵉⵣⵣⴰ 1921 ⴰⵎ ⵜⴰⵙⵓⵏⵉⵔⵜⴰ ⴰⵍⵉⵏⴽ
+                        ⵍⵉⵏⵢⵓⴰⵎⵓⵔⵙⴽⵉ، ⵜⵉⵙⵎⵔⵉⵜ ⵏ ⵇⵇⴰⴳⵣⵣⴰⴱⴰⵢ⵰ ⴷ ⵓⵎⵄⴰⵔⵉⴼ.</p>
+                </div>
+            </div>
+
+            <div class="container-scroll-image" data-aos="fade-up" data-aos-duration="1000">
+                <div class="text-section">
+                    <img src="assets/img/ville-de-loisirs/126617581_o.jpeg" alt="Description de l'image"
+                        class="img-loisirs-mobile">
+
+                    <div class="pilules-de-succes-container">
+                        <div class="pilules-de-succes-item">
+                            <div class="pilules-de-succes-svg">
+                                <div class="pilules-de-succes-background"></div>
+                                <div class="pilules-de-succes-background-inner"></div>
+                            </div>
+                            <a class="pilules-de-succes-link font-arabe">البناء</a>
+                            <div class="pilules-de-succes-border"></div>
+                        </div>
+                        <div class="pilules-de-succes-item">
+                            <div class="pilules-de-succes-svg">
+                                <div class="pilules-de-succes-background"></div>
+                                <div class="pilules-de-succes-background-inner"></div>
+                            </div>
+                            <a class="pilules-de-succes-link">La construction</a>
+                            <div class="pilules-de-succes-border"></div>
+                        </div>
+                        <div class="pilules-de-succes-item">
+                            <div class="pilules-de-succes-svg">
+                                <div class="pilules-de-succes-background"></div>
+                                <div class="pilules-de-succes-background-inner"></div>
+                            </div>
+                            <a class="pilules-de-succes-link">ⵜⴰⵎⴱⵔⴰⵙⵜ</a>
+                            <div class="pilules-de-succes-border"></div>
+                        </div>
+                    </div>
+
+                    <p id="para1" class="paragraphe-sec-1">
+                        <span class="francais">Les arènes de Casablanca ont vu le jour en 1921, sous l’impulsion de la
+                            famille Castella, des Espagnols établis au
+                            Maroc. Construites en seulement 80 jours par l'architecte français Alexandre Cormier, elles
+                            étaient destinées à devenir
+                            un haut lieu de la tauromachie.</span>
+                        <br><br>
+                        <span class="arabe font-arabe">ظهرت حلبات الدار البيضاء إلى الوجود في عام 1921، بدفع من عائلة
+                            كاستيلا، وهي عائلة إسبانية استقرت في المغرب. تم بناؤها في
+                            80 يومًا فقط من قبل المهندس المعماري الفرنسي ألكسندر كورمييه، وكانت مخصصة لتصبح مكانًا هامًا
+                            لمصارعة الثيران</span>
+                        <br><br>
+                        <span class="tamazight">ⵍⴰⵔⴰⵏⴻⵙ ⴷ ⵓⵛ ⵏ ⵇⵇⴰⴳⵣⵣⴰⴱⴰⵢ⵰ ⵍⵉ ⵓⴼⴼⴰⵍ ⴷ 1921 ⴷⵏ ⵜⴰⴳⴳⴰⵔⵜ ⵓⵛ ⵏ ⴰⵎⵎⵓⵔⵉⵖⴻⵏ
+                            ⵇⵇⴰⵙⵜⵉⵍⴰ ⵏⵢⴰⵎⵎⵓⵔⵉⵖⴻⵏ ⵓⵎⵔⴰⴳ. ⵉⴼⴼⴻⵙⵙⴰⵏ ⴷ 80 ⵄⵔⵓ
+                            ⴰⵢⵉⴷⴻⵏ ⵏⵉ ⵓⴳⴳⴰⵔⴻⵏ ⵉⵏⵛ ⵍⵢⵓⵏ ⵉⵙⴻⵏⴰⵓ ⴰⵙⴻⵏⴳⵉⵍ ⴳⵍⴻⵎⵉⵣⵖⴻⵏ ⴳⴳⴰⵢ ⵏⴳⵍⵓⴽ ⵓⵙⵙⴻⵏⴳⵉⵍⵉ ⴳⵍⵉⵏⵎⴻⵢ
+                            ⵏⵜⴰⵡⵔⵓⵎⴰⵛⵉⵢⵢⴰ.</span>
+                    </p>
+                    <img src="assets/img/ville-de-loisirs/WhatsApp Image 2024-08-02 à 10.56.09_0621356b.jpg"
+                        alt="Description de l'image" class="img-loisirs-mobile">
+                    <div class="pilules-de-succes-container">
+                        <div class="pilules-de-succes-item">
+                            <div class="pilules-de-succes-svg">
+                                <div class="pilules-de-succes-background"></div>
+                                <div class="pilules-de-succes-background-inner"></div>
+                            </div>
+                            <a class="pilules-de-succes-link font-arabe">الافتتاح</a>
+                            <div class="pilules-de-succes-border"></div>
+                        </div>
+                        <div class="pilules-de-succes-item">
+                            <div class="pilules-de-succes-svg">
+                                <div class="pilules-de-succes-background"></div>
+                                <div class="pilules-de-succes-background-inner"></div>
+                            </div>
+                            <a class="pilules-de-succes-link">Inauguration</a>
+                            <div class="pilules-de-succes-border"></div>
+                        </div>
+                        <div class="pilules-de-succes-item">
+                            <div class="pilules-de-succes-svg">
+                                <div class="pilules-de-succes-background"></div>
+                                <div class="pilules-de-succes-background-inner"></div>
+                            </div>
+                            <a class="pilules-de-succes-link">ⵜⵉⵏⵓⵖⵓⵔⴰⵜ</a>
+                            <div class="pilules-de-succes-border"></div>
+                        </div>
+                    </div>
+                    <p id="para2" class="paragraphe-sec-2">
+                        <span class="francais">Inaugurées en grande pompe en octobre 1921 par le futur Maréchal Lyautey,
+                            les arènes ont rapidement attiré les foules
+                            pour des corridas et autres spectacles taurins. Avec une capacité de 12 000 places, elles
+                            ont marqué le début d’une ère
+                            festive pour Casablanca.</span>
+                        <br><br>
+                        <span class="arabe font-arabe">افتتحت الحلبات بفرح كبير في أكتوبر 1921 من قبل المارشال المستقبلي
+                            ليوطي، وجذبت بسرعة الحشود لمصارعة الثيران والعروض
+                            الترفيهية الأخرى. بقدرة استيعابية تصل إلى 12,000 مقعد، كانت بداية لعصر احتفالي في الدار
+                            البيضاء.</span>
+                        <br><br>
+                        <span class="tamazight">ⵜⴰⵏⵓⵖⵓⵔⴰⵜ ⵉⵏ ⵉⴳⵔⴰ ⵜⵉⵏ ⵓⴽⵜⵓⴱⵔ 1921 ⵏ ⵜⴰⵎⴰⵔⵛⵉⵍ ⵍⵢⵓⵜⵉ ⴷ ⵉⵙⵎⵉⵙ ⵜⴰⵎⴳⴷⵉⵡⵜ
+                            ⵉⵏⴰⵎⵓⵏⵙ ⵜⵉⵎⵙⵎⵔⵉⵜ ⵉⵏ ⵜⵓⵔⵉⵜ ⵜⵉⵍⵍⴰⵢⵜ ⵉⵙⵏⴰⵓ</span>
+                    </p>
+                    <img src="assets/img/Shoelifer_arenes-de-casablanca.jpg" alt="Description de l'image"
+                        class="img-loisirs-mobile">
+                    <div class="pilules-de-succes-container">
+                        <div class="pilules-de-succes-item">
+                            <div class="pilules-de-succes-svg">
+                                <div class="pilules-de-succes-background"></div>
+                                <div class="pilules-de-succes-background-inner"></div>
+                            </div>
+                            <a class="pilules-de-succes-link font-arabe">إعادة التنشيط</a>
+                            <div class="pilules-de-succes-border"></div>
+                        </div>
+                        <div class="pilules-de-succes-item">
+                            <div class="pilules-de-succes-svg">
+                                <div class="pilules-de-succes-background"></div>
+                                <div class="pilules-de-succes-background-inner"></div>
+                            </div>
+                            <a class="pilules-de-succes-link">Redynamisation</a>
+                            <div class="pilules-de-succes-border"></div>
+                        </div>
+                        <div class="pilules-de-succes-item">
+                            <div class="pilules-de-succes-svg">
+                                <div class="pilules-de-succes-background"></div>
+                                <div class="pilules-de-succes-background-inner"></div>
+                            </div>
+                            <a class="pilules-de-succes-link">ⵜⵉⵏⴳⴰ ⵜⵉⵏⵏⵉⵙⵓⵜ</a>
+                            <div class="pilules-de-succes-border"></div>
+                        </div>
+                    </div>
+                    <p id="para3" class="paragraphe-sec-3">
+                        <span class="francais">À partir de 1953, sous la direction de Paul Barrière et Don Vicente
+                            Marmaneu, les arènes ont connu leur apogée. Les plus
+                            grands toreros, tels que Paco Camino et El Cordobès, ont foulé le sable des arènes, faisant
+                            vibrer les aficionados
+                            casablancais.</span>
+                        <br><br>
+                        <span class="arabe font-arabe">ابتداءً من عام 1953، تحت إدارة بول باريير ودون فيسنتي مارمانيو،
+                            شهدت الحلبات ذروتها. أكبر مصارعي الثيران، مثل باكو
+                            كامينو وإل كوردوبيس، وطأوا رمال الحلبات، مما أثار إعجاب عشاق مصارعة الثيران في الدار
+                            البيضاء.</span>
+                        <br>
+                        <span class="tamazight">ⴰⴱⵜⴰⴷⴷ ⵏ ⴰⵢⵓⵙ 1953، ⵙ ⵜⴰⵏⴳⵓⵔⴰⵜ ⵏ ⵓⵎⵓⵔ ⴱⴰⵍ ⴱⴰⵔⵉⵢⴻ ⴷ ⴷⵓⵏ ⴼⵉⵙⴻⵏⵜⵉ ⵎⴰⵔⵎⴰⵏⴻⵓ،
+                            ⴰⵎⴳⵉ ⵍⴰⵔⴻⵏⴻⵙ ⴷ ⴳⵍⵍⵉⵎ. ⵉⴳⴷⴰⵔⴷⴻⵏ ⵜⵓⵔⵉⵙⵜⴻⵏ
+                            ⵜⵉⵏⵉⵣⵉⵙⵏ، ⵜⵉⵣⵉ ⴱⴰⴽⵓ ⴽⴰⵎⵉⵏⵓ ⴷ ⴻⵍ ⴽⵓⵔⴷⵓⴱⴻⵙ، ⵉⵍⵍⵎ ⵜⵉⵏⵜⵜⵍⴰⴷⵜ ⵉⵙⵏⴰⵓⵙ ⵉⴼⴻⵛⵉⵏ ⵏ ⵇⵇⴰⴳⵣⵣⴰⴱⴰⵢ⵰.</span>
+                    </p>
+                    <img src="assets/img/ville-de-loisirs/84430805cbf133c657ec954ba2bc4533.jpg"
+                        alt="Description de l'image" class="img-loisirs-mobile">
+                    <div class="pilules-de-succes-container">
+                        <div class="pilules-de-succes-item">
+                            <div class="pilules-de-succes-svg">
+                                <div class="pilules-de-succes-background"></div>
+                                <div class="pilules-de-succes-background-inner"></div>
+                            </div>
+                            <a class="pilules-de-succes-link font-arabe">الأحداث الدولية</a>
+                            <div class="pilules-de-succes-border"></div>
+                        </div>
+                        <div class="pilules-de-succes-item">
+                            <div class="pilules-de-succes-svg">
+                                <div class="pilules-de-succes-background"></div>
+                                <div class="pilules-de-succes-background-inner"></div>
+                            </div>
+                            <a class="pilules-de-succes-link">évènements internationaux</a>
+                            <div class="pilules-de-succes-border"></div>
+                        </div>
+                        <div class="pilules-de-succes-item">
+                            <div class="pilules-de-succes-svg">
+                                <div class="pilules-de-succes-background"></div>
+                                <div class="pilules-de-succes-background-inner"></div>
+                            </div>
+                            <a class="pilules-de-succes-link">ⴻⴷⴷⵎⴻⵏⵜⴰⵍ ⵉⵏⵜⵓⵔⵏⴰⵜⵉⵓⵙⵉⵏ</a>
+                            <div class="pilules-de-succes-border"></div>
+                        </div>
+                    </div>
+                    <p id="para4" class="paragraphe-sec-4">
+                        <span class="francais">Outre les corridas, les arènes sont devenues une scène prestigieuse pour
+                            des concerts de légendes comme Ray Charles et
+                            Dalida, ainsi que pour des événements sportifs comme les courses de stock-car et les combats
+                            de boxe, élargissant ainsi
+                            leur audience.</span>
+                        <br><br>
+                        <span class="arabe font-arabe">إلى جانب مصارعة الثيران، أصبحت الحلبات مسرحًا مرموقًا للحفلات
+                            الموسيقية لأساطير مثل راي تشارلز وداليدا، وكذلك للأحداث
+                            الرياضية مثل سباقات السيارات القوية ومباريات الملاكمة، مما وسع جمهورها.</span>
+                        <br><br>
+                        <span class="tamazight">ⵉⵍⵍⵉ ⵜⵉⵏⵜⵜⵍⵍⴰⵢⵜ ⵜⴰⵏⴰⵢⵢⵔⵜ، ⴰⵎⴳⵉ ⵍⴰⵔⴻⵏⴻⵙ ⵜⴰⵙⵓⵙⵏⵜ ⵜⵙⵙⴻⵔⵢⵢⵉⵏ ⵙⵙⵎ ⵏ ⵜⴰⴳⵍⵉⵣⵏⵉⵏ
+                            ⵉⵏⵣⵣⴰⵎⵉⵏ ⵙ ⵔⴰⵢ ⵛⴰⵔⵍⵙ ⴷ ⴷⴰⵍⵉⴷⴰ، ⴷⵉⵙ ⵉⵜⵜⵔⵉⵏ
+                            ⵜⴰⵎⵔⵉⵜⵉⵏ ⵜⴰⵏⵓⵡⵔⵉⵜ ⵜⴰⵟⵉⵟⵉⵏⵉⵜ ⵉⵏⵜⵜⵉⴷⵓⴷⵉⵏ ⵏ ⵉⵙⴽⴰⵎ ⵙⴽⴽⴰⵎ ⴰⵛⵔⴰⵔⵉⵏ ⴷ ⵜⵔⴳⵉⴷⵉⵏ ⵏ ⵠⵓⴽⵙⵉⵏⵉⵏ، ⵉⵜⵜⴰⴷⵍⵉⵏ
+                            ⵜⵉⵏⵜⵜⴰⴼⵍⵜ ⵉⵎⵉⴷⵉⵏ ⵏ
+                            ⵜⵙⵉⵎⵉⵎⵉⵏⵜⵜⵉⵏ ⵓⵎⵉⵏⴷⵜⵉⴷⵏ.</span>
+                    </p>
+                    <img src="assets/img/ville-de-loisirs/eab077022dece9bf79aa7f1eb5e69196.jpg"
+                        alt="Description de l'image" class="img-loisirs-mobile">
+                    <div class="pilules-de-succes-container">
+                        <div class="pilules-de-succes-item">
+                            <div class="pilules-de-succes-svg">
+                                <div class="pilules-de-succes-background"></div>
+                                <div class="pilules-de-succes-background-inner"></div>
+                            </div>
+                            <a class="pilules-de-succes-link font-arabe">من المهم الاهتمام</a>
+                            <div class="pilules-de-succes-border"></div>
+                        </div>
+                        <div class="pilules-de-succes-item">
+                            <div class="pilules-de-succes-svg">
+                                <div class="pilules-de-succes-background"></div>
+                                <div class="pilules-de-succes-background-inner"></div>
+                            </div>
+                            <a class="pilules-de-succes-link">Lorem ipsum</a>
+                            <div class="pilules-de-succes-border"></div>
+                        </div>
+                        <div class="pilules-de-succes-item">
+                            <div class="pilules-de-succes-svg">
+                                <div class="pilules-de-succes-background"></div>
+                                <div class="pilules-de-succes-background-inner"></div>
+                            </div>
+                            <a class="pilules-de-succes-link">ⵍoⵔⴻⵎ ⵉⵒⵙⵓⵎ</a>
+                            <div class="pilules-de-succes-border"></div>
+                        </div>
+                    </div>
+                    <p id="para5" class="paragraphe-sec-5">
+                        <span class="francais">Malheureusement, la mort de Don Vicente Marmaneu et la pression
+                            immobilière ont conduit à la démolition des arènes en
+                            1971. Aujourd’hui, le souvenir de ces moments glorieux demeure vivace dans la mémoire
+                            collective des Casablancais.</span>
+                        <br><br>
+                        <span class="arabe font-arabe">للأسف، أدت وفاة دون فيسنتي مارمانيو والضغط العقاري إلى هدم
+                            الحلبات في عام 1971. اليوم، لا يزال ذكرى هذه اللحظات المجيدة
+                            حاضرة في الذاكرة الجماعية لسكان الدار البيضاء</span>
+                        <br><br>
+                        <span class="tamazight">ⵉⵣⵉⵣⴻⵍⵉ ⵏⵏⴰⵢ، ⵉⵜⵜⴻⴷ ⵜⵓⵥⵥⴰⵜ ⵏ ⴷⵓⵏ ⴼⵉⵙⴻⵏⵜⵉ ⵎⴰⵔⵎⴰⵏⴻⵓ ⴷ ⵜⵓⵔⵉⵙⵢⵉⵜ ⵜⴰⵏⵏⵉⵙⵜⵉⵒⵉⵜ
+                            ⵜⴰⵢⵉⵙ ⵏⴰⵎⵜⵜⵔⴰ ⵍⴰⵔⴻⵏⴻⵙ ⵉⵏ 1971. ⴰⵎⵣⵉⵔⵉⵢ ⵉⵜⵜⵓⴳⴳⴰ
+                            ⵏ ⵜⵉⵎⵉⵖⵓⵔⵜ ⵜⴰⵟⵟⵉⵜⵜⴰⵡⵜ ⵜⴰⵏⵜⵜⵉⵎⵓⵔⵜ ⵏ ⴰⵎⵎⵓⵔⵉⵖⴻⵏ ⵏ ⵇⵇⴰⴳⵣⵣⴰⴱⴰⵢ⵰.</span>
+                    </p>
+                </div>
+                <div id="dynamic-image" class="image-section">
+                    <img src="./assets/img/ctgUWPe2FeKeRk4ZuRYlMoqtL34.png.png" alt="Fixed Image">
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <section class="lieu-emblematique-section-1" data-aos="fade-in" data-aos-duration="1000">
+        <div class="lieu-emblematique-container">
+            <div class="lieu-emblematique-pilules-avec-success-parent">
+                <div class="lieu-emblematique-pilules-avec-success">
+                    <div class="lieu-emblematique-container1">
+                        <div class="lieu-emblematique-container-wrapper">
+                            <div class="lieu-emblematique-container2">
+                                <div class="lieu-emblematique-svg">
+                                    <div class="lieu-emblematique-svg1">
+                                        <div class="lieu-emblematique-container3">
+                                            <div class="lieu-emblematique-background"></div>
+                                            <div class="lieu-emblematique-background1"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="lieu-emblematique-a font-arabe">مكان اللقاء</a>
+                        <div class="lieu-emblematique-border"></div>
+                    </div>
+                    <div class="lieu-emblematique-container4">
+                        <div class="lieu-emblematique-container-container">
+                            <div class="lieu-emblematique-container5">
+                                <div class="lieu-emblematique-svg2">
+                                    <div class="lieu-emblematique-container6">
+                                        <div class="lieu-emblematique-container7">
+                                            <div class="lieu-emblematique-svg3"></div>
+                                            <div class="lieu-emblematique-background2"></div>
+                                            <div class="lieu-emblematique-background3"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="lieu-emblematique-lorem-ipsum">Un lieu de rencontre</a>
+                        <div class="lieu-emblematique-border1"></div>
+                    </div>
+                    <div class="lieu-emblematique-container8">
+                        <div class="lieu-emblematique-container-frame">
+                            <div class="lieu-emblematique-container9">
+                                <div class="lieu-emblematique-svg4">
+                                    <div class="lieu-emblematique-container10">
+                                        <div class="lieu-emblematique-container11">
+                                            <div class="lieu-emblematique-svg5"></div>
+                                            <div class="lieu-emblematique-background4"></div>
+                                            <div class="lieu-emblematique-background5"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="lieu-emblematique-o">ⵜⴰⵎⵎⴰⵢⵏⵜ ⵏ ⵜⵉⵙⵏⵜⵜⵓⵔ</a>
+                        <div class="lieu-emblematique-border2"></div>
+                    </div>
+                </div>
+                <div class="lieu-emblematique-frame-parent">
+                    <div class="lieu-emblematique-parent">
+                        <div class="lieu-emblematique-div">حلبات المعاريف: موقع رمزي</div>
+                        <div class="lieu-emblematique-les-arnes-de">
+                            Événements mémorables aux Arènes
+                        </div>
+                        <div class="lieu-emblematique-div1">ⵏⴳⴷⵡⵡⴰ ⵏ ⵉⵏⴷⴳⴰⵙ ⴰⴹⵉⵎⵡⵉ</div>
+                    </div>
+                    <div class="lieu-emblematique-container12">
+                        <div class="lieu-emblematique-group">
+                            <div class="lieu-emblematique-div2 font-arabe">
+                                بدمج الماضي والحاضر، تُظهر الدار البيضاء قدرتها على الحفاظ على
+                                تراثها الثقافي الغني مع التكيف مع الاتجاهات الجديدة واحتياجات
+                                سكانها.
+                            </div>
+                            <div class="lieu-emblematique-o-oo">
+                                Revivez les moments inoubliables qui ont marqué l’histoire des arènes de Casablanca.
+                                Chaque bouton vous plonge dans une
+                                époque spécifique, illustrant la diversité et la richesse des événements qui s'y sont
+                                déroulés.
+                            </div>
+                            <div class="lieu-emblematique-div3">
+                                ⴱ ⵜⵉⴷⴷⵏⵓⴹ ⵜⴰⵟⵟⴰⴼⴰⵏⵉⵜ ⴰⴷ ⵜⴰⴼⴼⴻⵍⵉⵜ، ⵜⴳⴰⵍⵉⵜ ⵏⵉⵙⵉⴷⴰ ⵢⵏⴷⵓ ⵜⵉⵏⵏⵉⵍⵉ ⵢ
+                                ⵉⵣⵔⵎ ⴰⵢⵏⵢⵓⴷ ⴰⵏⴳⴳⵔⴰ ⵢⴰⴷⵉⴹ ⵜⵉⵏⵏⵉⵏⵜ ⵜⴰⵏⴳⴷⵉⵙⵜ ⵏⵓⵎⴽⵓⵛⵉ ⵜⴰⵎⵣⵎⵉⵏⵜ ⴰⴷ
+                                ⵜⴰⵎⵎⵓⵙⵏⵉⵜ ⵏⵜⵉⵏⵉⵏⴳⵏⵓ ⵢⴰⴼⴰⵏⵜⵉⵏ.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lieu-emblematique-container13"></div>
+            <div class="lieu-emblematique-container-inner">
+                <div class="lieu-emblematique-frame-group">
+                    <div class="lieu-emblematique-frame-wrapper">
+                        <div class="lieu-emblematique-frame-container">
+                            <nav class="lieu-emblematique-frame-nav">
+                                <div class="lieu-emblematique-construction-wrapper">
+                                    <a id="construction" class="lieu-emblematique-construction active">Corridas</a>
+                                </div>
+                                <a id="spectacles" class="lieu-emblematique-spectacles">Scène internationale</a>
+                                <div class="lieu-emblematique-tauromachie-parent">
+                                    <a id="tauromachie" class="lieu-emblematique-tauromachie">Sports & compétitions</a>
+                                    <a id="demolition" class="lieu-emblematique-dmolition">Arts</a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <div id="content" class="lieu-emblematique-container14">
+                        <div class="lieu-emblematique-background6">
+                            <div class="lieu-emblematique-container15">
+                                <img id="main-image" class="lieu-emblematique-nt3eoptbxs2yub8fnfdeso5pt6ipn-icon"
+                                    loading="lazy" alt="" src="./assets/img/image00001.png" />
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="titres-historiques-section-titres-historiques" data-aos="fade-in" data-aos-duration="800">
+        <section class="titres-historiques-container">
+            <div class="titres-historiques-titres-historiques">
+                <a class="titres-historiques-a font-arabe">بناء الحلبات</a>
+                <a class="titres-historiques-construction">Construction</a>
+                <div class="titres-historiques-o-o">ⵜⴰⵎⴱⵔⴰⵙⵜ ⵏ ⵍⴰⵔⴻⵏⴻⵙ</div>
+                <div class="titres-historiques-anne">
+                    <div class="titres-historiques-details">1921</div>
+                </div>
+            </div>
+            <div class="titres-historiques-titres-historiques1">
+                <a class="titres-historiques-a1 font-arabe">إعادة تنشيط مصارعة الثيران</a>
+                <a class="titres-historiques-redynamisation">Redynamisation de la tauromachie</a>
+                <div class="titres-historiques-o-o1">ⵜⵉⵏⴳⴰ ⵜⵓⵔⵓⵎⴰⵛⵉⵜ</div>
+                <div class="titres-historiques-anne1">
+                    <div class="titres-historiques-div">1953</div>
+                </div>
+            </div>
+            <div class="titres-historiques-titres-historiques2">
+                <a class="titres-historiques-a2 font-arabe">آخر مصارعة ثيران في الدار البيضاء</a>
+                <a class="titres-historiques-dernire-corrida">Dernière Corrida à Casablanca</a>
+                <div class="titres-historiques-o-o2">ⵜⵉⵎⴳⴰⵣⵉⵍⵜ ⵏ ⵜⵓⵔⵓⵎⴰⵛⵉⵜ</div>
+                <div class="titres-historiques-anne2">
+                    <div class="titres-historiques-div1">1959</div>
+                </div>
+            </div>
+            <div class="titres-historiques-titres-historiques3">
+                <a class="titres-historiques-a3 font-arabe">هدم الحلبات</a>
+                <a class="titres-historiques-dmolition">Démolition des Arènes</a>
+                <div class="titres-historiques-o-o3">ⵜⴰⵎⴹⴰⴹ ⵏ ⵍⴰⵔⴻⵏⴻⵙ</div>
+                <div class="titres-historiques-anne3">
+                    <div class="titres-historiques-div2">1971</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="section-arenes-populaires-background">
+        <main class="section-arenes-populaires-background1">
+            <section class="section-arenes-populaires-container" data-aos="fade-up" data-aos-duration="1000">
+                <div class="section-arenes-populaires-wrapper">
+                    <div class="section-arenes-populaires-div font-arabe">الحلبات: نجاح شعبي</div>
+                </div>
+                <div class="section-arenes-populaires-les-arnes">Les Arènes : Un Succès Populaire</div>
+                <div class="section-arenes-populaires-frame">
+                    <div class="section-arenes-populaires-div1">ⵜⵉⴼⵉⵏⵉⵍ: ⴰⵎⵓⵔ ⵉⵎⵉⵏⵉⵏ</div>
+                </div>
+            </section>
+            <section class="section-arenes-populaires-container1" data-aos="fade-in" data-aos-duration="1000">
+                <div class="section-arenes-populaires-container-parent">
+                    <div class="section-arenes-populaires-container2">
+                        <img class="section-arenes-populaires-pzecta9irccrfab7civxskecqtepn-icon" loading="lazy" alt=""
+                            src="./assets/img/TMDZRNJB2RBGRHQNEWNVYOPSMY.jpg" />
+                        <div class="section-arenes-populaires-overlay"></div>
+                    </div>
+                    <div class="section-arenes-populaires-background2">
+                        <div class="section-arenes-populaires-svg"></div>
+                    </div>
+                </div>
+                <div class="section-arenes-populaires-background-parent">
+                    <div class="section-arenes-populaires-background3">
+                        <div class="section-arenes-populaires-container-group">
+                            <div class="section-arenes-populaires-container3">
+                                <div class="section-arenes-populaires-container4">
+                                    <div class="section-arenes-populaires-div2 font-arabe">الدار البيضاء، حيث يلتقي الفن
+                                        والثقافة</div>
+                                </div>
+                            </div>
+                            <div class="section-arenes-populaires-container5">
+                                <div class="section-arenes-populaires-lorem-ipsum-dolor">
+                                    Casablanca, où l'art et la culture se rencontrent.
+                                </div>
+                            </div>
+                            <div class="section-arenes-populaires-container6">
+                                <div class="section-arenes-populaires-o-oo">
+                                    ⴰⵎⵣⴰⵣⵉⵖ ⵓⵏ ⴽⴰⵙⴰⴱⵍⴰⵏⴰ، ⵉⵙⵓⴷⴷ ⴰⵍⴰⵡⵏ ⴷ ⵜⵛⵓⵍⵜⵉⵔⵜ
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-arenes-populaires-container7">
+                            <div class="section-arenes-populaires-container8">
+                                <div class="section-arenes-populaires-container9">
+                                    <b class="section-arenes-populaires-pablo-picasso">Pablo Picasso</b>
+                                </div>
+                                <div class="section-arenes-populaires-container10">
+                                    <div class="section-arenes-populaires-casablanca-1980">Casablanca, 1934</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-arenes-populaires-container11">
+                        <img class="section-arenes-populaires-wxtso75pkwvjknbmxtqsxgshdkopn-icon" loading="lazy" alt=""
+                            src="./assets/img/Shoelifer_arenes-de-casablanca.jpg" />
+                        <div class="section-arenes-populaires-overlay1">
+                            <div class="section-arenes-populaires-svg1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-arenes-populaires-container-container">
+                    <div class="section-arenes-populaires-container12">
+                        <img class="section-arenes-populaires-evqypqeudnq6qvlmpqrqylft6ospn-icon" loading="lazy" alt=""
+                            src="./assets/img/picasso-casa.jpg" />
+                        <div class="section-arenes-populaires-overlay2"></div>
+                    </div>
+                    <div class="section-arenes-populaires-background4">
+                        <div class="section-arenes-populaires-container13">
+                            <div class="section-arenes-populaires-container14">
+                                <div class="section-arenes-populaires-container15">
+                                    <div class="section-arenes-populaires-div3 font-arabe">الدار البيضاء، مدينتي المفضلة
+                                        ومعاركتي</div>
+                                    <div class="section-arenes-populaires-lorem-ipsum-dolor1">
+                                        Casablanca, ma ville de cœur et de combats
+                                    </div>
+                                    <div class="section-arenes-populaires-o-oo1">
+                                        ⵏⴽⴰⵙⴰⴱⵍⴰⵏⴰ، ⵜⴰⵎⴰⵜⵉⵏⵜ ⵏⴰⵖ ⴷ ⵓⵏⵣⴰⵍⵉⵜⵉⵏⵏⴻⵏⵏⵉ
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-arenes-populaires-container16">
+                            <div class="section-arenes-populaires-container17">
+                                <div class="section-arenes-populaires-container18">
+                                    <div class="section-arenes-populaires-container19">
+                                        <b class="section-arenes-populaires-marcel-serdan">Marcel Serdan</b>
+                                    </div>
+                                </div>
+                                <div class="section-arenes-populaires-container20">
+                                    <div class="section-arenes-populaires-casablanca-1999">Casablanca, 1999</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-arenes-populaires-background-group">
+                    <img class="section-arenes-populaires-background-icon" loading="lazy" alt=""
+                        src="./assets/img/ville-de-loisirs/image00001.png" />
+                    <div class="section-arenes-populaires-container21">
+                        <img class="section-arenes-populaires-gjwq6yf8c5o9i1s3wuspqbbspng-icon" loading="lazy" alt=""
+                            src="./assets/img/artistiquement.jpg" />
+                        <div class="section-arenes-populaires-container22"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="section-en-evolution-background">
+        <main class="section-en-evolution-background1">
+            <section class="section-arenes-populaires-container" data-aos="fade-in" data-aos-duration="1000">
+                <div class="section-arenes-populaires-wrapper">
+                    <div class="section-arenes-populaires-div font-arabe">الحلبات: نجاح شعبي</div>
+                </div>
+                <div class="section-arenes-populaires-les-arnes">Casablanca Aujourd'hui : Une Ville de Loisirs en
+                    Évolution</div>
+                <div class="section-arenes-populaires-frame">
+                    <div class="section-arenes-populaires-div1">ⵜⵉⴼⵉⵏⵉⵍ: ⴰⵎⵓⵔ ⵉⵎⵉⵏⵉⵏ</div>
+                </div>
+            </section>
+            <section class="section-en-evolution-container6" data-aos="fade-out" data-aos-duration="1000">
+                <div class="section-en-evolution-container7">
+                    <div class="section-en-evolution-container8">
+                        <div class="section-en-evolution-container9">
+                            <div class="section-en-evolution-container10">
+                                <div class="section-en-evolution-container11">
+                                    <div class="section-en-evolution-container12">
+                                        <div class="section-en-evolution-div2 font-arabe">
+                                            على الرغم من اختفائها الجسدي، تواصل الحلبات العيش في الذاكرة الجماعية لسكان
+                                            الدار البيضاء. يتم إحياء تاريخها من خلال
+                                            الحديقة الجديدة التي تقف في موقعها، كتحية لإرثها. استثمرت الدار البيضاء في
+                                            تجديد بنيتها التحتية الثقافية لتنشيط الحياة
+                                            الاجتماعية والثقافية للمدينة. من المسارح، مثل مسرح محمد الخامس، إلى المتاحف
+                                            المعاصرة، كل مكان يقدم برمجة متنوعة تجذب
+                                            كلًا من السكان والزوار.
+                                        </div>
+                                        <div class="section-en-evolution-malgr-leur-disparition">
+                                            Malgré leur disparition physique, les arènes continuent
+                                            de vivre dans la mémoire collective des Casablancais.
+                                            Leur histoire est commémorée à travers le nouveau jardin
+                                            qui se dresse à leur emplacement, un hommage à leur
+                                            héritage.
+                                            Casablanca a investi dans la rénovation de ses infrastructures culturelles
+                                            pour dynamiser la vie sociale et culturelle
+                                            de la ville. Des théâtres, comme le Théâtre Mohammed V, aux musées
+                                            contemporains, chaque lieu offre une programmation
+                                            diversifiée qui attire à la fois les résidents et les visiteurs.
+                                        </div>
+                                        <div class="section-en-evolution-div3">
+                                            ⵏⵉⵣⵉⵣ ⵉⴷⴰⵢⴰ ⴰⴳⴳⵍⵉⴷⴰⵜⵜⵉⵏ ⵏⵢⵓⵏⵢⵓⵎⵍⴷ ⵍⴰⵔⴻⵏⴻⵙ ⵉⵏ ⵜⴰⵎⵉⵔⵓⵜ ⵜⴰⵙⵙⴰⵖⵉⵉⵏⵜ ⵏ
+                                            ⵇⵇⴰⴳⵣⵣⴰⴱⴰⵢ⵰. ⵜⵉⵜⵜⴳⵉⴼ ⵜⴰⵙⵙⴰⵖⵉⵉⵜ ⵙ ⵜⵜⵉⴷⵔⴻⵎ ⴰⵎⵣⵉⵔ ⵏ
+                                            ⵜⴰⵛⵓⵍⵉ ⵜⴰⵏⵜⵜⵉⵙⵙⵉⵢⵜ ⵙⵜⵜⵉⵜⵜⴰⵟⵉⵡⵜ ⵜⵉⵜⵜⴰⵔⵔⴰⵢⵜⵜ ⵜⵉⵜⵜⴰⵇⵇⵉⵍⵉⵜⵜ. ⵇⵇⴰⴳⵣⵣⴰⴱⴰⵢ⵰ ⵜⵉⵜⵜⵔⴻⵏ
+                                            ⵜⴰⵜⵉⵏⵙⵜⵔⵓⴷⵜ ⵏⵢⵓⵏⵜⵜⵉⵙ ⵜⴰⵔⴰⵢⵜⵜ ⵜⴰⵜⵜⴰⵔⵔⴰⵢⵜⵜ
+                                            ⵜⴰⵜⵜⵉⵇⵇⵉⵍⵉⵜⵜ ⵜⴰⵜⵜⵉⵏⵜⵜⵉⴷⵜ ⵜⴰⵉⵜⵜⵓⵙⵙⵓⵏⵜ ⵜⴰⵔⵔⴰⵢⵜⵜ ⵜⴰⵏⵜⵜⴰⵡⵜⵜ ⵜⴰⵇⵇⵉⵍⵉⵜⵜ ⵜⴰⵜⵜⵉⵙⵙⵉⵏⵜ
+                                            ⵏⵜⴰⵜⵜⵉⴼⵔⵓⴽⵜⵜ ⵜⵉⵜⵜⵉⵍⵉⵜⵜ ⵜⴰⵜⵜⴰⵜⵜⵉⵏⵜⵜ
+                                            ⵜⴰⵜⵜⴰⵔⵔⴰⵢⵜⵜ ⵉⵜⵜⵜⵉⵎⵜⵜⵜⵜⵉⵍⵍⵉⵜⵜ ⵏⵜⴰⵙⵓⵣⵉⵜ
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="section-en-evolution-container13">
+                                <div class="section-en-evolution-container14">
+                                    <div class="section-en-evolution-div4 font-arabe">
+                                        إن إنشاء حدائق ومنتزهات جديدة هو في صميم تحول الدار البيضاء. من بين هذه الحدائق،
+                                        يتميز الحديقة التي أعيد تأهيلها في موقع
+                                        الحلبات القديمة في المعاريف بدورها التاريخي والثقافي. هذا الفضاء الأخضر الجديد
+                                        يوفر للسكان مكانًا للاسترخاء والتنزه
+                                        واللقاءات، في قلب المدينة. هذا المزيج بين الماضي والحاضر يظهر أن المدينة، في
+                                        تطور مستمر، تظل مركزًا نابضًا بالحياة
+                                        والترفيه، متمسكة بتقليدها في تقديم لحظات الفرح والتجمع لكل من يعيش فيها ويزورها.
+                                    </div>
+                                    <div class="section-en-evolution-cette-fusion-du">
+                                        La création de nouveaux parcs et jardins est au cœur de la transformation de
+                                        Casablanca. Parmi eux, le jardin réhabilité
+                                        à l'emplacement des anciennes arènes de Maarif se distingue par son rôle
+                                        historique et culturel. Ce nouvel espace vert
+                                        offre aux habitants un lieu de détente, de promenade et de rencontres, en plein
+                                        centre de la ville.
+                                        Cette fusion du passé et du présent montre que la ville,
+                                        en perpétuelle évolution, demeure un centre vibrant de
+                                        loisirs et de divertissements, fidèle à sa tradition
+                                        d’offrir des moments de joie et de rassemblement à tous
+                                        ceux qui la vivent et la visitent.
+                                    </div>
+                                    <div class="section-en-evolution-o-oo">
+                                        ⴰⴷⵔⴰⵙ ⵜⴰⵎⴰⵎⵙⵓⵏⵜ ⵉⵏⵜⵜⴰⵛⵉⵢⵉⵏ ⵜⴰⵙⵙⵓⴷⴷⵉⵏ ⵍⴰⵍⵍⴰⵎⵙⵉⵏ ⵜⵉⵏⵜⵜⴰⵛⵉⵏ ⵏ ⵇⵇⴰⴳⵣⵣⴰⴱⴰⵢ⵰. ⴰⴷⵔ
+                                        ⵍⵉⵙⵉⵜ ⵜⵉⵍⴰⵙⴽⴽⵉⵏⵜ ⵏ ⵜⴰⵛⵉⵜ ⵜⵉⵍⴻⵇⵇ ⵜⵜⵔⵏⴰⵜⵜ ⵙⵉⵙⵓ
+                                        ⵉⵏⵜⵜⵉⴼ ⵏ ⵍⴰⵔⴻⵏⴻⵙ ⵏⵢⴰⵎⵎⵓⵔⵉⵖⴻⵏ ⴷ ⵎⴰⵄⵔⵉⴼ ⵜⴰⵡⵇⴷⴷⴰⵜ ⵜⴰⵙⵓⴷⴷⵉⵜ ⴷ ⵜⵓⴽⵍⵉⵎⵜ ⵉⵏⵙⵙⴻⵏⵙ ⵉⵎⵜⵜⵓⵏ
+                                        ⵜⵉⵍⵎⵉⵣ ⵓⵎⴰⴷⴰⵔ ⵜⵓⴳⴳⴰ ⵜⵎⵔⵉⵜⵜ ⵏ ⵎⵓⴳⴳⵓ
+                                        ⵜⵜⴰⵎⵔⵉⵜⵜ ⵜⴰⵏⵜⵜⴰⴷⵍⵉⵜ ⵜⴰⵉⵜⵜⵎⵔⵉⵜⵜ ⵏ ⵏⵉⵔⵔ ⵓⵛⵓⵛ ⵙⵉⵏⵎⵉⴹⴹ ⴷⴳⴳⵉⵜ ⵓⵛⵛⴻⵔⵎⴰⴹⴹ ⵜⴰⴳⵔⵏⵉⵢⵢⵉⵏ
+                                        ⵜⴰⵉⵜⵜⵓⵍⵍⴰⵡⵜ ⴰⵙⵎⵎⵔⵉⵜⵜ ⵜⴰⵔⴰⵔⵜⵜⵉⵜ ⵜⴰⴳⵉⴳⵉⴷⵉⵜ
+                                        ⵜⴰⵔⴰⵢⵜⵜ ⵙ ⵎⵎⵓⵔⵉⵖⴻⵏ ⵢⵓⵎⵎⴷⴷⵓ ⴷⵜⵜⵉⵜⵜⴰⴼⵍⵜ ⵜⴰⴼⵓⵙⵏⵜ ⵜⵉⵏⵜⵜⴰⴷⵍⵜ ⵜⴰⵉⵜⵜⵍⵉⵣⵜⵜ ⵜⴰⵔⵉⵙⵜⵜ ⵏ
+                                        ⵜⴰⵔⵔⴰⵢⵜⵜ ⵉⵏⵜⵜⵓⵔⵜⵜⵉⵏ ⵙⴽⴽⵍⵍⵓⵜ ⴰⵎⴰⵔⵔⴻⵙ
+                                        ⵜⴰⵍⵉⵙⵙⵓⴷⵉⵜ ⵏ ⵜⴰⴳⵍⵉⵣⵏⵉⵏ ⵜⵉⵜⵜⵓⵍⵍⴰⵡⵜ ⵉⵏⵜⵜⴰⴷⴷⵓⵜ ⵉⵎⵉⴷⵉⵏⵏ ⵏ ⵜⴰⵎⴰⵟⵟⴰⵢⵜ ⵢ ⵎⵓⵔⵉⵖⴻⵏ
+                                        ⵜⴰⵇⵇⵉⵍⵉⵜⵜ ⵜⵉⵜⵜⴰⵙⵏⵓⴷⵜ ⴷⴳⴳⵉⵜ ⵜⵜⵉⵏⵜⵜⵉⴷⴰⵜ
+                                        ⵜⴰⴳⵍⵉⵣⵏⵉⵏ ⴷ ⵜⵜⴰⵜⵜⴰⴼⵉⵜⵜ ⵜⵉⵏⵜⵜⵓⵕⴰⵛⵜ ⵉⴽⴽⵍⵓⵜ.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+
+    <div class="section-footer-et-copyright-container" data-aos="fade-up" data-aos-duration="1000">
+        <main class="section-footer-et-copyright-background">
+            <section class="section-footer-et-copyright-background1">
+                <div class="section-footer-et-copyright-container1">
+                    <div class="section-footer-et-copyright-background2">
+                        <div class="section-footer-et-copyright-svg"></div>
+                        <img class="section-footer-et-copyright-container-icon" alt="" src="./assets/img/Vector.svg" />
+
+
+                        <div class="section-footer-et-copyright-frame-parent">
+                            <div class="section-footer-et-copyright-frame-wrapper">
+                                <div class="section-footer-et-copyright-frame-group">
+                                    <div class="section-footer-et-copyright-div font-arabe">
+                                        تحول الدار البيضاء: من الحلبات إلى الحديقة
+                                    </div>
+                                    <div class="section-footer-et-copyright-la-mtamorphose-de-casablanca-wrapper">
+                                        <div class="section-footer-et-copyright-la-mtamorphose-de">
+                                            Des Arènes au Jardin
+                                        </div>
+                                    </div>
+                                    <div class="section-footer-et-copyright-div1">
+                                        ⵜⴰⵎⵉⵜⴰⵎⵓⵔⴰⵙⵜ ⵏ ⵏⵉⵙⵉⴷⴰ: ⵉⵏⴳⵏ ⵜⵉⴼⵉⵏⵉⵍ ⵏ ⵜⴰⵊⴰⵔⴷⵉⵏ
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-footer-et-copyright-container-parent">
+                                <div class="section-footer-et-copyright-container2">
+                                    <div class="section-footer-et-copyright-container3">
+                                        <div class="section-footer-et-copyright-div2 font-arabe">
+                                            من المهم الاهتمام بالمريض، وأن يتبعه العميل، ولكن في نفس
+                                            الوقت سوف يتأثر ببعض الآلام والمعاناة الكبيرة.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section-footer-et-copyright-container4">
+                                    <div class="section-footer-et-copyright-ce-jardin-nest">
+                                        Ce jardin n'est pas seulement un espace vert, mais un lieu
+                                        de mémoire qui raconte l'histoire vibrante des arènes.
+                                    </div>
+                                </div>
+                                <div class="section-footer-et-copyright-container5">
+                                    <div class="section-footer-et-copyright-container6">
+                                        <div class="section-footer-et-copyright-div3">
+                                            ⴰⵔⵇⵇⵉ ⵉⵙⴳ ⵉⴷⵡⴰⴹ ⵏ ⵜⵉⵏⵉⵏⴳⵉⵏⵜ ⵏ ⵜⴰⵟⵟⴰⴼⴰⵏⵉⵜ ⴰⴷ ⵜⴰⴼⴼⴻⵍⵉⵜ
+                                            ⵜⴰⴷⴷⵏⵓⴹ ⵜⴰⵎⵎⴰⵣⵉⵏⵜ ⵜⴰⵉⴷⵔⵓⵏ ⵉⴼ ⵜⴰⵡⵓⵏⵏⵉⵔⵜⵜ ⵜⵉⵇⴰⵡⴰⵏⵜⵜ ⵏ
+                                            ⵜⴰⴼⴼⴻⵍⵉⵜ ⴰⴷ ⵜⵉⴳⴳⴰⵔⵉⵜ ⵜⴰⵍⵍⴰⴷⵉⵏ.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-footer-et-copyright-link-wrapper">
+                            <button class="section-footer-et-copyright-link">
+                                <div class="section-footer-et-copyright-gradientblur">
+                                    <div class="section-footer-et-copyright-gradient">
+                                        <div class="section-footer-et-copyright-background3">
+                                            <a href="https://maarif.casablancacity.ma/fr"
+                                                class="section-footer-et-copyright-commune-de-maarif">Commune de Maarif
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-footer-et-copyright-container7">
+                    <div class="section-footer-et-copyright-link1">
+                        <div class="section-footer-et-copyright-container8">
+                            <div class="section-footer-et-copyright-container9">
+                                <div class="section-footer-et-copyright-svg1"></div>
+                            </div>
+                            <div class="section-footer-et-copyright-container10">
+                                <div class="section-footer-et-copyright-container11">
+                                    <a href="https://www.facebook.com/VilledeCasablanca"
+                                        class="section-footer-et-copyright-facebook">Facebook</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-footer-et-copyright-svg2"></div>
+                        <div class="section-footer-et-copyright-horizontalborder"></div>
+                    </div>
+                    <div class="section-footer-et-copyright-link2">
+                        <div class="section-footer-et-copyright-container12">
+                            <div class="section-footer-et-copyright-container13">
+                                <div class="section-footer-et-copyright-svg3"></div>
+                            </div>
+                            <div class="section-footer-et-copyright-container14">
+                                <div class="section-footer-et-copyright-container15">
+                                    <a href="https://maarif.casablancacity.ma/fr"
+                                        class="section-footer-et-copyright-commune-de-maarif1">Commune de Maarif</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-footer-et-copyright-svg4"></div>
+                        <div class="section-footer-et-copyright-horizontalborder1"></div>
+                    </div>
+                    <div class="section-footer-et-copyright-link3">
+                        <div class="section-footer-et-copyright-container16">
+                            <div class="section-footer-et-copyright-container17">
+                                <div class="section-footer-et-copyright-svg5"></div>
+                            </div>
+                            <div class="section-footer-et-copyright-container18">
+                                <div class="section-footer-et-copyright-container19">
+                                    <div class="section-footer-et-copyright-mot-du-prsident">Mot du Président</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-footer-et-copyright-svg6"></div>
+                        <div class="section-footer-et-copyright-horizontalborder2"></div>
+                    </div>
+                    <div class="section-footer-et-copyright-link4">
+                        <div class="section-footer-et-copyright-container20">
+                            <div class="section-footer-et-copyright-container21">
+                                <div class="section-footer-et-copyright-svg7"></div>
+                            </div>
+                            <div class="section-footer-et-copyright-container22">
+                                <div class="section-footer-et-copyright-container23">
+                                    <a href="https://maps.app.goo.gl/CvvjuEgm8XSSLkBRA"
+                                        class="section-footer-et-copyright-jardin-des-arnes">Jardin des Arènes</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-footer-et-copyright-svg8"></div>
+                        <div class="section-footer-et-copyright-horizontalborder3"></div>
+                    </div>
+                </div>
+                <div class="section-footer-et-copyright-link5">
+                    <div class="section-footer-et-copyright-container24">
+                        <div class="section-footer-et-copyright-container25">
+                            <div class="section-footer-et-copyright-jardin-des-arnes1">
+                                Jardin des Arènes de Casablanca © 2024. Designed by Digitex.ma
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script>
+        // Initialisation de la carte
+        var map = L.map('map-main-section-1').setView([33.588892, -7.639583], 18); // Centrer la carte sur le jardin public avec un zoom de 18
+
+        // Ajouter une couche de carte (OpenStreetMap)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.digitex.ma">Digitex.ma</a>'
+        }).addTo(map);
+
+        // Définir une classe d'icône personnalisée
+        var LeafIcon = L.Icon.extend({
+            options: {
+                shadowUrl: 'assets/img/ombre.png',
+                iconSize: [28, 95], // Taille de l'icône
+                shadowSize: [50, 64], // Taille de l'ombre
+                iconAnchor: [22, 94], // Point de l'icône correspondant à la position du marker
+                shadowAnchor: [4, 62],  // Point de l'ombre correspondant à la position du marker
+                popupAnchor: [-3, -76] // Point d'où la popup doit s'ouvrir par rapport à l'iconAnchor
+            }
+        });
+
+        // Créer des instances d'icônes personnalisées
+        var greenIcon = new LeafIcon({ iconUrl: 'assets/img/pin-1.png' }),
+            redIcon = new LeafIcon({ iconUrl: 'assets/img/pin.png' }),
+            orangeIcon = new LeafIcon({ iconUrl: 'assets/img/pin.png' });
+
+        // Coordonnées des panneaux avec QR codes
+        var qrPins = [
+            [33.588928, -7.639721],  // Coordonnée 1
+            [33.588523, -7.639489],  // Coordonnée 2
+            [33.588572, -7.639364],  // Coordonnée 3
+            [33.588968, -7.639498],  // Coordonnée 4
+            [33.589211, -7.639817],  // Coordonnée 5
+            [33.589259, -7.639695]   // Coordonnée 6
+        ];
+
+        // Titres des popups pour chaque pin
+        var popupTitles = [
+            'Un haut lieu de spectacles en tous genres',
+            'Aujourd\'hui, votre arrondissement se réinvente',
+            'Vous êtes ici',
+            'Un haut lieu de tauromachie',
+            'Casablanca, ville de loisirs',
+            'Construites en 80 jours !'
+        ];
+
+        // Tableau des descriptions de popup
+        var popupDescriptions = [
+            '<a href="spectacles-historiques.html">Cliquez ici</a> pour découvrir les anciens spectacles joués dans les Arènes de Casablanca',
+            '<a href="maarif-se-reinvente.html">Cliquez ici</a> pour découvrir comment votre arrondissement Maarif se réinvente',
+            'Découvrez la musique à Casablanca comme vous ne l\'avez jamais vu. <a href="musique.html">Cliquez ici</a>',
+            'Découvrez l\'Histoire de la tauromachie à Casablanca. <a href="tauromachie.html">Cliquez ici</a>',
+            'Maarif, arrondissement de loisirs. <a href="ville-de-loisirs.html">Cliquez ici</a>',
+            '<a href="construction.html">Cliquez ici</a> pour découvrir l\'Histoire de la construction des Arènes.'
+        ];
+
+        // Tableau d'icônes pour les markers
+        var icons = [greenIcon, redIcon, orangeIcon, greenIcon, redIcon, orangeIcon];
+
+        // Ajout des pins sur la carte avec des icônes personnalisées et des textes de popup spécifiques
+        qrPins.forEach(function (coords, index) {
+            var marker = L.marker(coords, { icon: icons[index % icons.length] })
+                .addTo(map)
+                .bindPopup('<b>' + popupTitles[index] + '</b><br />' + popupDescriptions[index]);
+
+            // Ouvrir le popup du pin 5 par défaut
+            if (index === 2) { // index 4 correspond au 5e élément (index commençant à 0)
+                marker.openPopup();
+            }
+        });
+    </script>
+
+
+    <script>
+        // This was built using aat.js: https://github.com/TahaSh/aat
+
+        const { ScrollObserver, valueAtPercentage } = aat
+
+        const cardsContainer = document.querySelector('.cards')
+        const cards = document.querySelectorAll('.card')
+        cardsContainer.style.setProperty('--cards-count', cards.length)
+        cardsContainer.style.setProperty(
+            '--card-height',
+            `${cards[0].clientHeight}px`
+        )
+        Array.from(cards).forEach((card, index) => {
+            const offsetTop = 20 + index * 20
+            card.style.paddingTop = `${offsetTop}px`
+            if (index === cards.length - 1) {
+                return
+            }
+            const toScale = 1 - (cards.length - 1 - index) * 0.1
+            const nextCard = cards[index + 1]
+            const cardInner = card.querySelector('.card__inner')
+            ScrollObserver.Element(nextCard, {
+                offsetTop,
+                offsetBottom: window.innerHeight - card.clientHeight
+            }).onScroll(({ percentageY }) => {
+                cardInner.style.scale = valueAtPercentage({
+                    from: 1,
+                    to: toScale,
+                    percentage: percentageY
+                })
+                cardInner.style.filter = `brightness(${valueAtPercentage({
+                    from: 1,
+                    to: 0.6,
+                    percentage: percentageY
+                })})`
+            })
+        })
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navItems = document.querySelectorAll(".lieu-emblematique-frame-nav a");
+            const content = {
+                construction: {
+                    text1: "حلبات المعاريف: موقع رمزي",
+                    text2: "Les Arènes de Maarif : Un Lieu Emblématique",
+                    text3: "ⵏⴳⴷⵡⵡⴰ ⵏ ⵉⵏⴷⴳⴰⵙ ⴰⴹⵉⵎⵡⵉ",
+                    desc1: "بدمج الماضي والحاضر، تُظهر الدار البيضاء قدرتها على الحفاظ على تراثها الثقافي الغني مع التكيف مع الاتجاهات الجديدة واحتياجات سكانها.",
+                    desc2: "En intégrant le passé et le présent, Casablanca démontre sa capacité à préserver son riche héritage culturel tout en s’adaptant aux nouvelles tendances et aux besoins de sa population.",
+                    desc3: "ⴱ ⵜⵉⴷⴷⵏⵓⴹ ⵜⴰⵟⵟⴰⴼⴰⵏⵉⵜ ⴰⴷ ⵜⴰⴼⴼⴻⵍⵉⵜ، ⵜⴳⴰⵍⵉⵜ ⵏⵉⵙⵉⴷⴰ ⵢⵏⴷⵓ ⵜⵉⵏⵏⵉⵍⵉ ⵢ ⵉⵣⵔⵎ ⴰⵢⵏⵢⵓⴷ ⴰⵏⴳⴳⵔⴰ ⵢⴰⴷⵉⴹ ⵜⵉⵏⵏⵉⵏⵜ ⵜⴰⵏⴳⴷⵉⵙⵜ ⵏⵓⵎⴽⵓⵛⵉ ⵜⴰⵎⵣⵎⵉⵏⵜ ⴰⴷ ⵜⴰⵎⵎⵓⵙⵏⵉⵜ ⵏⵜⵉⵏⵉⵏⴳⵏⵓ ⵢⴰⴼⴰⵏⵜⵉⵏ.",
+                    image: "./assets/img/image00001.png"
+                },
+                spectacles: {
+                    text1: "المعاريف على الساحة العالمية",
+                    text2: "Maarif sur la scène internationale",
+                    text3: "ⵎⴰⵄⵔⵉⴼ ⴷ ⵜⵙⵉⵏⵜⵜⵓⵔⵜ ⵜⴰⵍⵄⴰⵎⵉⵜ",
+                    desc1: "لقد خدمت حلبات الدار البيضاء أيضًا كمنصة للفنانين والأحداث الدولية، مما حول المدينة إلى ملتقى ثقافي عالمي. أساطير الموسيقى مثل راي تشارلز وداليدا، بالإضافة إلى العديد من الفرق والمؤدين ذوي الشهرة العالمية، أسرت الحشود بعروض لا تُنسى. بهذا، ساهم هذا المكان الرمزي في وضع الدار البيضاء على الساحة الفنية العالمية، جاذبًا المتفرجين من جميع الجهات ومحتفلاً بالتنوع الثقافي من خلال عروض ضخمة",
+                    desc2: "Les arènes de Casablanca ont également servi de plateforme pour des artistes et des événements internationaux, transformant la ville en un carrefour culturel global. Des légendes de la musique comme Ray Charles et Dalida, ainsi que de nombreux groupes et performers de renommée mondiale, ont captivé les foules avec des performances inoubliables. Ce lieu emblématique a ainsi contribué à positionner Casablanca sur la scène artistique mondiale, attirant des spectateurs de tous horizons et célébrant la diversité culturelle à travers des spectacles de grande envergure.",
+                    desc3: "ⵉⴼⵙⵙⵔⵏ ⵏⴰⵎⴻⵜ ⵜⵉⵏⵜⵜⵔⵓⵙⵜⵜⵉⵏ ⵏⵜⵜⴰⵙⵓⴷⴷⵉⵏ ⴷ ⵜⴰⵎⴳⵓⵔⵓⵔ ⵜⵉⵜⵜⴰⴷⴷⵉⵜ ⵉⴼⴻⴳⴷⴷⵉⵜ ⵇⵇⴰⴳⵣⵣⴰⴱⴰⵢ⵰ ⵏⵜⵜⴰⴳⵉⵏⵉ ⵜⵉⵜⵜⵓⵔⵜ ⵢ ⵜⴰⵜⵜⵉⵏⵜⵜⵓⵍⵓⵙⵜⵜⵉⵏ ⵜⴰⵏⵜⵜⵉⵙⵜⵜⵉⵔⵜⵜ. ⵇⴻⵥⵥⴰ ⵏ ⵜⴰⵙⵓⵙⵏⵜⵜⵜⵜ ⵜⵉⵜⵜⴰⵔⴻⵜⵜ ⵢ ⵔⴰⵢ ⵛⴰⵔⵍⵙ ⴷ ⴷⴰⵍⵉⴷⴰ، ⴰⵢⵏ ⵜⴰⵎⵜⵜⴰⵎⵜ ⵜⴰⵜⵜⴷⵉⵔⵔ",
+                    image: "assets/img/ville-de-loisirs/WhatsApp Image 2024-08-02 à 10.56.08_f6c6a477.jpg"
+                },
+                tauromachie: {
+                    text1: "مكان المنافسة",
+                    text2: "Un lieu de compétition",
+                    text3: "ⵜⴰⵎⵎⴰⵢⵏⵜ ⵏ ⵜⵉⵏⵜⵜⵓⵙⵜ",
+                    desc1: "لقد كانت حلبات الدار البيضاء مسرحًا للعديد من المنافسات الرياضية، حيث قدمت للجماهير لحظات من الأدرينالين والشغف. من سباقات السيارات المثيرة إلى معارك الملاكمة الأسطورية، مرورًا بعروض المصارعة والفنون القتالية، استضاف هذا المكان أحداثًا رياضية متنوعة أسرت جمهورًا واسعًا. لم يحتفل هذا الموقع الرمزي فقط بالإنجازات الرياضية، بل جمع أيضًا المجتمعات حول حب مشترك للرياضة والمنافسة",
+                    desc2: "Les arènes de Casablanca ont été le théâtre de nombreuses compétitions sportives, offrant aux spectateurs des moments d'adrénaline et de passion. Des courses de stock-car palpitantes aux combats de boxe légendaires, en passant par des démonstrations de catch et d'arts martiaux, cet espace a accueilli des événements sportifs diversifiés qui ont captivé un large public. Ce lieu emblématique a non seulement célébré les exploits athlétiques mais a aussi rassemblé des communautés autour d’un amour partagé pour le sport et la compétition.",
+                    desc3: "ⵉⴼⵙⵙⵔⵏ ⵏⴰⵎⴻⵜ ⵜⵉⵏⵜⵜⵔⵓⵙⵜⵜⵉⵏ ⵏⵜⵜⴰⵙⵓⴷⴷⵉⵏ ⴷ ⵜⴰⵎⴳⵓⵔⵓⵔ ⵜⵉⵜⵜⴰⴷⴷⵉⵜ ⵉⴼⴻⴳⴷⴷⵉⵜ ⵇⵇⴰⴳⵣⵣⴰⴱⴰⵢ⵰ ⵏⵜⵜⴰⴳⵉⵏⵉ ⵜⵉⵜⵜⵓⵔⵜ ⵢ ⵜⴰⵜⵜⵉⵏⵜⵜⵓⵍⵓⵙⵜⵜⵉⵏ ⵜⴰⵏⵜⵜⵉⵙⵜⵜⵉⵔⵜⵜ. ⵇⴻⵥⵥⴰ ⵏ ⵜⴰⵙⵓⵙⵏⵜⵜⵜⵜ ⵜⵉⵜⵜⴰⵔⴻⵜⵜ ⵢ ⵔⴰⵢ ⵛⴰⵔⵍⵙ ⴷ ⴷⴰⵍⵉⴷⴰ، ⴰⵢⵏ ⵜⴰⵎⵜⵜⴰⵎⵜ ⵜⴰⵜⵜⴷⵉⵔⵔⵉⵜⵜ ",
+                    image: "./assets/img/image00002.png"
+                },
+                demolition: {
+                    text1: "الفنون في الحلبات",
+                    text2: "Les Arts dans les Arènes",
+                    text3: "ⵜⴰⵙⵙⵔⵉⵏⵉ ⴷ ⵍⴰⵔⴻⵏⴻⵙ",
+                    desc1: "كانت حلبات الدار البيضاء مسرحًا فنيًا رئيسيًا، تستضيف عروض المسرح والباليه وأداءات الرقص. وجد الفنانون المحليون والدوليون في هذا المكان منصة للتعبير عن إبداعهم ومواهبهم. ساهمت فرق رقص مشهورة، وفرق مسرحية، وفنانو الشوارع في جعل الحلبات مركزًا ثقافيًا ديناميكيًا، حيث كان يتم الاحتفال بالفن بجميع أشكاله، مما أغنى التراث الثقافي للدار البيضاء",
+                    desc2: "Les arènes de Casablanca ont été une scène artistique majeure, accueillant des spectacles de théâtre, des ballets et des performances de danse. Les artistes locaux et internationaux ont trouvé en ce lieu une plateforme pour exprimer leur créativité et leur talent. De célèbres compagnies de danse, des troupes de théâtre et des artistes de rue ont contribué à faire des arènes un centre culturel dynamique, où l'art sous toutes ses formes était célébré, enrichissant ainsi le patrimoine culturel de Casablanca.",
+                    desc3: "ⵉⵙⴻⵎⴳⵉ ⵍⴰⵔⴻⵏⴻⵙ ⵏ ⵇⵇⴰⴳⵣⵣⴰⴱⴰⵢ⵰ ⵜⵉⵍⵍⴰⵢⵜ ⵜⴰⵜⵜⵓⵖⵜ ⵏ ⵜⴰⵛⵔⴰⵜ ⴷ ⴰⵜⵜⵔⵓⵎⴰⵜⵜ ⵏ ⵜⴰⵇⴷⴷⵉⵢⵜ. ⵉⴷⴷⴰⵢⵉⵏ ⵜⵉⵏⵜⵜⴰⵙⵔⵔⴰ",
+                    image: "assets/img/ville-de-loisirs/WhatsApp Image 2024-08-02 à 10.56.09_9ce63aae.jpg"
+                }
+            };
+
+            navItems.forEach(item => {
+                item.addEventListener("click", function () {
+                    navItems.forEach(nav => nav.classList.remove("active"));
+                    item.classList.add("active");
+                    const id = item.id;
+                    document.querySelector(".lieu-emblematique-div").textContent = content[id].text1;
+                    document.querySelector(".lieu-emblematique-les-arnes-de").textContent = content[id].text2;
+                    document.querySelector(".lieu-emblematique-div1").textContent = content[id].text3;
+                    document.querySelector(".lieu-emblematique-div2").textContent = content[id].desc1;
+                    document.querySelector(".lieu-emblematique-o-oo").textContent = content[id].desc2;
+                    document.querySelector(".lieu-emblematique-div3").textContent = content[id].desc3;
+                    document.getElementById("main-image").src = content[id].image;
+                });
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const floatingArrow = document.getElementById("floating-arrow");
+
+            function checkScroll() {
+                if (window.scrollY === 0) {
+                    floatingArrow.style.display = "flex";
+                } else {
+                    floatingArrow.style.display = "none";
+                }
+            }
+
+            // Initial check
+            checkScroll();
+
+            // Check scroll event
+            window.addEventListener("scroll", checkScroll);
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Initialisation de l'observer
+            var options = {
+                root: null, // Utilise le viewport comme racine
+                rootMargin: '0px',
+                threshold: 0.5 // Déclenche lorsque 50% de l'élément est visible
+            };
+
+            var observer = new IntersectionObserver(callback, options);
+
+            // Sélection des paragraphes à observer
+            var targets = document.querySelectorAll('.text-section p');
+
+            targets.forEach(function (target) {
+                observer.observe(target);
+            });
+
+            function callback(entries, observer) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        // Changer l'image en fonction de l'ID du paragraphe
+                        var image = document.querySelector('#dynamic-image img');
+                        switch (entry.target.id) {
+                            case 'para1':
+                                image.src = './assets/img/ctgUWPe2FeKeRk4ZuRYlMoqtL34.png.png';
+                                break;
+                            case 'para2':
+                                image.src = 'assets/img/ville-de-loisirs/WhatsApp Image 2024-08-02 à 10.56.09_0621356b.jpg';
+                                break;
+                            case 'para3':
+                                image.src = 'assets/img/Shoelifer_arenes-de-casablanca.jpg';
+                                break;
+                            case 'para4':
+                                image.src = 'assets/img/ville-de-loisirs/eab077022dece9bf79aa7f1eb5e69196.jpg';
+                                break;
+                            case 'para5':
+                                image.src = 'assets/img/ville-de-loisirs/84430805cbf133c657ec954ba2bc4533.jpg';
+                                break;
+                        }
+                    }
+                });
+            }
+        });
+
+    </script>
+
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        // Fermer la popup lorsque l'utilisateur clique en dehors de celle-ci
+        window.onclick = function (event) {
+            var popup = document.getElementById('popup');
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        };
+
+    </script>
+    <script>
+        function scrollToSection() {
+            const targetSection = document.getElementById('target-section');
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+    </script>
 </body>
 
 </html>

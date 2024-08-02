@@ -53,10 +53,10 @@
                     <div data-aos="fade-up" data-aos-duration="1000" class="container">
                         <img class="link-icon" alt="" src="./assets/img/logo-arrondissement.png" id="linkImage" />
                         <div class="buttons-container">
-                            <div class="histoire">Histoire</div>
-                            <div class="dcouvrir">Découvrir</div>
-                            <div class="patrimoine">Patrimoine</div>
-                            <div class="faq">FAQ</div>
+                            <div class="histoire" onclick="scrollToSection()">Histoire</div>
+                            <div class="dcouvrir" onclick="scrollToSection()">Découvrir</div>
+                            <div class="patrimoine" onclick="scrollToSection()">Patrimoine</div>
+                            <div class="faq" onclick="scrollToSection()">FAQ</div>
                         </div>
                         <button class="button-main-section-1" onclick="showPopup()">Mot du Président</button>
 
@@ -1036,14 +1036,14 @@
             'Construites en 80 jours !'
         ];
 
-        // Descriptions des popups pour chaque pin
+     // Tableau des descriptions de popup
         var popupDescriptions = [
-            'Cliquez ici pour découvrir les anciens spectacles joués dans les Arènes de Casablanca',
-            'Cliquez ici pour découvrir comment votre arrondissement Maarif se réinvente',
-            'Découvrez la musique à Casablanca comme vous ne l\'avez jamais vu.',
-            'Découvrez l\'Histoire de la tauromachie à Casablanca.',
-            'Maarif, arrondissement de loisirs.',
-            'Cliquez ici pour découvrir l\'Histoire de la construction des Arènes.'
+            '<a href="spectacles-historiques.html">Cliquez ici</a> pour découvrir les anciens spectacles joués dans les Arènes de Casablanca',
+            '<a href="maarif-se-reinvente.html">Cliquez ici</a> pour découvrir comment votre arrondissement Maarif se réinvente',
+            'Découvrez la musique à Casablanca comme vous ne l\'avez jamais vu. <a href="musique.html">Cliquez ici</a>',
+            'Découvrez l\'Histoire de la tauromachie à Casablanca. <a href="tauromachie.html">Cliquez ici</a>',
+            'Maarif, arrondissement de loisirs. <a href="ville-de-loisirs.html">Cliquez ici</a>',
+            '<a href="construction.html">Cliquez ici</a> pour découvrir l\'Histoire de la construction des Arènes.'
         ];
 
         // Tableau d'icônes pour les markers
