@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <!--  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />-->
     <script src="https://unpkg.com/aatjs/dist/aat.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.umd.js"></script>
+
 </head>
 
 <body>
@@ -1326,6 +1329,48 @@
         }
 
     </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const images = document.querySelectorAll("img");
+                const excludePatterns = [
+                    "leaflet",   // Exclure les images de Leaflet
+                    "pin.png",
+                    "pin-1.png",
+                    "ombre.png",       // Exclure les pins personnalisés
+                    "blur.png",     // Exclure les ombres des pins
+                    "Vector.svg",
+                    "logo-arrondissement.png",// Exclure le vecteur spécifique
+                    "ORU2DB0.jpg",
+                    "map-maroc.png"
+                ];
+
+                images.forEach((img) => {
+                    const src = img.src;
+                    const isLeafletImage = img.classList.contains("leaflet-marker-icon") ||
+                        img.classList.contains("leaflet-marker-shadow") ||
+                        img.classList.contains("leaflet-tile");
+
+                    // Vérifier si l'image doit être exclue ou si elle est déjà encapsulée dans un lien
+                    const isExcluded = excludePatterns.some(pattern => src.includes(pattern)) || isLeafletImage;
+                    const isAlreadyLinked = img.parentNode.tagName.toLowerCase() === 'a';
+
+                    if (!isExcluded && !isAlreadyLinked) {
+                        const link = document.createElement("a");
+                        link.href = img.src;
+                        link.setAttribute("data-fancybox", "gallery");
+                        img.parentNode.insertBefore(link, img);
+                        link.appendChild(img);
+                    }
+                });
+
+                Fancybox.bind("[data-fancybox='gallery']", {
+                    // Options personnalisées
+                });
+            });
+
+        </script>
+
 </body>
 
 </html>
