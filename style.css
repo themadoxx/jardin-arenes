@@ -8,6 +8,9 @@
     font-style: normal;
 }
 
+.font-arabe {
+  font-family: 'KacstTitle', sans-serif !important;
+}
 body {
   margin: 0;
   line-height: normal;
@@ -196,7 +199,7 @@ h1, h2, h3, h4, h5 {
 
 .heading-main-section-1 {
     margin-top: 10px; /* Ajuster cette valeur selon vos besoins */
-    font-family: var(--font-inter) !important;
+    font-family: var(--font-inter);
 }
 
 .title-main-section-1 {
