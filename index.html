@@ -792,51 +792,78 @@
 
 
 
-  <script>
-    // Initialisation de la carte
-    var map = L.map('map-main-section-1').setView([33.588892, -7.639583], 18); // Centrer la carte sur le jardin public avec un zoom de 18
+<script>
+  // Initialisation de la carte
+  var map = L.map('map-main-section-1').setView([33.588892, -7.639583], 18); // Centrer la carte sur le jardin public avec un zoom de 18
 
-    // Ajouter une couche de carte (OpenStreetMap)
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.digitex.ma">Digitex.ma</a>'
-    }).addTo(map);
+  // Ajouter une couche de carte (OpenStreetMap)
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.digitex.ma">Digitex.ma</a>'
+  }).addTo(map);
 
-    // Définir une classe d'icône personnalisée
-    var LeafIcon = L.Icon.extend({
-      options: {
-       shadowUrl: 'assets/img/ombre.png',
-        iconSize: [28, 95], // Taille de l'icône
-        shadowSize: [50, 64], // Taille de l'ombre
-        iconAnchor: [22, 94], // Point de l'icône correspondant à la position du marker
-        shadowAnchor: [4, 62],  // Point de l'ombre correspondant à la position du marker
-        popupAnchor: [-3, -76] // Point d'où la popup doit s'ouvrir par rapport à l'iconAnchor
-      }
-    });
+  // Définir une classe d'icône personnalisée
+  var LeafIcon = L.Icon.extend({
+    options: {
+      shadowUrl: 'assets/img/ombre.png',
+      iconSize: [28, 95], // Taille de l'icône
+      shadowSize: [50, 64], // Taille de l'ombre
+      iconAnchor: [22, 94], // Point de l'icône correspondant à la position du marker
+      shadowAnchor: [4, 62],  // Point de l'ombre correspondant à la position du marker
+      popupAnchor: [-3, -76] // Point d'où la popup doit s'ouvrir par rapport à l'iconAnchor
+    }
+  });
 
-    // Créer des instances d'icônes personnalisées
-    var greenIcon = new LeafIcon({ iconUrl: 'assets/img/pin-1.png' }),
-      redIcon = new LeafIcon({ iconUrl: 'assets/img/pin.png' }),
-      orangeIcon = new LeafIcon({ iconUrl: 'assets/img/pin.png' });
+  // Créer des instances d'icônes personnalisées
+  var greenIcon = new LeafIcon({ iconUrl: 'assets/img/pin-1.png' }),
+    redIcon = new LeafIcon({ iconUrl: 'assets/img/pin.png' }),
+    orangeIcon = new LeafIcon({ iconUrl: 'assets/img/pin.png' });
 
-    // Coordonnées des panneaux avec QR codes
-    var qrPins = [
-      [33.588928, -7.639721],    // Coordonnée 1
-      [33.588523, -7.639489],  // Coordonnée 2
-      [33.588572, -7.639364],  // Coordonnée 3
-      [33.588968, -7.639498],  // Coordonnée 4
-      [33.589211, -7.639817],  // Coordonnée 5
-      [33.589259, -7.639695]   // Coordonnée 6
-    ];
+  // Coordonnées des panneaux avec QR codes
+  var qrPins = [
+    [33.588928, -7.639721],  // Coordonnée 1
+    [33.588523, -7.639489],  // Coordonnée 2
+    [33.588572, -7.639364],  // Coordonnée 3
+    [33.588968, -7.639498],  // Coordonnée 4
+    [33.589211, -7.639817],  // Coordonnée 5
+    [33.589259, -7.639695]   // Coordonnée 6
+  ];
 
-    // Tableau d'icônes pour les markers
-    var icons = [greenIcon, redIcon, orangeIcon, greenIcon, redIcon, orangeIcon];
+  // Titres des popups pour chaque pin
+  var popupTitles = [
+    'Un haut lieu de spectacles en tous genres',
+    'Aujourd\'hui, votre arrondissement se réinvente',
+    'Un haut lieu de musique',
+    'Un haut lieu de tauromachie',
+    'Vous êtes ici',
+    'Titre 6'
+  ];
 
-    // Ajout des pins sur la carte avec des icônes personnalisées
-    qrPins.forEach(function (coords, index) {
-      L.marker(coords, { icon: icons[index % icons.length] }).addTo(map)
-        .bindPopup('<b>Panneau QR Code ' + (index + 1) + '</b><br />Scannez le code QR pour plus d\'informations.');
-    });
-  </script>
+  // Descriptions des popups pour chaque pin
+  var popupDescriptions = [
+    'Description pour le panneau QR Code 1.',
+    'Description pour le panneau QR Code 2.',
+    'Découvrez la musique à Casablanca',
+    'Découvrez la tauromachie à Casablanca',
+    'Casablanca, ville de loisirs: Vous êtes ici.',
+    'Description pour le panneau QR Code 6.'
+  ];
+
+  // Tableau d'icônes pour les markers
+  var icons = [greenIcon, redIcon, orangeIcon, greenIcon, redIcon, orangeIcon];
+
+  // Ajout des pins sur la carte avec des icônes personnalisées et des textes de popup spécifiques
+  qrPins.forEach(function (coords, index) {
+    var marker = L.marker(coords, { icon: icons[index % icons.length] })
+      .addTo(map)
+      .bindPopup('<b>' + popupTitles[index] + '</b><br />' + popupDescriptions[index]);
+
+    // Ouvrir le popup du pin 5 par défaut
+    if (index === 4) { // index 4 correspond au 5e élément (index commençant à 0)
+      marker.openPopup();
+    }
+  });
+</script>
+
 
   <script>
   // This was built using aat.js: https://github.com/TahaSh/aat
