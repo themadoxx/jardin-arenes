@@ -1,5 +1,13 @@
 
 /********* Global **************/
+
+@font-face {
+    font-family: 'KacstTitle';
+    src: url('assets/font/KacstTitle.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
   margin: 0;
   line-height: normal;
@@ -10,9 +18,10 @@ body {
 } 
 
 h1, h2, h3, h4, h5 {
-   font-family: var(--font-inter) !important;
+   font-family: 'KacstTitle', sans-serif !important;
    font-weight: normal !important;
 }
+
 
 :root {
   /* fonts */
@@ -1401,7 +1410,7 @@ margin-bottom: 12vh;
     padding-left: var(--padding-10xl);
     padding-right: var(--padding-10xl);
     box-sizing: border-box;
-    margin-top: 40px;
+    margin-top: 90px;
   }
   .lieu-emblematique-frame-group {
     gap: 39px;
@@ -1415,7 +1424,7 @@ margin-bottom: 12vh;
     box-sizing: border-box;
   }
   .lieu-emblematique-container12 {
-  
+  width: 70%;
   height: 360px;
  
 
@@ -1430,6 +1439,7 @@ margin-bottom: 12vh;
   }
   .lieu-emblematique-parent {
   gap: 4px;
+  max-width: 70%;
   }
   .lieu-emblematique-div1 {
     line-height: 29px;
