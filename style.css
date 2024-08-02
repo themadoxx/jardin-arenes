@@ -1483,7 +1483,7 @@ margin-bottom: 12vh;
     padding-left: var(--padding-10xl);
     padding-right: var(--padding-10xl);
     box-sizing: border-box;
-    margin-top: 90px;
+    margin-top: 220px;
   }
   .lieu-emblematique-frame-group {
     gap: 39px;
@@ -1498,7 +1498,7 @@ margin-bottom: 12vh;
   }
   .lieu-emblematique-container12 {
   width: 90%;
-  height: 580px;
+ /* height: 580px; */
   margin-top: 20px;
  
 
@@ -3258,6 +3258,7 @@ margin-bottom: 12vh;
 .section-footer-et-copyright-mot-du-prsident {
   position: relative;
   line-height: 27px;
+  text-decoration: none;
 }
 .section-footer-et-copyright-container18,
 .section-footer-et-copyright-container19 {

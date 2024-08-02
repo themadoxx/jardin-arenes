@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <!--  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />-->
     <script src="https://unpkg.com/aatjs/dist/aat.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.umd.js"></script>
+
 </head>
 
 <body>
@@ -45,6 +48,19 @@
             </div>
         </div>
     </div>
+<div class="image-gallery">
+    <a href="assets/img/photo1.jpg" data-fancybox="gallery">
+        <img src="assets/img/photo1.jpg" alt="Image 1" />
+    </a>
+    <a href="assets/img/photo2.jpg" data-fancybox="gallery">
+        <img src="assets/img/photo2.jpg" alt="Image 2" />
+    </a>
+    <a href="assets/img/photo3.jpg" data-fancybox="gallery">
+        <img src="assets/img/photo3.jpg" alt="Image 3" />
+    </a>
+    <!-- Ajoutez autant d'images que nécessaire -->
+</div>
+
 
     <div class="custom-div-container ">
         <div class="custom-div">
@@ -457,7 +473,7 @@
                                 <div class="pilules-de-succes-background"></div>
                                 <div class="pilules-de-succes-background-inner"></div>
                             </div>
-                            <a class="pilules-de-succes-link">évènements internationaux</a>
+                            <a class="pilules-de-succes-link">Évènements internationaux</a>
                             <div class="pilules-de-succes-border"></div>
                         </div>
                         <div class="pilules-de-succes-item">
@@ -603,7 +619,7 @@
                     </div>
                     <div class="lieu-emblematique-container12">
                         <div class="lieu-emblematique-group">
-                            <div class="lieu-emblematique-div2 font-arabe">
+                            <div class="lieu-emblematique-div2 font-arabe" >
                                 بدمج الماضي والحاضر، تُظهر الدار البيضاء قدرتها على الحفاظ على
                                 تراثها الثقافي الغني مع التكيف مع الاتجاهات الجديدة واحتياجات
                                 سكانها.
@@ -1007,7 +1023,7 @@
                             </div>
                             <div class="section-footer-et-copyright-container18">
                                 <div class="section-footer-et-copyright-container19">
-                                    <div class="section-footer-et-copyright-mot-du-prsident">Mot du Président</div>
+                                    <a class="section-footer-et-copyright-mot-du-prsident" onclick="showPopup()">Mot du Président</a>
                                 </div>
                             </div>
                         </div>
@@ -1164,62 +1180,68 @@
     </script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const navItems = document.querySelectorAll(".lieu-emblematique-frame-nav a");
-            const content = {
-                construction: {
-                    text1: "حلبات المعاريف: موقع رمزي",
-                    text2: "Les Arènes de Maarif : Un Lieu Emblématique",
-                    text3: "ⵏⴳⴷⵡⵡⴰ ⵏ ⵉⵏⴷⴳⴰⵙ ⴰⴹⵉⵎⵡⵉ",
-                    desc1: "بدمج الماضي والحاضر، تُظهر الدار البيضاء قدرتها على الحفاظ على تراثها الثقافي الغني مع التكيف مع الاتجاهات الجديدة واحتياجات سكانها.",
-                    desc2: "En intégrant le passé et le présent, Casablanca démontre sa capacité à préserver son riche héritage culturel tout en s’adaptant aux nouvelles tendances et aux besoins de sa population.",
-                    desc3: "ⴱ ⵜⵉⴷⴷⵏⵓⴹ ⵜⴰⵟⵟⴰⴼⴰⵏⵉⵜ ⴰⴷ ⵜⴰⴼⴼⴻⵍⵉⵜ، ⵜⴳⴰⵍⵉⵜ ⵏⵉⵙⵉⴷⴰ ⵢⵏⴷⵓ ⵜⵉⵏⵏⵉⵍⵉ ⵢ ⵉⵣⵔⵎ ⴰⵢⵏⵢⵓⴷ ⴰⵏⴳⴳⵔⴰ ⵢⴰⴷⵉⴹ ⵜⵉⵏⵏⵉⵏⵜ ⵜⴰⵏⴳⴷⵉⵙⵜ ⵏⵓⵎⴽⵓⵛⵉ ⵜⴰⵎⵣⵎⵉⵏⵜ ⴰⴷ ⵜⴰⵎⵎⵓⵙⵏⵉⵜ ⵏⵜⵉⵏⵉⵏⴳⵏⵓ ⵢⴰⴼⴰⵏⵜⵉⵏ.",
-                    image: "./assets/img/image00001.png"
-                },
-                spectacles: {
-                    text1: "المعاريف على الساحة العالمية",
-                    text2: "Maarif sur la scène internationale",
-                    text3: "ⵎⴰⵄⵔⵉⴼ ⴷ ⵜⵙⵉⵏⵜⵜⵓⵔⵜ ⵜⴰⵍⵄⴰⵎⵉⵜ",
-                    desc1: "لقد خدمت حلبات الدار البيضاء أيضًا كمنصة للفنانين والأحداث الدولية، مما حول المدينة إلى ملتقى ثقافي عالمي. أساطير الموسيقى مثل راي تشارلز وداليدا، بالإضافة إلى العديد من الفرق والمؤدين ذوي الشهرة العالمية، أسرت الحشود بعروض لا تُنسى. بهذا، ساهم هذا المكان الرمزي في وضع الدار البيضاء على الساحة الفنية العالمية، جاذبًا المتفرجين من جميع الجهات ومحتفلاً بالتنوع الثقافي من خلال عروض ضخمة",
-                    desc2: "Les arènes de Casablanca ont également servi de plateforme pour des artistes et des événements internationaux, transformant la ville en un carrefour culturel global. Des légendes de la musique comme Ray Charles et Dalida, ainsi que de nombreux groupes et performers de renommée mondiale, ont captivé les foules avec des performances inoubliables. Ce lieu emblématique a ainsi contribué à positionner Casablanca sur la scène artistique mondiale, attirant des spectateurs de tous horizons et célébrant la diversité culturelle à travers des spectacles de grande envergure.",
-                    desc3: "ⵉⴼⵙⵙⵔⵏ ⵏⴰⵎⴻⵜ ⵜⵉⵏⵜⵜⵔⵓⵙⵜⵜⵉⵏ ⵏⵜⵜⴰⵙⵓⴷⴷⵉⵏ ⴷ ⵜⴰⵎⴳⵓⵔⵓⵔ ⵜⵉⵜⵜⴰⴷⴷⵉⵜ ⵉⴼⴻⴳⴷⴷⵉⵜ ⵇⵇⴰⴳⵣⵣⴰⴱⴰⵢ⵰ ⵏⵜⵜⴰⴳⵉⵏⵉ ⵜⵉⵜⵜⵓⵔⵜ ⵢ ⵜⴰⵜⵜⵉⵏⵜⵜⵓⵍⵓⵙⵜⵜⵉⵏ ⵜⴰⵏⵜⵜⵉⵙⵜⵜⵉⵔⵜⵜ. ⵇⴻⵥⵥⴰ ⵏ ⵜⴰⵙⵓⵙⵏⵜⵜⵜⵜ ⵜⵉⵜⵜⴰⵔⴻⵜⵜ ⵢ ⵔⴰⵢ ⵛⴰⵔⵍⵙ ⴷ ⴷⴰⵍⵉⴷⴰ، ⴰⵢⵏ ⵜⴰⵎⵜⵜⴰⵎⵜ ⵜⴰⵜⵜⴷⵉⵔⵔ",
-                    image: "assets/img/ville-de-loisirs/WhatsApp Image 2024-08-02 à 10.56.08_f6c6a477.jpg"
-                },
-                tauromachie: {
-                    text1: "مكان المنافسة",
-                    text2: "Un lieu de compétition",
-                    text3: "ⵜⴰⵎⵎⴰⵢⵏⵜ ⵏ ⵜⵉⵏⵜⵜⵓⵙⵜ",
-                    desc1: "لقد كانت حلبات الدار البيضاء مسرحًا للعديد من المنافسات الرياضية، حيث قدمت للجماهير لحظات من الأدرينالين والشغف. من سباقات السيارات المثيرة إلى معارك الملاكمة الأسطورية، مرورًا بعروض المصارعة والفنون القتالية، استضاف هذا المكان أحداثًا رياضية متنوعة أسرت جمهورًا واسعًا. لم يحتفل هذا الموقع الرمزي فقط بالإنجازات الرياضية، بل جمع أيضًا المجتمعات حول حب مشترك للرياضة والمنافسة",
-                    desc2: "Les arènes de Casablanca ont été le théâtre de nombreuses compétitions sportives, offrant aux spectateurs des moments d'adrénaline et de passion. Des courses de stock-car palpitantes aux combats de boxe légendaires, en passant par des démonstrations de catch et d'arts martiaux, cet espace a accueilli des événements sportifs diversifiés qui ont captivé un large public. Ce lieu emblématique a non seulement célébré les exploits athlétiques mais a aussi rassemblé des communautés autour d’un amour partagé pour le sport et la compétition.",
-                    desc3: "ⵉⴼⵙⵙⵔⵏ ⵏⴰⵎⴻⵜ ⵜⵉⵏⵜⵜⵔⵓⵙⵜⵜⵉⵏ ⵏⵜⵜⴰⵙⵓⴷⴷⵉⵏ ⴷ ⵜⴰⵎⴳⵓⵔⵓⵔ ⵜⵉⵜⵜⴰⴷⴷⵉⵜ ⵉⴼⴻⴳⴷⴷⵉⵜ ⵇⵇⴰⴳⵣⵣⴰⴱⴰⵢ⵰ ⵏⵜⵜⴰⴳⵉⵏⵉ ⵜⵉⵜⵜⵓⵔⵜ ⵢ ⵜⴰⵜⵜⵉⵏⵜⵜⵓⵍⵓⵙⵜⵜⵉⵏ ⵜⴰⵏⵜⵜⵉⵙⵜⵜⵉⵔⵜⵜ. ⵇⴻⵥⵥⴰ ⵏ ⵜⴰⵙⵓⵙⵏⵜⵜⵜⵜ ⵜⵉⵜⵜⴰⵔⴻⵜⵜ ⵢ ⵔⴰⵢ ⵛⴰⵔⵍⵙ ⴷ ⴷⴰⵍⵉⴷⴰ، ⴰⵢⵏ ⵜⴰⵎⵜⵜⴰⵎⵜ ⵜⴰⵜⵜⴷⵉⵔⵔⵉⵜⵜ ",
-                    image: "./assets/img/image00002.png"
-                },
-                demolition: {
-                    text1: "الفنون في الحلبات",
-                    text2: "Les Arts dans les Arènes",
-                    text3: "ⵜⴰⵙⵙⵔⵉⵏⵉ ⴷ ⵍⴰⵔⴻⵏⴻⵙ",
-                    desc1: "كانت حلبات الدار البيضاء مسرحًا فنيًا رئيسيًا، تستضيف عروض المسرح والباليه وأداءات الرقص. وجد الفنانون المحليون والدوليون في هذا المكان منصة للتعبير عن إبداعهم ومواهبهم. ساهمت فرق رقص مشهورة، وفرق مسرحية، وفنانو الشوارع في جعل الحلبات مركزًا ثقافيًا ديناميكيًا، حيث كان يتم الاحتفال بالفن بجميع أشكاله، مما أغنى التراث الثقافي للدار البيضاء",
-                    desc2: "Les arènes de Casablanca ont été une scène artistique majeure, accueillant des spectacles de théâtre, des ballets et des performances de danse. Les artistes locaux et internationaux ont trouvé en ce lieu une plateforme pour exprimer leur créativité et leur talent. De célèbres compagnies de danse, des troupes de théâtre et des artistes de rue ont contribué à faire des arènes un centre culturel dynamique, où l'art sous toutes ses formes était célébré, enrichissant ainsi le patrimoine culturel de Casablanca.",
-                    desc3: "ⵉⵙⴻⵎⴳⵉ ⵍⴰⵔⴻⵏⴻⵙ ⵏ ⵇⵇⴰⴳⵣⵣⴰⴱⴰⵢ⵰ ⵜⵉⵍⵍⴰⵢⵜ ⵜⴰⵜⵜⵓⵖⵜ ⵏ ⵜⴰⵛⵔⴰⵜ ⴷ ⴰⵜⵜⵔⵓⵎⴰⵜⵜ ⵏ ⵜⴰⵇⴷⴷⵉⵢⵜ. ⵉⴷⴷⴰⵢⵉⵏ ⵜⵉⵏⵜⵜⴰⵙⵔⵔⴰ",
-                    image: "assets/img/ville-de-loisirs/WhatsApp Image 2024-08-02 à 10.56.09_9ce63aae.jpg"
-                }
-            };
+    document.addEventListener("DOMContentLoaded", function () {
+        const navItems = document.querySelectorAll(".lieu-emblematique-frame-nav a");
+        const content = {
+            construction: {
+                text1: "حلبات المعاريف: موقع رمزي",
+                text2: "Les Arènes de Maarif : Un Lieu Emblématique",
+                text3: "ⵏⴳⴷⵡⵡⴰ ⵏ ⵉⵏⴷⴳⴰⵙ ⴰⴹⵉⵎⵡⵉ",
+                desc1: "بدمج الماضي والحاضر، تُظهر الدار البيضاء قدرتها على الحفاظ على تراثها الثقافي الغني مع التكيف مع الاتجاهات الجديدة واحتياجات سكانها.",
+                desc2: "En intégrant le passé et le présent, Casablanca démontre sa capacité à préserver son riche héritage culturel tout en s’adaptant aux nouvelles tendances et aux besoins de sa population.",
+                desc3: "ⴱ ⵜⵉⴷⴷⵏⵓⴹ ⵜⴰⵟⵟⴰⴼⴰⵏⵉⵜ ⴰⴷ ⵜⴰⴼⴼⴻⵍⵉⵜ، ⵜⴳⴰⵍⵉⵜ ⵏⵉⵙⵉⴷⴰ ⵢⵏⴷⵓ ⵜⵉⵏⵏⵉⵍⵉ ⵢ ⵉⵣⵔⵎ ⴰⵢⵏⵢⵓⴷ ⴰⵏⴳⴳⵔⴰ ⵢⴰⴷⵉⴹ ⵜⵉⵏⵏⵉⵏⵜ ⵜⴰⵏⴳⴷⵉⵙⵜ ⵏⵓⵎⴽⵓⵛⵉ ⵜⴰⵎⵣⵎⵉⵏⵜ ⴰⴷ ⵜⴰⵎⵎⵓⵙⵏⵉⵜ ⵏⵜⵉⵏⵉⵏⴳⵏⵓ ⵢⴰⴼⴰⵏⵜⵉⵏ.",
+                image: "./assets/img/image00001.png",
+                height: 500 // Hauteur spécifique pour ce contenu
+            },
+            spectacles: {
+                text1: "المعاريف على الساحة العالمية",
+                text2: "Maarif sur la scène internationale",
+                text3: "ⵎⴰⵄⵔⵉⴼ ⴷ ⵜⵙⵉⵏⵜⵜⵓⵔⵜ ⵜⴰⵍⵄⴰⵎⵉⵜ",
+                desc1: "لقد خدمت حلبات الدار البيضاء أيضًا كمنصة للفنانين والأحداث الدولية، مما حول المدينة إلى ملتقى ثقافي عالمي. أساطير الموسيقى مثل راي تشارلز وداليدا، بالإضافة إلى العديد من الفرق والمؤدين ذوي الشهرة العالمية، أسرت الحشود بعروض لا تُنسى. بهذا، ساهم هذا المكان الرمزي في وضع الدار البيضاء على الساحة الفنية العالمية، جاذبًا المتفرجين من جميع الجهات ومحتفلاً بالتنوع الثقافي من خلال عروض ضخمة",
+                desc2: "Les arènes de Casablanca ont également servi de plateforme pour des artistes et des événements internationaux, transformant la ville en un carrefour culturel global. Des légendes de la musique comme Ray Charles et Dalida, ainsi que de nombreux groupes et performers de renommée mondiale, ont captivé les foules avec des performances inoubliables. Ce lieu emblématique a ainsi contribué à positionner Casablanca sur la scène artistique mondiale, attirant des spectateurs de tous horizons et célébrant la diversité culturelle à travers des spectacles de grande envergure.",
+                desc3: "ⵉⴼⵙⵙⵔⵏ ⵏⴰⵎⴻⵜ ⵜⵉⵏⵜⵜⵔⵓⵙⵜⵜⵉⵏ ⵏⵜⵜⴰⵙⵓⴷⴷⵉⵏ ⴷ ⵜⴰⵎⴳⵓⵔⵓⵔ ⵜⵉⵜⵜⴰⴷⴷⵉⵜ ⵉⴼⴻⴳⴷⴷⵉⵜ ⵇⵇⴰⴳⵣⵣⴰⴱⴰⵢ⵰ ⵏⵜⵜⴰⴳⵉⵏⵉ ⵜⵉⵜⵜⵓⵔⵜ ⵢ ⵜⴰⵜⵜⵉⵏⵜⵜⵓⵍⵓⵙⵜⵜⵉⵏ ⵜⴰⵏⵜⵜⵉⵙⵜⵜⵉⵔⵜⵜ. ⵇⴻⵥⵥⴰ ⵏ ⵜⴰⵙⵓⵙⵏⵜⵜⵜⵜ ⵜⵉⵜⵜⴰⵔⴻⵜⵜ ⵢ ⵔⴰⵢ ⵛⴰⵔⵍⵙ ⴷ ⴷⴰⵍⵉⴷⴰ، ⴰⵢⵏ ⵜⴰⵎⵜⵜⴰⵎⵜ ⵜⴰⵜⵜⴷⵉⵔⵔ",
+                image: "assets/img/ville-de-loisirs/WhatsApp Image 2024-08-02 à 10.56.08_f6c6a477.jpg",
+                height: 1000 // Hauteur spécifique pour ce contenu
+            },
+            tauromachie: {
+                text1: "مكان المنافسة",
+                text2: "Un lieu de compétition",
+                text3: "ⵜⴰⵎⵎⴰⵢⵏⵜ ⵏ ⵜⵉⵏⵜⵜⵓⵙⵜ",
+                desc1: "لقد كانت حلبات الدار البيضاء مسرحًا للعديد من المنافسات الرياضية، حيث قدمت للجماهير لحظات من الأدرينالين والشغف. من سباقات السيارات المثيرة إلى معارك الملاكمة الأسطورية، مرورًا بعروض المصارعة والفنون القتالية، استضاف هذا المكان أحداثًا رياضية متنوعة أسرت جمهورًا واسعًا. لم يحتفل هذا الموقع الرمزي فقط بالإنجازات الرياضية، بل جمع أيضًا المجتمعات حول حب مشترك للرياضة والمنافسة",
+                desc2: "Les arènes de Casablanca ont été le théâtre de nombreuses compétitions sportives, offrant aux spectateurs des moments d'adrénaline et de passion. Des courses de stock-car palpitantes aux combats de boxe légendaires, en passant par des démonstrations de catch et d'arts martiaux, cet espace a accueilli des événements sportifs diversifiés qui ont captivé un large public. Ce lieu emblématique a non seulement célébré les exploits athlétiques mais a aussi rassemblé des communautés autour d’un amour partagé pour le sport et la compétition.",
+                desc3: "ⵉⴼⵙⵙⵔⵏ ⵏⴰⵎⴻⵜ ⵜⵉⵏⵜⵜⵔⵓⵙⵜⵜⵉⵏ ⵏⵜⵜⴰⵙⵓⴷⴷⵉⵏ ⴷ ⵜⴰⵎⴳⵓⵔⵓⵔ ⵜⵉⵜⵜⴰⴷⴷⵉⵜ ⵉⴼⴻⴳⴷⴷⵉⵜ ⵇⵇⴰⴳⵣⵣⴰⴱⴰⵢ⵰ ⵏⵜⵜⴰⴳⵉⵏⵉ ⵜⵉⵜⵜⵓⵔⵜ ⵢ ⵜⴰⵜⵜⵉⵏⵜⵜⵓⵍⵓⵙⵜⵜⵉⵏ ⵜⴰⵏⵜⵜⵉⵙⵜⵜⵉⵔⵜⵜ. ⵇⴻⵥⵥⴰ ⵏ ⵜⴰⵙⵓⵙⵏⵜⵜⵜⵜ ⵜⵉⵜⵜⴰⵔⴻⵜⵜ ⵢ ⵔⴰⵢ ⵛⴰⵔⵍⵙ ⴷ ⴷⴰⵍⵉⴷⴰ، ⴰⵢⵏ ⵜⴰⵎⵜⵜⴰⵎⵜ ⵜⴰⵜⵜⴷⵉⵔⵔⵉⵜⵜ ",
+                image: "./assets/img/image00002.png",
+                height: 900 // Hauteur spécifique pour ce contenu
+            },
+            demolition: {
+                text1: "الفنون في الحلبات",
+                text2: "Les Arts dans les Arènes",
+                text3: "ⵜⴰⵙⵙⵔⵉⵏⵉ ⴷ ⵍⴰⵔⴻⵏⴻⵙ",
+                desc1: "كانت حلبات الدار البيضاء مسرحًا فنيًا رئيسيًا، تستضيف عروض المسرح والباليه وأداءات الرقص. وجد الفنانون المحليون والدوليون في هذا المكان منصة للتعبير عن إبداعهم ومواهبهم. ساهمت فرق رقص مشهورة، وفرق مسرحية، وفنانو الشوارع في جعل الحلبات مركزًا ثقافيًا ديناميكيًا، حيث كان يتم الاحتفال بالفن بجميع أشكاله، مما أغنى التراث الثقافي للدار البيضاء",
+                desc2: "Les arènes de Casablanca ont été une scène artistique majeure, accueillant des spectacles de théâtre, des ballets et des performances de danse. Les artistes locaux et internationaux ont trouvé en ce lieu une plateforme pour exprimer leur créativité et leur talent. De célèbres compagnies de danse, des troupes de théâtre et des artistes de rue ont contribué à faire des arènes un centre culturel dynamique, où l'art sous toutes ses formes était célébré, enrichissant ainsi le patrimoine culturel de Casablanca.",
+                desc3: "ⵉⵙⴻⵎⴳⵉ ⵍⴰⵔⴻⵏⴻⵙ ⵏ ⵇⵇⴰⴳⵣⵣⴰⴱⴰⵢ⵰ ⵜⵉⵍⵍⴰⵢⵜ ⵜⴰⵜⵜⵓⵖⵜ ⵏ ⵜⴰⵛⵔⴰⵜ ⴷ ⴰⵜⵜⵔⵓⵎⴰⵜⵜ ⵏ ⵜⴰⵇⴷⴷⵉⵢⵜ. ⵉⴷⴷⴰⵢⵉⵏ ⵜⵉⵏⵜⵜⴰⵙⵔⵔⴰ",
+                image: "assets/img/ville-de-loisirs/WhatsApp Image 2024-08-02 à 10.56.09_9ce63aae.jpg",
+                height: 800 // Hauteur spécifique pour ce contenu
+            }
+        };
 
-            navItems.forEach(item => {
-                item.addEventListener("click", function () {
-                    navItems.forEach(nav => nav.classList.remove("active"));
-                    item.classList.add("active");
-                    const id = item.id;
-                    document.querySelector(".lieu-emblematique-div").textContent = content[id].text1;
-                    document.querySelector(".lieu-emblematique-les-arnes-de").textContent = content[id].text2;
-                    document.querySelector(".lieu-emblematique-div1").textContent = content[id].text3;
-                    document.querySelector(".lieu-emblematique-div2").textContent = content[id].desc1;
-                    document.querySelector(".lieu-emblematique-o-oo").textContent = content[id].desc2;
-                    document.querySelector(".lieu-emblematique-div3").textContent = content[id].desc3;
-                    document.getElementById("main-image").src = content[id].image;
-                });
+        navItems.forEach(item => {
+            item.addEventListener("click", function () {
+                navItems.forEach(nav => nav.classList.remove("active"));
+                item.classList.add("active");
+                const id = item.id;
+                document.querySelector(".lieu-emblematique-div").textContent = content[id].text1;
+                document.querySelector(".lieu-emblematique-les-arnes-de").textContent = content[id].text2;
+                document.querySelector(".lieu-emblematique-div1").textContent = content[id].text3;
+                document.querySelector(".lieu-emblematique-div2").textContent = content[id].desc1;
+                document.querySelector(".lieu-emblematique-o-oo").textContent = content[id].desc2;
+                document.querySelector(".lieu-emblematique-div3").textContent = content[id].desc3;
+                document.getElementById("main-image").src = content[id].image;
+                document.querySelector(".lieu-emblematique-container12").style.height = content[id].height + "px"; // Changer la hauteur en fonction du contenu
             });
         });
+    });
+
     </script>
 
     <script>
@@ -1326,6 +1348,49 @@
         }
 
     </script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll("img");
+        const excludePatterns = [
+            "leaflet",   // Exclure les images de Leaflet
+            "pin.png",
+            "pin-1.png",
+            "ombre.png",       // Exclure les pins personnalisés
+            "blur.png",     // Exclure les ombres des pins
+            "Vector.svg",
+            "logo-arrondissement.png",// Exclure le vecteur spécifique
+            "ORU2DB0.jpg",
+            "map-maroc.png"
+        ];
+
+        images.forEach((img) => {
+            const src = img.src;
+            const isLeafletImage = img.classList.contains("leaflet-marker-icon") ||
+                img.classList.contains("leaflet-marker-shadow") ||
+                img.classList.contains("leaflet-tile");
+
+            // Vérifier si l'image doit être exclue ou si elle est déjà encapsulée dans un lien
+            const isExcluded = excludePatterns.some(pattern => src.includes(pattern)) || isLeafletImage;
+            const isAlreadyLinked = img.parentNode.tagName.toLowerCase() === 'a';
+
+            if (!isExcluded && !isAlreadyLinked) {
+                const link = document.createElement("a");
+                link.href = img.src;
+                link.setAttribute("data-fancybox", "gallery");
+                img.parentNode.insertBefore(link, img);
+                link.appendChild(img);
+            }
+        });
+
+        Fancybox.bind("[data-fancybox='gallery']", {
+            // Options personnalisées
+        });
+    });
+
+    </script>
+
+
 </body>
 
 </html>
