@@ -1197,8 +1197,8 @@
                 text1: "المعاريف على الساحة العالمية",
                 text2: "Maarif sur la scène internationale",
                 text3: "ⵎⴰⵄⵔⵉⴼ ⴷ ⵜⵙⵉⵏⵜⵜⵓⵔⵜ ⵜⴰⵍⵄⴰⵎⵉⵜ",
-                desc1: "لقد خدمت حلبات الدار البيضاء أيضًا كمنصة للفنانين والأحداث الدولية، مما حول المدينة إلى ملتقى ثقافي عالمي. أساطير الموسيقى مثل راي تشارلز وداليدا، بالإضافة إلى العديد من الفرق والمؤدين ذوي الشهرة العالمية، أسرت الحشود بعروض لا تُنسى. بهذا، ساهم هذا المكان الرمزي في وضع الدار البيضاء على الساحة الفنية العالمية، جاذبًا المتفرجين من جميع الجهات ومحتفلاً بالتنوع الثقافي من خلال عروض ضخمة",
-                desc2: "Les arènes de Casablanca ont également servi de plateforme pour des artistes et des événements internationaux, transformant la ville en un carrefour culturel global. Des légendes de la musique comme Ray Charles et Dalida, ainsi que de nombreux groupes et performers de renommée mondiale, ont captivé les foules avec des performances inoubliables. Ce lieu emblématique a ainsi contribué à positionner Casablanca sur la scène artistique mondiale, attirant des spectateurs de tous horizons et célébrant la diversité culturelle à travers des spectacles de grande envergure.",
+                desc1: "لقد خدمت حلبات الدار البيضاء أيضًا كمنصة للفنانين والأحداث الدولية، مما حول المدينة إلى ملتقى ثقافي عالمي. أساطير الموسيقى مثل راي تشارلز وداليدا، بالإضافة إلى العديد من الفرق والمؤدين ذوي الشهرة العالمية، أسرت الحشود بعروض لا تُنسى",
+                desc2: "Les arènes de Casablanca ont également servi de plateforme pour des artistes et des événements internationaux, transformant la ville en un carrefour culturel global. Des légendes de la musique comme Ray Charles et Dalida, ainsi que de nombreux groupes et performers de renommée mondiale. Ce lieu emblématique a ainsi contribué à positionner Casablanca sur la scène artistique mondiale.",
                 desc3: "ⵉⴼⵙⵙⵔⵏ ⵏⴰⵎⴻⵜ ⵜⵉⵏⵜⵜⵔⵓⵙⵜⵜⵉⵏ ⵏⵜⵜⴰⵙⵓⴷⴷⵉⵏ ⴷ ⵜⴰⵎⴳⵓⵔⵓⵔ ⵜⵉⵜⵜⴰⴷⴷⵉⵜ ⵉⴼⴻⴳⴷⴷⵉⵜ ⵇⵇⴰⴳⵣⵣⴰⴱⴰⵢ⵰ ⵏⵜⵜⴰⴳⵉⵏⵉ ⵜⵉⵜⵜⵓⵔⵜ ⵢ ⵜⴰⵜⵜⵉⵏⵜⵜⵓⵍⵓⵙⵜⵜⵉⵏ ⵜⴰⵏⵜⵜⵉⵙⵜⵜⵉⵔⵜⵜ. ⵇⴻⵥⵥⴰ ⵏ ⵜⴰⵙⵓⵙⵏⵜⵜⵜⵜ ⵜⵉⵜⵜⴰⵔⴻⵜⵜ ⵢ ⵔⴰⵢ ⵛⴰⵔⵍⵙ ⴷ ⴷⴰⵍⵉⴷⴰ، ⴰⵢⵏ ⵜⴰⵎⵜⵜⴰⵎⵜ ⵜⴰⵜⵜⴷⵉⵔⵔ",
                 image: "assets/img/ville-de-loisirs/WhatsApp Image 2024-08-02 à 10.56.08_f6c6a477.jpg",
                 height: 1000 // Hauteur spécifique pour ce contenu
@@ -1365,7 +1365,7 @@
         ];
 
         images.forEach((img) => {
-            const src = img.src;
+            const src = img.src || '';  // Pour les éléments sans src, utiliser une chaîne vide
             const isLeafletImage = img.classList.contains("leaflet-marker-icon") ||
                 img.classList.contains("leaflet-marker-shadow") ||
                 img.classList.contains("leaflet-tile");
@@ -1376,7 +1376,7 @@
 
             if (!isExcluded && !isAlreadyLinked) {
                 const link = document.createElement("a");
-                link.href = img.src;
+                link.href = img.src || '#';  // Utiliser l'URL si disponible, sinon une chaîne vide pour les éléments sans src
                 link.setAttribute("data-fancybox", "gallery");
                 img.parentNode.insertBefore(link, img);
                 link.appendChild(img);
@@ -1386,8 +1386,17 @@
         Fancybox.bind("[data-fancybox='gallery']", {
             // Options personnalisées
         });
-    });
 
+        // Gérer les clics sur les éléments avec la classe spécifique
+        document.querySelectorAll(".section-arenes-populaires-container1").forEach((element) => {
+            element.addEventListener("click", function () {
+                const allImages = document.querySelectorAll("img:not(.leaflet-marker-icon):not(.leaflet-marker-shadow):not(.leaflet-tile)");
+                Fancybox.show(allImages, {
+                    // Options personnalisées
+                });
+            });
+        });
+    });
     </script>
 
 

@@ -1285,7 +1285,7 @@
                 ];
 
                 images.forEach((img) => {
-                    const src = img.src;
+                    const src = img.src || '';  // Pour les éléments sans src, utiliser une chaîne vide
                     const isLeafletImage = img.classList.contains("leaflet-marker-icon") ||
                         img.classList.contains("leaflet-marker-shadow") ||
                         img.classList.contains("leaflet-tile");
@@ -1296,7 +1296,7 @@
 
                     if (!isExcluded && !isAlreadyLinked) {
                         const link = document.createElement("a");
-                        link.href = img.src;
+                        link.href = img.src || '#';  // Utiliser l'URL si disponible, sinon une chaîne vide pour les éléments sans src
                         link.setAttribute("data-fancybox", "gallery");
                         img.parentNode.insertBefore(link, img);
                         link.appendChild(img);
@@ -1306,9 +1306,19 @@
                 Fancybox.bind("[data-fancybox='gallery']", {
                     // Options personnalisées
                 });
-            });
 
+                // Gérer les clics sur les éléments avec la classe spécifique
+                document.querySelectorAll(".section-arenes-populaires-container1").forEach((element) => {
+                    element.addEventListener("click", function () {
+                        const allImages = document.querySelectorAll("img:not(.leaflet-marker-icon):not(.leaflet-marker-shadow):not(.leaflet-tile)");
+                        Fancybox.show(allImages, {
+                            // Options personnalisées
+                        });
+                    });
+                });
+            });
         </script>
+
 
 </body>
 
