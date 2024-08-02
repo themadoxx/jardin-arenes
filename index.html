@@ -15,6 +15,9 @@
 </head>
 
 <body>
+  <div id="floating-cross">
+    ✖
+  </div>
   <div class="custom-div-container ">
 <div class="custom-div">
       <div class="background-wrapper">
@@ -931,6 +934,25 @@
   });
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const floatingCross = document.getElementById("floating-cross");
+
+    function checkScroll() {
+      if (window.scrollY === 0) {
+        floatingCross.style.display = "flex";
+      } else {
+        floatingCross.style.display = "none";
+      }
+    }
+
+    // Initial check
+    checkScroll();
+
+    // Check scroll event
+    window.addEventListener("scroll", checkScroll);
+  });
+</script>
 
 </body>
 
