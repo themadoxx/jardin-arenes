@@ -1425,8 +1425,11 @@ margin-bottom: 12vh;
   .lieu-emblematique-div,
   .lieu-emblematique-div1,
   .lieu-emblematique-les-arnes-de {
-    font-size: var(--font-size-9xl);
-    line-height: 37px;
+    font-size: 22px;
+    line-height: 25px;
+  }
+  .lieu-emblematique-parent {
+  gap: 4px;
   }
   .lieu-emblematique-div1 {
     line-height: 29px;
@@ -3612,5 +3615,12 @@ font-size: 22px;
     float: left;
     width: 100%; /* Ajustez la largeur selon vos besoins */
   }
+  .card-section .card__image-container {
+gap: 8px;
 }
 
+.card-section .cards {
+
+max-width: 300px;
+}
+}
