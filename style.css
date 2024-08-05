@@ -3881,3 +3881,15 @@ padding: 0 1px;
     margin-top: 60px;
   }
 }
+
+@media (min-width: 1030px) {
+  .lieu-emblematique-frame-nav {
+    gap: 1px;
+  }
+}
+
+@media (min-width: 1530px) {
+  .lieu-emblematique-frame-nav {
+    gap: 30px;
+  }
+}
