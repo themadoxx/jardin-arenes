@@ -1319,53 +1319,58 @@
     </script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const images = document.querySelectorAll("img");
-            const excludePatterns = [
-                "leaflet",   // Exclure les images de Leaflet
-                "pin.png",
-                "pin-1.png",
-                "ombre.png",       // Exclure les pins personnalisés
-                "blur.png",     // Exclure les ombres des pins
-                "Vector.svg",
-                "logo-arrondissement.png",// Exclure le vecteur spécifique
-                "ORU2DB0.jpg",
-                "map-maroc.png"
-            ];
+    document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll("img");
+        const excludePatterns = [
+            "leaflet",   // Exclure les images de Leaflet
+            "pin.png",
+            "pin-1.png",
+            "ombre.png",       // Exclure les pins personnalisés
+            "blur.png",     // Exclure les ombres des pins
+            "Vector.svg",
+            "logo-arrondissement.png",// Exclure le vecteur spécifique
+            "ORU2DB0.jpg",
+            "map-maroc.png"
+        ];
 
-            images.forEach((img) => {
-                const src = img.src || '';  // Pour les éléments sans src, utiliser une chaîne vide
-                const isLeafletImage = img.classList.contains("leaflet-marker-icon") ||
-                    img.classList.contains("leaflet-marker-shadow") ||
-                    img.classList.contains("leaflet-tile");
+        images.forEach((img) => {
+            const src = img.src || '';  // Pour les éléments sans src, utiliser une chaîne vide
+            const isLeafletImage = img.classList.contains("leaflet-marker-icon") ||
+                img.classList.contains("leaflet-marker-shadow") ||
+                img.classList.contains("leaflet-tile");
 
-                // Vérifier si l'image doit être exclue ou si elle est déjà encapsulée dans un lien
-                const isExcluded = excludePatterns.some(pattern => src.includes(pattern)) || isLeafletImage;
-                const isAlreadyLinked = img.parentNode.tagName.toLowerCase() === 'a';
+            // Vérifier si l'image doit être exclue ou si elle est déjà encapsulée dans un lien
+            const isExcluded = excludePatterns.some(pattern => src.includes(pattern)) || isLeafletImage;
+            const isAlreadyLinked = img.parentNode.tagName.toLowerCase() === 'a';
 
-                if (!isExcluded && !isAlreadyLinked) {
-                    const link = document.createElement("a");
-                    link.href = img.src || '#';  // Utiliser l'URL si disponible, sinon une chaîne vide pour les éléments sans src
-                    link.setAttribute("data-fancybox", "gallery");
-                    img.parentNode.insertBefore(link, img);
-                    link.appendChild(img);
-                }
-            });
+            if (!isExcluded && !isAlreadyLinked) {
+                const link = document.createElement("a");
+                link.href = img.src || '#';  // Utiliser l'URL si disponible, sinon une chaîne vide pour les éléments sans src
+                link.setAttribute("data-fancybox", "gallery");
+                link.setAttribute("data-caption", "Crédits : Mohamed Tangi, collection privée.");
+                img.parentNode.insertBefore(link, img);
+                link.appendChild(img);
+            }
+        });
 
-            Fancybox.bind("[data-fancybox='gallery']", {
-                // Options personnalisées
-            });
+        Fancybox.bind("[data-fancybox='gallery']", {
+            // Options personnalisées
+            caption: function (fancybox, slide) {
+                return slide.$thumb.alt || "Crédits : Mohamed Tangi, collection privée.";
+            }
+        });
 
-            // Gérer les clics sur les éléments avec la classe spécifique
-            document.querySelectorAll(".section-arenes-populaires-container1").forEach((element) => {
-                element.addEventListener("click", function () {
-                    const allImages = document.querySelectorAll("img:not(.leaflet-marker-icon):not(.leaflet-marker-shadow):not(.leaflet-tile)");
-                    Fancybox.show(allImages, {
-                        // Options personnalisées
-                    });
+        // Gérer les clics sur les éléments avec la classe spécifique
+        document.querySelectorAll(".section-arenes-populaires-container1").forEach((element) => {
+            element.addEventListener("click", function () {
+                const allImages = document.querySelectorAll("img:not(.leaflet-marker-icon):not(.leaflet-marker-shadow):not(.leaflet-tile)");
+                Fancybox.show(allImages, {
+                    // Options personnalisées
                 });
             });
         });
+    });
+
     </script>
 
 

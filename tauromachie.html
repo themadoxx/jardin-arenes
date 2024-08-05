@@ -1364,6 +1364,7 @@
                 const link = document.createElement("a");
                 link.href = img.src || '#';  // Utiliser l'URL si disponible, sinon une chaîne vide pour les éléments sans src
                 link.setAttribute("data-fancybox", "gallery");
+                link.setAttribute("data-caption", "Crédits : Mohamed Tangi, collection privée.");
                 img.parentNode.insertBefore(link, img);
                 link.appendChild(img);
             }
@@ -1371,6 +1372,9 @@
 
         Fancybox.bind("[data-fancybox='gallery']", {
             // Options personnalisées
+            caption: function (fancybox, slide) {
+                return slide.$thumb.alt || "Crédits : Mohamed Tangi, collection privée.";
+            }
         });
 
         // Gérer les clics sur les éléments avec la classe spécifique
@@ -1383,6 +1387,7 @@
             });
         });
     });
+
     </script>
 
 
