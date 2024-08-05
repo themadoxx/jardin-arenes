@@ -1483,7 +1483,7 @@ margin-bottom: 12vh;
     padding-left: var(--padding-10xl);
     padding-right: var(--padding-10xl);
     box-sizing: border-box;
-    margin-top: 460px;
+    margin-top: 312px;
   }
   .lieu-emblematique-frame-group {
     gap: 39px;
@@ -3880,6 +3880,15 @@ padding: 0 1px;
     padding: 0;
     margin-top: 60px;
   }
+
+  .card-section .space { 
+    height: 30vh;
+  }
+
+  .text-section p {
+    margin-bottom: 100px;
+  }
+
 }
 
 @media (min-width: 1030px) {
@@ -3892,4 +3901,6 @@ padding: 0 1px;
   .lieu-emblematique-frame-nav {
     gap: 30px;
   }
+
+  
 }
