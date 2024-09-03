@@ -202,7 +202,7 @@
                         </p>
                     </div>
                     <div class="card__image-container">
-                        <img class="card__image" src="assets/img/ville-de-loisirs/tauromachie-connu.jpg" alt="" />
+                        <img class="card__image" src="assets/img/Ray Charles Arènes de Casablanca.jpg" alt="" />
                         <img class="card__image mobile-hidden"
                             src="assets/img/184537924_899847280580910_2849017723902665996_n.jpg" alt="" />
 
@@ -1306,7 +1306,7 @@
 
     </script>
 
-    <script>
+<script>
     document.addEventListener("DOMContentLoaded", function () {
         const images = document.querySelectorAll("img");
         const excludePatterns = [
@@ -1316,9 +1316,19 @@
             "ombre.png",       // Exclure les pins personnalisés
             "blur.png",     // Exclure les ombres des pins
             "Vector.svg",
-            "logo-arrondissement.png",// Exclure le vecteur spécifique
+            "logo-arrondissement.png", // Exclure le vecteur spécifique
             "ORU2DB0.jpg",
-            "map-maroc.png"
+            "map-maroc.png",
+            "logo_casablanca.svg"
+        ];
+
+        const noCreditPatterns = [
+            "artistiquement.jpg",
+            "Ray Charles Arènes de Casablanca.jpg",
+            "ctgUWPe2FeKeRk4ZuRYlMoqtL34.png.png",
+            "eab077022dece9bf79aa7f1eb5e69196.jpg",
+            "84430805cbf133c657ec954ba2bc4533.jpg",
+            "TMDZRNJB2RBGRHQNEWNVYOPSMY.jpg"
         ];
 
         images.forEach((img) => {
@@ -1334,8 +1344,14 @@
             if (!isExcluded && !isAlreadyLinked) {
                 const link = document.createElement("a");
                 link.href = img.src || '#';  // Utiliser l'URL si disponible, sinon une chaîne vide pour les éléments sans src
-                link.setAttribute("data-fancybox", "gallery");
-                link.setAttribute("data-caption", "Crédits : Mohamed Tangi, collection privée."); // Ajout des crédits
+
+                if (!noCreditPatterns.some(pattern => src.includes(pattern))) {
+                    link.setAttribute("data-fancybox", "gallery");
+                    link.setAttribute("data-caption", "Crédits : Mohamed Tangi, collection privée."); // Ajout des crédits
+                } else {
+                    link.setAttribute("data-fancybox", "gallery");
+                }
+
                 img.parentNode.insertBefore(link, img);
                 link.appendChild(img);
             }
@@ -1352,14 +1368,18 @@
                 Fancybox.show(allImages, {
                     // Options personnalisées
                     caption: function (fancybox, slide) {
-                        return "Crédits : Mohamed Tangi, collection privée.";
+                        const src = slide.src || '';
+                        if (!noCreditPatterns.some(pattern => src.includes(pattern))) {
+                            return "Crédits : Mohamed Tangi, collection privée.";
+                        }
+                        return "";
                     }
                 });
             });
         });
     });
+</script>
 
-    </script>
 
 
 </body>
