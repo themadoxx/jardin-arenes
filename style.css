@@ -3905,7 +3905,7 @@ padding: 0 1px;
   
 }
 
- #payment-popup-overlay {
+   #payment-popup-overlay {
             position: fixed;
             top: 0;
             left: 0;
@@ -3921,18 +3921,37 @@ padding: 0 1px;
         /* Style pour la boîte de message */
         #payment-popup-box {
             background-color: white;
-            padding: 30px;
+            padding: 20px;
             border-radius: 10px;
             text-align: center;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             max-width: 500px;
+            width: 90%; /* S'adapte aux petits écrans */
             font-family: Arial, sans-serif;
         }
 
         #payment-popup-box h1 {
             margin: 0 0 20px 0;
+            font-size: 1.5em;
         }
 
         #payment-popup-box p {
             margin: 20px 0;
+            font-size: 1em;
+        }
+
+        /* Ajustements pour les petits écrans */
+        @media (max-width: 600px) {
+            #payment-popup-box {
+                padding: 15px;
+                font-size: 0.9em;
+            }
+
+            #payment-popup-box h1 {
+                font-size: 1.2em;
+            }
+
+            #payment-popup-box p {
+                font-size: 0.9em;
+            }
         }

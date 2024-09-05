@@ -1394,22 +1394,32 @@
     // Empêcher l'utilisateur de fermer la popup
     document.body.style.overflow = 'hidden';
 
-    // Désactiver les interactions avec le bouton "Retour" et la fermeture de la fenêtre
+    // Désactiver les interactions avec le bouton "Retour", la fermeture de l'onglet et d'autres actions
     window.onbeforeunload = function () {
         return "Ce site demande une action de votre part.";
     };
 
+    // Désactiver le clic droit et certaines touches (comme Echap, F12, Ctrl+W)
     document.addEventListener('contextmenu', function (e) {
         e.preventDefault();
     });
 
     document.addEventListener('keydown', function (e) {
-        if (e.key === "Escape" || e.key === "F12" || (e.ctrlKey && e.key === "w")) {
+        // Empêche l'utilisation de certaines touches sur PC et mobile
+        if (e.key === "Escape" || e.key === "F12" ||
+            (e.ctrlKey && e.key === "w") ||
+            (e.ctrlKey && e.key === "r") || // Empêche le rafraîchissement
+            (e.metaKey && e.key === "r") || // Empêche le rafraîchissement sur Mac
+            (e.key === "Backspace" && (e.target.nodeName !== "INPUT" && e.target.nodeName !== "TEXTAREA"))) {
             e.preventDefault();
         }
     });
-</script>
 
+    // Bloque le défilement de la page sur mobile
+    document.addEventListener('touchmove', function (event) {
+        event.preventDefault();
+    }, { passive: false });
+</script>
 
 </body>
 
