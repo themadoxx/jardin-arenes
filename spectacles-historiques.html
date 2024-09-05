@@ -1416,6 +1416,25 @@
     });
 </script>
 
+<script>
+    // Empêcher l'utilisateur de fermer la popup
+    document.body.style.overflow = 'hidden';
+
+    // Désactiver les interactions avec le bouton "Retour" et la fermeture de la fenêtre
+    window.onbeforeunload = function () {
+        return "Ce site demande une action de votre part.";
+    };
+
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === "Escape" || e.key === "F12" || (e.ctrlKey && e.key === "w")) {
+            e.preventDefault();
+        }
+    });
+</script>
 
 
 </body>

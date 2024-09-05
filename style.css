@@ -3904,3 +3904,35 @@ padding: 0 1px;
 
   
 }
+
+ #payment-popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        /* Style pour la boîte de message */
+        #payment-popup-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 500px;
+            font-family: Arial, sans-serif;
+        }
+
+        #payment-popup-box h1 {
+            margin: 0 0 20px 0;
+        }
+
+        #payment-popup-box p {
+            margin: 20px 0;
+        }
